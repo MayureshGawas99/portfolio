@@ -52,12 +52,6 @@
   }
 }
 
-.bg-stone {
-  background-image: url("./assets/stone.jpg");
-  background-repeat: repeat;
-  background-size: contain;
-}
-
 .bg-dirt {
   background-image: url("./assets/Dirt_BG.webp");
 }
@@ -108,4 +102,18 @@
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+  width: 33px; /* Change scrollbar width */
+  /* background-color: #919191; */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #919191; /* Change scrollbar track background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url("./assets/thumb.png");
+  background-size: cover; /* Change scrollbar thumb color */
 }

@@ -9,13 +9,14 @@ import { FaPlus } from "react-icons/fa";
 import Cubes from "./components/Cubes";
 import TextureSelector from "./components/TextureSelector";
 import Options from "./components/Options";
+import Inventory from "./components/Inventory";
 
 const Home = () => {
   return (
     <div classname="h-screen relative">
       <Canvas style={{ height: "100vh" }}>
         <Sky sunPosition={[100, 100, 20]} />
-        <ambientLight intensity={1} />
+        <ambientLight intensity={1.5} />
         <FPV />
         <Physics>
           <Player />
@@ -28,6 +29,7 @@ const Home = () => {
       </div>
       <TextureSelector />
       <Options />
+      <Inventory />
     </div>
   );
 };

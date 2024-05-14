@@ -1,28 +1,60 @@
 import React, { useEffect, useState } from "react";
 import useStore from "../hooks/useStore";
-import { dirtImg, grassImg, glassImg, woodImg, logImg } from "../images/images";
-
 import useKeyboard from "../hooks/useKeyboard";
+import { useGameContext } from "../../context/GameContext";
+import { blocks } from "../blocks/blocks";
 
 const TextureSelector = () => {
   const [visible, setVisible] = useState(false);
-  const [active, setActive] = useState("dirt");
+  const { keyActionMap, active, setActive } = useGameContext();
+  const actions = useKeyboard();
   const [activeTexture, setTexture] = useStore((state) => [
     state.texture,
     state.setTexture,
   ]);
-  const { dirt, grass, glass, wood, log } = useKeyboard();
+  const {
+    Digit1,
+    Digit2,
+    Digit3,
+    Digit4,
+    Digit5,
+    Digit6,
+    Digit7,
+    Digit8,
+    Digit9,
+  } = useKeyboard();
 
   useEffect(() => {
-    const textures = { dirt, grass, glass, wood, log };
+    const textures = {
+      Digit1,
+      Digit2,
+      Digit3,
+      Digit4,
+      Digit5,
+      Digit6,
+      Digit7,
+      Digit8,
+      Digit9,
+    };
 
     const pressedTexture = Object.entries(textures).find(([k, v]) => v);
     if (pressedTexture) {
       console.log("preesed", pressedTexture);
-      setTexture(pressedTexture[0]);
-      setActive(pressedTexture[0]);
+      setTexture(keyActionMap[pressedTexture[0]]);
+      setActive(keyActionMap[pressedTexture[0]]);
     }
-  }, [setTexture, dirt, grass, glass, wood, log]);
+  }, [
+    setTexture,
+    Digit1,
+    Digit2,
+    Digit3,
+    Digit4,
+    Digit5,
+    Digit6,
+    Digit7,
+    Digit8,
+    Digit9,
+  ]);
 
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
@@ -35,50 +67,42 @@ const TextureSelector = () => {
   }, [activeTexture]);
 
   return (
-    <div className="bottom-align ">
-      {visible && (
-        <p className="text-font text-white text-center">
-          {active.toUpperCase()}
-        </p>
+    <>
+      {!actions.openInventory && (
+        <div className="bottom-align ">
+          {visible && (
+            <p className="text-font text-white text-center">
+              {active.toUpperCase()}
+            </p>
+          )}
+          <div className="flex flex-row gap-1 ">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((ind) => {
+              // console.log(keyActionMap["Digit" + ind.toString()]);
+              // console.log("Digit" + ind.toString());
+              return (
+                <div
+                  key={ind}
+                  className={`${
+                    active === keyActionMap["Digit" + ind.toString()]
+                      ? "border-white border-4"
+                      : ""
+                  }  w-14 h-14 bg-black/50 relative flex justify-center items-center`}
+                >
+                  <img
+                    src={blocks[keyActionMap["Digit" + ind.toString()]]?.image}
+                    alt=""
+                    className="w-10 "
+                  />
+                  <p className="text-font text-white absolute bottom-0 right-0">
+                    {ind}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       )}
-      <div className="flex flex-row">
-        <div
-          className={`${
-            active === "dirt" ? "border-white" : "border-gray-500"
-          } border-4 p-2`}
-        >
-          <img src={dirtImg} alt="" className="w-10" />
-        </div>
-        <div
-          className={`${
-            active === "grass" ? "border-white" : "border-gray-500"
-          } border-4 p-2`}
-        >
-          <img src={grassImg} alt="" className="w-10" />
-        </div>
-        <div
-          className={`${
-            active === "glass" ? "border-white" : "border-gray-500"
-          } border-4 p-2`}
-        >
-          <img src={glassImg} alt="" className="w-10" />
-        </div>
-        <div
-          className={`${
-            active === "wood" ? "border-white" : "border-gray-500"
-          } border-4 p-2`}
-        >
-          <img src={woodImg} alt="" className="w-10" />
-        </div>
-        <div
-          className={`${
-            active === "log" ? "border-white" : "border-gray-500"
-          } border-4 p-2`}
-        >
-          <img src={logImg} alt="" className="w-10" />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

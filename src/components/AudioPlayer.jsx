@@ -1,23 +1,9 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useContext } from "react";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { AppContext } from "../context/AppContext";
 
-const AudioPlayer = ({ src }) => {
-  // const [audio] = useState(new Audio(src));
+const AudioPlayer = ({}) => {
   const { isPlaying, setIsPlaying } = useContext(AppContext);
-
-  // useEffect(() => {
-  //   // Set the audio to loop
-  //   audio.loop = true;
-  // }, [audio]);
-
-  // useEffect(() => {
-  //   if (isPlaying) {
-  //     audio.play();
-  //   } else {
-  //     audio.pause();
-  //   }
-  // }, [isPlaying]);
 
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);

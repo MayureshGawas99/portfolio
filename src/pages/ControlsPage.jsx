@@ -1,5 +1,4 @@
 import React from "react";
-import icon from "../assets/pan1.png";
 import { useNavigate } from "react-router-dom";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 
@@ -15,10 +14,10 @@ const ControlsPage = () => {
         <p className="  text-center text-xl text-font  text-white">Controls</p>
       </div>
       <div className="flex-grow   bg-black/50">
-        <p className=" mt-5 text-center text-xl text-font  text-yellow-300">
+        <p className=" mt-2 text-center text-xl text-font  text-yellow-300">
           Movements
         </p>
-        <div className="mx-32  grid grid-cols-12 gap-5 mt-5">
+        <div className="mx-32  grid grid-cols-12 gap-5 mt-2">
           {/* 1  */}
 
           <p className="col-span-8 text-lg text-font  text-white">
@@ -58,10 +57,10 @@ const ControlsPage = () => {
             <span>D</span>
           </div>
         </div>
-        <p className=" mt-5 text-center text-xl text-font  text-yellow-300">
+        <p className=" mt-2 text-center text-xl text-font  text-yellow-300">
           Blocks
         </p>
-        <div className="mx-32  grid grid-cols-12 gap-5 mt-5">
+        <div className="mx-32  grid grid-cols-12 gap-5 mt-2">
           {/* 1  */}
 
           <p className="col-span-8 text-lg text-font  text-white">
@@ -90,6 +89,13 @@ const ControlsPage = () => {
             className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
           >
             <span> 1 - 5 Digits</span>
+          </div>
+          <p className="col-span-8 text-lg text-font  text-white">Inventory</p>
+          <div
+            onClick={playButtonSound}
+            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+          >
+            <span> E</span>
           </div>
         </div>
       </div>

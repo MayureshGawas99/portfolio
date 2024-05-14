@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import Panorama from "../components/Panorama";
 import minecraftLogo from "../assets/minecraftLogo.png";
 import AudioPlayer from "../components/AudioPlayer";
-import bgSound from "../assets/sounds/Haggstrom.mp3";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";

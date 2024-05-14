@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { AppContext } from "../context/AppContext";
 

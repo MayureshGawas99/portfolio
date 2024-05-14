@@ -5,19 +5,18 @@ import { Vector3 } from "three";
 import useKeyboard from "../hooks/useKeyboard";
 const JUMP_FORCE = 4;
 const SPEED = 6;
+const GRAVITY = -40;
 
 const Player = () => {
   const actions = useKeyboard();
   const { moveBackward, moveForward, moveLeft, moveRight, jump } = actions;
-  //   console.log(
-  //     "actions",
-  //     Object.entries(actions).filter(([k, v]) => v)
-  //   );
   const { camera } = useThree();
   const [ref, api] = useSphere(() => ({
-    mass: 1,
+    mass: 10,
     type: "Dyanamic",
     position: [0, 1, 0],
+    args: [0.5], // Sphere radius
+    gravity: [0, GRAVITY, 0],
   }));
   const vel = useRef([0, 0, 0]);
 
@@ -33,7 +32,7 @@ const Player = () => {
 
   useFrame(() => {
     camera.position.copy(
-      new Vector3(pos.current[0], pos.current[1], pos.current[2])
+      new Vector3(pos.current[0], pos.current[1] + 1, pos.current[2])
     );
     const direction = new Vector3();
     const frontVector = new Vector3(

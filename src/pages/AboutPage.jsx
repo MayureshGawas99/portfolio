@@ -1,6 +1,5 @@
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
-// import Steve from "../../public/models/steve/Steve";
 import Models from "../components/Models";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
@@ -24,10 +23,6 @@ const AboutPage = () => {
             }}
           >
             <Models />
-            {/* <gridHelper
-          ref={gridRef}
-          args={[50, 50]} // You can adjust the size of the grid as needed
-        /> */}
           </Canvas>
           <p className="position-abs text-font bg-gray-300/30 text-white px-2 py-1 ">
             Narayan Gawas
@@ -97,26 +92,6 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-            {/* <div>
-              <div>
-                <p className="text-font text-gray-300">GeeksforGeeks</p>
-                <a href="" className="ml-5 text-font text-white">
-                  www.gfg.com
-                </a>
-              </div>
-              <div>
-                <p className="text-font text-gray-300">Codechef</p>
-                <a href="" className="ml-5 text-font text-white">
-                  www.gfg.com
-                </a>
-              </div>
-              <div>
-                <p className="text-font text-gray-300">HackerRank</p>
-                <a href="" className="ml-5 text-font text-white">
-                  www.gfg.com
-                </a>
-              </div>
-            </div> */}
             <div>
               <p className="text-font text-white text-center text-xl">
                 Socials
@@ -172,7 +147,6 @@ const AboutPage = () => {
               }}
               type="button"
               className="minecraft-btn w-[10rem] py-1 text-gray-300"
-              // className="w-fit cursor-pointer px-4 bg-stone py-2  text-font text-xl  text-gray-200 border-[3px] border-black hover:border-white"
             >
               See Resume
             </button>
@@ -183,7 +157,6 @@ const AboutPage = () => {
               }}
               type="button"
               className="minecraft-btn w-[10rem] py-1 text-gray-300"
-              // className="w-fit cursor-pointer px-4 bg-stone py-2  text-font text-xl  text-gray-200 border-[3px] border-black hover:border-white"
             >
               Back
             </button>

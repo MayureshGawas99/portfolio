@@ -1,9 +1,10 @@
 import { useBox } from "@react-three/cannon";
-import React from "react";
-import * as textures from "../images/textures";
+import React, { useEffect, useState } from "react";
 import useStore from "../hooks/useStore";
+import { blocks } from "../blocks/blocks";
 
 const Cube = ({ position, texture }) => {
+  const [textures, setTextures] = useState(null);
   const [ref] = useBox(() => ({
     type: "Static",
     position,
@@ -13,14 +14,15 @@ const Cube = ({ position, texture }) => {
     state.removeCube,
   ]);
 
-  const activeTexture = textures[texture + "Texture"];
+  useEffect(() => {
+    setTextures(blocks[texture]);
+  }, []);
+
   return (
     <mesh
       ref={ref}
       onClick={(e) => {
         e.stopPropagation();
-        // const [x, y, z] = Object.values(e.point).map((val) => Math.ceil(val));
-        // addCube(x, y, z);
         const clickedFace = Math.floor(e.faceIndex / 2);
         const { x, y, z } = ref.current.position;
         if (e.altKey) {
@@ -48,7 +50,12 @@ const Cube = ({ position, texture }) => {
       }}
     >
       <boxGeometry attach="geometry" />
-      <meshStandardMaterial map={activeTexture} attach={"material"} />
+      <meshStandardMaterial map={textures?.right} attach={"material-0"} />
+      <meshStandardMaterial map={textures?.left} attach={"material-1"} />
+      <meshStandardMaterial map={textures?.top} attach={"material-2"} />
+      <meshStandardMaterial map={textures?.bottom} attach={"material-3"} />
+      <meshStandardMaterial map={textures?.front} attach={"material-4"} />
+      <meshStandardMaterial map={textures?.back} attach={"material-5"} />
     </mesh>
   );
 };

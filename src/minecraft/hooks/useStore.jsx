@@ -1,29 +1,23 @@
 import { nanoid } from "nanoid";
-import React from "react";
 import { create } from "zustand";
-import { house } from "../worlds/house";
-import dirtPlaceSound from "../../assets/sounds/dirtPlace.mp3";
-import dirtBreakSound from "../../assets/sounds/dirtBreak.mp3";
-import woodPlaceSound from "../../assets/sounds/woodPlace.mp3";
-import woodBreakSound from "../../assets/sounds/woodBreak.mp3";
-import glassPlaceSound from "../../assets/sounds/glassPlace.mp3";
-import glassBreakSound from "../../assets/sounds/glassBreak.mp3";
+import { blocks } from "../blocks/blocks";
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 const useStore = create((set) => ({
   texture: "dirt",
-  cubes: house,
+  cubes: [],
   addCube: (x, y, z) => {
     set((prev) => {
-      if (prev.texture === "dirt" || prev.texture === "grass") {
-        const Sound = new Audio(dirtPlaceSound);
-        Sound.play();
-      } else if (prev.texture === "wood" || prev.texture === "log") {
-        const Sound = new Audio(woodPlaceSound);
-        Sound.play();
-      } else if (prev.texture === "glass") {
-        const Sound = new Audio(glassPlaceSound);
-        Sound.play();
-      }
+      const block = blocks[prev.texture];
+      const ind = getRandomIntInclusive(0, block?.placed?.length - 1);
+      const audio = new Audio(block?.placed[ind]);
+      audio.play();
+
       return {
         cubes: [
           ...prev.cubes,
@@ -50,19 +44,11 @@ const useStore = create((set) => ({
         },
         { removed: [], remaining: [] }
       );
-      if (removed[0].texture === "dirt" || removed[0].texture === "grass") {
-        const Sound = new Audio(dirtBreakSound);
-        Sound.play();
-      } else if (
-        removed[0].texture === "wood" ||
-        removed[0].texture === "log"
-      ) {
-        const Sound = new Audio(woodBreakSound);
-        Sound.play();
-      } else if (removed[0].texture === "glass") {
-        const Sound = new Audio(glassBreakSound);
-        Sound.play();
-      }
+      const block = blocks[removed[0].texture];
+      const ind = getRandomIntInclusive(0, block?.breaks?.length - 1);
+      const audio = new Audio(block?.breaks[ind]);
+      audio.play();
+
       return {
         cubes: prev.cubes.filter((cube) => {
           const [X, Y, Z] = cube.pos;

@@ -90,7 +90,6 @@ const ProjectsPage = () => {
           }}
           type="button"
           className="minecraft-btn w-[10rem] px-2 py-1 text-gray-300"
-          // className="w-fit cursor-pointer px-4 bg-stone py-2  text-font text-xl  text-gray-200 border-[3px] border-black hover:border-white"
         >
           Back
         </button>

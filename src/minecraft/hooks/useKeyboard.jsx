@@ -1,55 +1,91 @@
-import React, { useCallback, useEffect, useState } from "react";
-
-function actionByKey(key) {
-  const keyActionMap = {
-    KeyW: "moveForward",
-    KeyS: "moveBackward",
-    KeyA: "moveLeft",
-    KeyD: "moveRight",
-    Space: "jump",
-    Digit1: "dirt",
-    Digit2: "grass",
-    Digit3: "glass",
-    Digit4: "wood",
-    Digit5: "log",
-  };
-  return keyActionMap[key];
-}
+import { useCallback, useEffect, useState } from "react";
+import { useGameContext } from "../../context/GameContext";
 
 const useKeyboard = () => {
+  const { keyActionMap } = useGameContext();
+  function actionByKey(key) {
+    return keyActionMap[key];
+  }
+
   const [actions, setActions] = useState({
     moveForward: false,
     moveBackward: false,
     moveLeft: false,
     moveRight: false,
-    jump: false,
-    dirt: false,
-    grass: false,
-    glass: false,
-    wood: false,
-    log: false,
+    openInventory: false,
+    Digit1: false,
+    Digit2: false,
+    Digit3: false,
+    Digit4: false,
+    Digit5: false,
+    Digit6: false,
+    Digit7: false,
+    Digit8: false,
+    Digit9: false,
   });
 
   const handleKeyDown = useCallback((e) => {
-    const action = actionByKey(e.code);
-    if (action) {
-      setActions((prev) => {
-        return {
-          ...prev,
-          [action]: true,
-        };
-      });
+    // console.log(e.code);
+    if (e.code === "KeyE") {
+      const action = actionByKey(e.code);
+      if (action) {
+        setActions((prev) => {
+          console.log(prev.openInventory, "openInventory");
+          return {
+            ...prev,
+            [action]: !prev.openInventory,
+          };
+        });
+      }
+    } else {
+      const movement = ["KeyW", "KeyA", "KeyS", "KeyD", "Space"];
+      if (movement.includes(e.code)) {
+        const action = actionByKey(e.code);
+        if (action) {
+          setActions((prev) => {
+            return {
+              ...prev,
+              [action]: true,
+            };
+          });
+        }
+      } else {
+        const action = actionByKey(e.code);
+        if (action) {
+          setActions((prev) => {
+            return {
+              ...prev,
+              [e.code]: true,
+            };
+          });
+        }
+      }
     }
   }, []);
   const handleKeyUp = useCallback((e) => {
-    const action = actionByKey(e.code);
-    if (action) {
-      setActions((prev) => {
-        return {
-          ...prev,
-          [action]: false,
-        };
-      });
+    if (e.code !== "KeyE") {
+      const movement = ["KeyW", "KeyA", "KeyS", "KeyD", "Space"];
+      if (movement.includes(e.code)) {
+        const action = actionByKey(e.code);
+        if (action) {
+          setActions((prev) => {
+            return {
+              ...prev,
+              [action]: false,
+            };
+          });
+        }
+      } else {
+        const action = actionByKey(e.code);
+        if (action) {
+          setActions((prev) => {
+            return {
+              ...prev,
+              [e.code]: false,
+            };
+          });
+        }
+      }
     }
   }, []);
 
