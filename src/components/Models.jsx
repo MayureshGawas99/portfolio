@@ -15,7 +15,7 @@ const Models = () => {
 
   return (
     <>
-      <mesh scale={0.1}>
+      <mesh scale={1}>
         <primitive object={model.scene} />
         <ambientLight intensity={1} />
         <OrbitControls
