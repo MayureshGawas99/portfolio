@@ -25,36 +25,44 @@ const ControlsPage = () => {
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span>W</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span>W</span>
+            </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
             Backward Movement
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span>S</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span>S</span>
+            </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
             Left Movement
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span>A</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span>A</span>
+            </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
             Right Movement
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span>D</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span>D</span>
+            </div>
           </div>
         </div>
         <p className=" mt-2 text-center text-xl text-font  text-yellow-300">
@@ -68,34 +76,42 @@ const ControlsPage = () => {
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span>Click</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span>Click</span>
+            </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
             Destroy Block
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span>Alt + Click</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span>Alt + Click</span>
+            </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
             Change Block
           </p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span> 0 - 9 Digits</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span> 0 - 9 Digits</span>
+            </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">Inventory</p>
           <div
             onClick={playButtonSound}
-            className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
+            className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
-            <span> E</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+              <span> E</span>
+            </div>
           </div>
         </div>
       </div>
@@ -107,9 +123,11 @@ const ControlsPage = () => {
             navigate("/overworld");
           }}
           type="button"
-          className="minecraft-btn w-[10rem] py-1 text-gray-300"
+          className="minecraft-btn w-[10rem]  text-white"
         >
-          Done
+          <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1.5 h-full flex justify-center">
+            <span> Done</span>
+          </div>
         </button>
       </div>
     </div>

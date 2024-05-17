@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { AppContext } from "../context/AppContext";
+import { VscMute, VscUnmute } from "react-icons/vsc";
 
 const AudioPlayer = ({}) => {
   const { isPlaying, setIsPlaying } = useContext(AppContext);
@@ -17,10 +18,15 @@ const AudioPlayer = ({}) => {
 
   return (
     <div
-      onClick={toggleAudio}
-      className="cursor-pointer mx-16  py-2 mt-5 text-font text-xl flex justify-center minecraft-btn text-gray-300"
+      onClick={(e) => {
+        e.stopPropagation();
+        toggleAudio();
+      }}
+      className="absolute top-0 right-0 cursor-pointer mr-2  mt-2 text-font text-xl  minecraft-btn text-white z-20"
     >
-      <span>{isPlaying ? "Pause Music" : "Play Music"}</span>
+      <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+        <span>{isPlaying ? <VscUnmute /> : <VscMute />}</span>
+      </div>
     </div>
   );
 };

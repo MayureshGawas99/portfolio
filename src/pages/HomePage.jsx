@@ -13,12 +13,12 @@ const HomePage = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
-  useEffect(() => {
-    if (!isPlaying) {
-      setModalOpen(true);
-    }
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   if (!isPlaying) {
+  //     setModalOpen(true);
+  //   }
+  //   // eslint-disable-next-line
+  // }, []);
   return (
     <div className="relative">
       <Panorama />
@@ -34,22 +34,37 @@ const HomePage = () => {
               playButtonSound();
               navigate("/projects");
             }}
-            className=" cursor-pointer mx-16  py-2 mt-5 text-font text-xl flex justify-center minecraft-btn text-gray-300"
+            className=" cursor-pointer mx-16   mt-5 text-font text-xl  minecraft-btn text-white"
           >
-            <span>Singleplayer</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+              <span>Singleplayer</span>
+            </div>
           </div>
           <div
             onClick={() => {
               playButtonSound();
               navigate("/about");
             }}
-            className=" cursor-pointer mx-16  py-2 mt-5 text-font text-xl flex justify-center minecraft-btn text-gray-300"
+            className=" cursor-pointer mx-16   mt-5 text-font text-xl  minecraft-btn text-white"
           >
-            <span>About me</span>
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+              <span>About Me</span>
+            </div>
           </div>
-
-          <AudioPlayer />
+          <div
+            onClick={() => {
+              playButtonSound();
+              navigate("/work-experience");
+            }}
+            className=" cursor-pointer mx-16   mt-5 text-font text-xl  minecraft-btn text-white"
+          >
+            <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+              <span>Work Experience</span>
+            </div>
+          </div>
         </div>
+        <AudioPlayer />
+
         <div className=" absolute top-[11rem]">
           <h1 className="title text-3xl text-[#d3c7c5] text-border ">
             PORTFOLIO EDITION

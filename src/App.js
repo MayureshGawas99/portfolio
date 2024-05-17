@@ -12,6 +12,7 @@ import audioPath from "./assets/sounds/Haggstrom.mp3";
 import ControlsPage from "./pages/ControlsPage";
 import NetherLoading from "./pages/NetherLoading";
 import Nether from "./minecraft/Nether";
+import WorkExperiencePage from "./pages/WorkExperiencePage";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -41,6 +42,7 @@ function App() {
         <Route path="/controls" element={<ControlsPage />} />
         <Route path="/nether-loading" element={<NetherLoading />} />
         <Route path="/nether" element={<Nether />} />
+        <Route path="/work-experience" element={<WorkExperiencePage />} />
       </Routes>
     </div>
   );

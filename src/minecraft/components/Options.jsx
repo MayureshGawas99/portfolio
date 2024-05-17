@@ -20,9 +20,11 @@ const Options = () => {
           // navigate(inNether ? "/loading" : "/nether-loading");
         }}
         type="button"
-        className="minecraft-btn w-[10rem] py-1 text-gray-300"
+        className="minecraft-btn w-[10rem] text-white"
       >
-        Controls
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+          <span>Controls</span>
+        </div>
       </button>
       <button
         onClick={(e) => {
@@ -31,9 +33,11 @@ const Options = () => {
           navigate("/");
         }}
         type="button"
-        className="minecraft-btn w-[10rem] px-2 py-1 text-gray-300"
+        className="minecraft-btn w-[10rem] text-white"
       >
-        Quit
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
+          <span>Quit</span>
+        </div>
       </button>
     </div>
   );

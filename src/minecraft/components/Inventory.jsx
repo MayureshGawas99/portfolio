@@ -5,6 +5,7 @@ import useKeyboard from "../hooks/useKeyboard";
 import { Tooltip } from "react-tooltip";
 
 const Inventory = () => {
+  const slots = 36;
   const { keyActionMap, active, setActive, allBlocks } = useGameContext();
   const allCubes = Object.entries(allBlocks);
   const actions = useKeyboard();
@@ -40,14 +41,17 @@ const Inventory = () => {
   return (
     <>
       {actions.openInventory && (
-        <div className="h-screen bg-black/50 absolute top-0 w-screen z-10 flex justify-center items-center">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="h-screen bg-black/50 absolute top-0 w-screen z-10 flex justify-center items-center"
+        >
           <div className=" w-[35rem] h-[20rem] bg-[#c9c7c8] rounded-lg border-2 border-black p-4 ">
             <div className="my-2">
               <p className="text-font text-xl text-gray-900">Blocks</p>
             </div>
             <div className="flex flex-row flex-wrap w-[100%] h-[10rem] overflow-y-auto minecraft-scrollbar">
               {Array.from(
-                { length: Math.max(allCubes.length, 27) },
+                { length: Math.max(allCubes.length, slots) },
                 (_, i) => i
               ).map((ind) => (
                 <div
@@ -86,6 +90,10 @@ const Inventory = () => {
                       : "border-[3px] border-t-[#313131] border-l-[#313131]"
                   }   bg-[#919191] p-1 h-fit `}
                   key={ind}
+                  onClick={() => {
+                    setActive(keyActionMap["Digit" + ind.toString()]);
+                    setTexture(keyActionMap["Digit" + ind.toString()]);
+                  }}
                 >
                   <a
                     data-tooltip-id="my-tooltip"

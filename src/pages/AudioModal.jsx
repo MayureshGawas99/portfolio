@@ -17,12 +17,12 @@ const AudioModal = () => {
   return (
     <>
       {modalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-dirt bg-opacity-50 flex justify-center z-50 items-center">
+        <div className="fixed top-0 left-0  w-full h-full bg-dirt bg-opacity-50 flex justify-center z-50 items-center">
           <div className=" p-6">
             <p className="text-white mb-5 text-font text-xl">
               Enable Chrome to play music for a great experience.
             </p>
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-5">
               <button
                 onClick={() => {
                   playButtonSound();
@@ -30,9 +30,11 @@ const AudioModal = () => {
                   closeModal();
                 }}
                 type="button"
-                className="minecraft-btn px-2 py-1 text-gray-300"
+                className=" cursor-pointer text-font   minecraft-btn text-white w-[7rem]"
               >
-                Allow
+                <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
+                  <span>Allow</span>
+                </div>
               </button>
               <button
                 onClick={() => {
@@ -40,9 +42,11 @@ const AudioModal = () => {
                   closeModal();
                 }}
                 type="button"
-                className="minecraft-btn px-2 py-1 text-gray-300"
+                className=" cursor-pointer  text-font   minecraft-btn text-white w-[7rem]"
               >
-                Block
+                <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
+                  <span>Reject</span>
+                </div>
               </button>
             </div>
           </div>

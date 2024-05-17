@@ -16,6 +16,8 @@ import minecraftFont from "../fonts/MinecraftBold.otf";
 import { Text } from "troika-three-text";
 import { blocks } from "./blocks/blocks";
 import Portal from "./components/Portal";
+import AudioModal from "../pages/AudioModal";
+import AudioPlayer from "../components/AudioPlayer";
 
 extend({ Text });
 const Home = () => {
@@ -102,6 +104,7 @@ const Home = () => {
       <TextureSelector />
       <Inventory />
       <Options />
+      <AudioPlayer />
     </div>
   );
 };

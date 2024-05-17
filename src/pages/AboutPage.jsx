@@ -12,7 +12,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="bg-dirt h-screen">
+    <div className="bg-dirt h-screen bg-fixed">
       <div className=" mx-32 flex flex-row gap-15 h-full ">
         <div className="relative h-[40rem] w-[20rem] cursor-pointer ">
           <Canvas
@@ -28,7 +28,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="flex flex-col gap-5 flex-grow my-10">
-          <div className="black-glassmorphism w-full flex-grow p-6 flex flex-col gap-5">
+          <div className="black-glassmorphism w-full flex-grow p-6 flex flex-col gap-2">
             <div>
               <p className="text-font text-yellow-300 text-xl">
                 Full Stack Web Devloper
@@ -46,7 +46,7 @@ const AboutPage = () => {
               <p className="text-font text-white text-center text-xl">
                 Languages
               </p>
-              <div className="mx-10  grid grid-cols-2 gap-5 mt-5">
+              <div className="mx-10  grid grid-cols-2 gap-4 mt-2">
                 {/* 1  */}
                 <div className="relative bg-btn text-gray-300 ">
                   <div className=" bg-black/50  py-2 flex justify-center">
@@ -95,42 +95,51 @@ const AboutPage = () => {
               <p className="text-font text-white text-center text-xl">
                 Socials
               </p>
-              <div className="mx-10  grid grid-cols-2 gap-5 mt-5">
+              <div className="mx-10  grid grid-cols-2 gap-4 mt-2">
                 {/* 1  */}
                 <a
                   href="https://www.linkedin.com/in/narayan-gawas-5746b0179"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-gray-300  py-2 flex justify-center"
+                  className=" minecraft-btn text-white flex justify-center"
                 >
-                  <span>LinkedIn</span>
+                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
+                    <span>LinkedIn</span>
+                  </div>
                 </a>
                 {/* 2  */}
                 <a
                   href="https://github.com/MayureshGawas99"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-gray-300  py-2 flex justify-center"
+                  className=" minecraft-btn text-white  flex justify-center"
                 >
-                  <span>Github</span>
+                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
+                    <span>Github</span>
+                  </div>
                 </a>
                 {/* 3  */}
                 <a
                   href="https://www.geeksforgeeks.org/user/narayan01000111/"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-gray-300  py-2 flex justify-center"
+                  className=" minecraft-btn text-white   flex justify-center"
                 >
-                  <span>GeeksforGeeks</span>
+                  {" "}
+                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
+                    <span>GeeksforGeeks</span>
+                  </div>
                 </a>
                 {/* 4  */}
                 <a
                   href="https://www.codechef.com/users/spt2021201070"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-gray-300  py-2 flex justify-center"
+                  className=" minecraft-btn text-white  flex justify-center"
                 >
-                  <span>Codechef</span>
+                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
+                    <span>Codechef</span>
+                  </div>
                 </a>
               </div>
             </div>
@@ -145,9 +154,11 @@ const AboutPage = () => {
                 );
               }}
               type="button"
-              className="minecraft-btn w-[10rem] py-1 text-gray-300"
+              className="minecraft-btn w-[10rem]  text-white"
             >
-              See Resume
+              <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1  h-full flex justify-center items-center">
+                <span>See Resume</span>
+              </div>
             </button>
             <button
               onClick={() => {
@@ -155,9 +166,11 @@ const AboutPage = () => {
                 navigate("/");
               }}
               type="button"
-              className="minecraft-btn w-[10rem] py-1 text-gray-300"
+              className="minecraft-btn w-[10rem]  text-white"
             >
-              Back
+              <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1  h-full flex justify-center items-center">
+                <span>Back</span>
+              </div>
             </button>
           </div>
         </div>

@@ -17,6 +17,7 @@ import minecraftFont from "../fonts/MinecraftBold.otf";
 import { Text } from "troika-three-text";
 import { skillBlocks } from "./blocks/skills";
 import Portal from "./components/Portal";
+import AudioPlayer from "../components/AudioPlayer";
 
 extend({ Text });
 
@@ -107,6 +108,7 @@ const Nether = () => {
       <TextureSelector />
       <Options />
       <Inventory />
+      <AudioPlayer />
     </div>
   );
 };
