@@ -17,6 +17,7 @@ const HomePage = () => {
     if (!isPlaying) {
       setModalOpen(true);
     }
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="relative">

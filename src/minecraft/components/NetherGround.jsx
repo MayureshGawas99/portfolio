@@ -1,9 +1,9 @@
 import { usePlane } from "@react-three/cannon";
-import { groundTexture } from "../images/textures";
+import { netherGroundTexture } from "../images/textures";
 import useStore from "../hooks/useStore";
 import { useGameContext } from "../../context/GameContext";
 
-export const Ground = () => {
+export const NetherGround = () => {
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
     position: [0.5, -0.5, 0.5],
@@ -12,7 +12,7 @@ export const Ground = () => {
 
   const [addCube] = useStore((state) => [state.addCube]);
 
-  groundTexture.repeat.set(100, 100);
+  netherGroundTexture.repeat.set(100, 100);
 
   function calculateDistance(vector1, vector2) {
     if (vector1.length !== vector2.length) {
@@ -33,6 +33,7 @@ export const Ground = () => {
       onClick={(e) => {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point);
+        // console.log([x, y, z], pos.current);
         const distance = calculateDistance([x, y, z], pos.current);
         console.log(distance);
         if (distance < 6) {
@@ -42,7 +43,7 @@ export const Ground = () => {
       }}
     >
       <planeGeometry attach="geometry" args={[100, 100]} />
-      <meshStandardMaterial attach="material" map={groundTexture} />
+      <meshStandardMaterial attach="material" map={netherGroundTexture} />
     </mesh>
   );
 };

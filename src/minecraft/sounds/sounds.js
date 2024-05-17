@@ -22,6 +22,7 @@ import mossPlace5 from "../sounds/Moss_break5.ogg";
 import glassPlace1 from "../sounds/Glass_dig1.ogg";
 import glassPlace2 from "../sounds/Glass_dig2.ogg";
 import glassPlace3 from "../sounds/Glass_dig3.ogg";
+import flintAndSteelCLick from "../sounds/Flint_and_steel_click.ogg";
 export {
   dirtPlace1,
   dirtPlace2,
@@ -47,4 +48,5 @@ export {
   glassPlace1,
   glassPlace2,
   glassPlace3,
+  flintAndSteelCLick,
 };

@@ -10,6 +10,8 @@ import { AppContext } from "./context/AppContext";
 import Home from "./minecraft/Home";
 import audioPath from "./assets/sounds/Haggstrom.mp3";
 import ControlsPage from "./pages/ControlsPage";
+import NetherLoading from "./pages/NetherLoading";
+import Nether from "./minecraft/Nether";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -24,6 +26,7 @@ function App() {
     } else {
       audio.pause();
     }
+    // eslint-disable-next-line
   }, [isPlaying]);
 
   return (
@@ -34,8 +37,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/loading" element={<LoadingPage />} />
-        <Route path="/play" element={<Home />} />
+        <Route path="/overworld" element={<Home />} />
         <Route path="/controls" element={<ControlsPage />} />
+        <Route path="/nether-loading" element={<NetherLoading />} />
+        <Route path="/nether" element={<Nether />} />
       </Routes>
     </div>
   );

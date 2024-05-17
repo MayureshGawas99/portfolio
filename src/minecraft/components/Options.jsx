@@ -8,6 +8,8 @@ const Options = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
+  // const { inNether } = useGameContext();
+
   return (
     <div className=" absolute bottom-10 left-5 flex flex-col gap-2 z-20">
       <button
@@ -15,6 +17,7 @@ const Options = () => {
           e.stopPropagation();
           playButtonSound();
           navigate("/controls");
+          // navigate(inNether ? "/loading" : "/nether-loading");
         }}
         type="button"
         className="minecraft-btn w-[10rem] py-1 text-gray-300"

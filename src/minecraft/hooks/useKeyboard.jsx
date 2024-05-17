@@ -22,6 +22,7 @@ const useKeyboard = () => {
     Digit7: false,
     Digit8: false,
     Digit9: false,
+    Digit0: false,
   });
 
   const handleKeyDown = useCallback((e) => {
@@ -61,6 +62,7 @@ const useKeyboard = () => {
         }
       }
     }
+    // eslint-disable-next-line
   }, []);
   const handleKeyUp = useCallback((e) => {
     if (e.code !== "KeyE") {
@@ -87,6 +89,7 @@ const useKeyboard = () => {
         }
       }
     }
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -97,6 +100,7 @@ const useKeyboard = () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("keyup", handleKeyUp);
     };
+    // eslint-disable-next-line
   }, [handleKeyUp, handleKeyDown]);
 
   return actions;

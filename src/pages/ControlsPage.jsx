@@ -88,7 +88,7 @@ const ControlsPage = () => {
             onClick={playButtonSound}
             className=" col-span-4 minecraft-btn text-gray-300  py-2 flex justify-center"
           >
-            <span> 1 - 5 Digits</span>
+            <span> 0 - 9 Digits</span>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">Inventory</p>
           <div
@@ -103,7 +103,8 @@ const ControlsPage = () => {
         <button
           onClick={() => {
             playButtonSound();
-            navigate("/play");
+
+            navigate("/overworld");
           }}
           type="button"
           className="minecraft-btn w-[10rem] py-1 text-gray-300"

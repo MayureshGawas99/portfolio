@@ -13,8 +13,8 @@ import {
   moss,
   glassImg,
   obsidianImg,
+  netherrack,
 } from "./images";
-import ground from "./grass_top.png";
 
 const dirtTexture = new TextureLoader().load(dirtImg);
 dirtTexture.magFilter = NearestFilter;
@@ -52,10 +52,15 @@ glassTexture.magFilter = NearestFilter;
 const obsidianTexture = new TextureLoader().load(obsidianImg);
 obsidianTexture.magFilter = NearestFilter;
 
-const groundTexture = new TextureLoader().load(ground);
+const groundTexture = new TextureLoader().load(grassTop);
 groundTexture.magFilter = NearestFilter;
 groundTexture.wrapS = RepeatWrapping;
 groundTexture.wrapT = RepeatWrapping;
+
+const netherGroundTexture = new TextureLoader().load(netherrack);
+netherGroundTexture.magFilter = NearestFilter;
+netherGroundTexture.wrapS = RepeatWrapping;
+netherGroundTexture.wrapT = RepeatWrapping;
 
 export {
   dirtTexture,
@@ -71,4 +76,5 @@ export {
   glassTexture,
   obsidianTexture,
   groundTexture,
+  netherGroundTexture,
 };

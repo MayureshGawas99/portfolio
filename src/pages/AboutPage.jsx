@@ -1,11 +1,10 @@
 import { Canvas } from "@react-three/fiber";
-import React, { useRef } from "react";
+import React from "react";
 import Models from "../components/Models";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
 
 const AboutPage = () => {
-  const gridRef = useRef();
   const navigate = useNavigate();
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);

@@ -15,7 +15,7 @@ const ProjectsPage = () => {
     <div className="bg-dirt h-screen py-6 flex flex-col gap-5">
       <div className=" ">
         <p className="  text-center text-xl text-font  text-white">
-          Select World
+          Select Project
         </p>
       </div>
       <div className="flex-grow bg-black/50">

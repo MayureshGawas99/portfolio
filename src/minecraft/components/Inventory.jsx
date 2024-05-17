@@ -1,12 +1,12 @@
 import React from "react";
-import { blocks } from "../blocks/blocks";
 import { useGameContext } from "../../context/GameContext";
 import useStore from "../hooks/useStore";
 import useKeyboard from "../hooks/useKeyboard";
+import { Tooltip } from "react-tooltip";
 
 const Inventory = () => {
-  const allBlocks = Object.entries(blocks);
-  const { keyActionMap, active, setActive } = useGameContext();
+  const { keyActionMap, active, setActive, allBlocks } = useGameContext();
+  const allCubes = Object.entries(allBlocks);
   const actions = useKeyboard();
   const [setTexture] = useStore((state) => [state.setTexture]);
   function findAttributeWithValue(obj, valueToCheck) {
@@ -47,7 +47,7 @@ const Inventory = () => {
             </div>
             <div className="flex flex-row flex-wrap w-[100%] h-[10rem] overflow-y-auto minecraft-scrollbar">
               {Array.from(
-                { length: Math.max(allBlocks.length, 27) },
+                { length: Math.max(allCubes.length, 27) },
                 (_, i) => i
               ).map((ind) => (
                 <div
@@ -55,15 +55,22 @@ const Inventory = () => {
                   key={ind}
                   onClick={(e) => {
                     e.stopPropagation();
-                    addToInventory(allBlocks[ind]);
+                    addToInventory(allCubes[ind]);
                   }}
                 >
-                  {ind < allBlocks.length ? (
-                    <img
-                      src={allBlocks[ind][1].image}
-                      className="w-10 h-10"
-                      alt=""
-                    />
+                  {ind < allCubes.length ? (
+                    <a
+                      data-tooltip-id="my-tooltip"
+                      data-tooltip-content={allCubes[ind][0].toUpperCase()}
+                      className="text-font"
+                      href="#"
+                    >
+                      <img
+                        src={allCubes[ind][1].image}
+                        className="w-10 h-10"
+                        alt=""
+                      />
+                    </a>
                   ) : (
                     <div className="w-10 h-10"></div>
                   )}
@@ -80,15 +87,26 @@ const Inventory = () => {
                   }   bg-[#919191] p-1 h-fit `}
                   key={ind}
                 >
-                  <img
-                    src={blocks[keyActionMap["Digit" + ind.toString()]]?.image}
-                    className="w-10 h-10"
-                    alt=""
-                  />
+                  <a
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content={keyActionMap[
+                      "Digit" + ind.toString()
+                    ].toUpperCase()}
+                    className="text-font"
+                  >
+                    <img
+                      src={
+                        allBlocks[keyActionMap["Digit" + ind.toString()]]?.image
+                      }
+                      className="w-10 h-10"
+                      alt=""
+                    />
+                  </a>
                 </div>
               ))}
             </div>
           </div>
+          <Tooltip id="my-tooltip" noArrow={true} className="custom-tooltip" />
         </div>
       )}
     </>

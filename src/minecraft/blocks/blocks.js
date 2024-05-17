@@ -62,6 +62,7 @@ export const blocks = {
     front: dirtTexture,
     back: dirtTexture,
     image: dirtImg,
+    rotational: false,
   },
   grass_block: {
     placed: [grassPlace1, grassPlace2, grassPlace3, grassPlace4],
@@ -73,6 +74,7 @@ export const blocks = {
     front: grassSideTexture,
     back: grassSideTexture,
     image: grassSide,
+    rotational: false,
   },
   stone: {
     placed: [stonePlace1, stonePlace2, stonePlace3, stonePlace4],
@@ -84,6 +86,7 @@ export const blocks = {
     front: stoneTexture,
     back: stoneTexture,
     image: stone,
+    rotational: false,
   },
   oak_plank: {
     placed: [woodPlace1, woodPlace2, woodPlace3, woodPlace4],
@@ -95,6 +98,7 @@ export const blocks = {
     front: oakPlanksTexture,
     back: oakPlanksTexture,
     image: oakPlanks,
+    rotational: false,
   },
   oak_log: {
     placed: [woodPlace1, woodPlace2, woodPlace3, woodPlace4],
@@ -106,6 +110,7 @@ export const blocks = {
     front: oakLogTexture,
     back: oakLogTexture,
     image: oakLog,
+    rotational: true,
   },
   cobblestone: {
     placed: [stonePlace1, stonePlace2, stonePlace3, stonePlace4],
@@ -117,6 +122,7 @@ export const blocks = {
     front: cobbleStoneTexture,
     back: cobbleStoneTexture,
     image: cobbleStone,
+    rotational: false,
   },
   mossy_cobblestone: {
     placed: [stonePlace1, stonePlace2, stonePlace3, stonePlace4],
@@ -128,6 +134,7 @@ export const blocks = {
     front: mossyCobblestoneTexture,
     back: mossyCobblestoneTexture,
     image: mossyCobblestone,
+    rotational: false,
   },
   moss: {
     placed: [mossPlace1, mossPlace2, mossPlace3, mossPlace4, mossPlace5],
@@ -139,6 +146,7 @@ export const blocks = {
     front: mossTexture,
     back: mossTexture,
     image: moss,
+    rotational: false,
   },
   glass: {
     placed: [stonePlace1, stonePlace2, stonePlace3, stonePlace4],
@@ -150,6 +158,7 @@ export const blocks = {
     front: glassTexture,
     back: glassTexture,
     image: glassImg,
+    rotational: false,
   },
   obsidian: {
     placed: [stonePlace1, stonePlace2, stonePlace3, stonePlace4],
@@ -161,5 +170,6 @@ export const blocks = {
     front: obsidianTexture,
     back: obsidianTexture,
     image: obsidianImg,
+    rotational: false,
   },
 };
