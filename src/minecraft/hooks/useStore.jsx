@@ -15,17 +15,18 @@ const useStore = create((set) => {
   return {
     texture: "dirt",
     nether: false,
-    cubes: world,
+    cubes: [],
     setCubes: (nether) => {
       set((prev) => {
         return {
           cubes: nether ? netherWorld : world,
+          // cubes: [],
           nether,
           texture: nether ? "react" : "dirt",
         };
       });
     },
-    addCube: (x, y, z) => {
+    addCube: (x, y, z, rotation) => {
       set((prev) => {
         const block = prev.nether
           ? skillBlocks[prev.texture]
@@ -41,6 +42,7 @@ const useStore = create((set) => {
                 key: nanoid(),
                 pos: [x, y, z],
                 texture: prev.texture,
+                rotation: rotation,
               },
             ],
           };

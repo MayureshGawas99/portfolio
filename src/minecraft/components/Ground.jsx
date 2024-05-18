@@ -37,7 +37,7 @@ export const Ground = () => {
         console.log(distance);
         if (distance < 6) {
           const [nx, ny, nz] = [Math.round(x), Math.ceil(y), Math.round(z)];
-          addCube(nx, ny, nz);
+          addCube(nx, ny, nz, [0, 0, 0]);
         }
       }}
     >

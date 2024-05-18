@@ -64,12 +64,10 @@ const WorkExperiencePage = () => {
                   <li>1. Design and Develop Web Apps</li>{" "}
                   <li>2. Optimize app wrt speed and scalability</li>{" "}
                   <li>3. Participate in Code Reviews</li>
+                  <li>4. Communicate the Progress with team</li>
+                  <li>5. Approach Problems with brainstorming solutions</li>
                   <li>
-                    4. Communicate the Progress with team Approach Problems with
-                  </li>
-                  <li>
-                    5. brainstorming solutions Contribute to development of
-                    technical documentation
+                    6. Contribute to development of technical documentation
                   </li>
                 </ul>
               </div>
