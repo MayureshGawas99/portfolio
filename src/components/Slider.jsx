@@ -30,7 +30,7 @@ const Slider = ({ label, defaultValue }) => {
       <div className="h-full w-full flex items-center justify-center">
         <p
           htmlFor="default-range"
-          className="   text-sm font-medium z-0 text-white text-center "
+          className="   text-sm font-medium z-10 text-white text-center "
         >
           {label}: {value}
         </p>
