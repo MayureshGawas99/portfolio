@@ -18,8 +18,8 @@ const WorkExperiencePage = () => {
           Work Experience
         </p>
       </div>
-      <div className="mx-6 flex-grow grid grid-cols-12 gap-5">
-        <div className=" col-span-3 bg-black/50">
+      <div className="mx-6 flex flex-col flex-grow md:grid md:grid-cols-12 gap-5 overflow-auto">
+        <div className=" md:col-span-5 lg:col-span-3 bg-black/50">
           <div
             onClick={() => setTab(0)}
             className={`${
@@ -45,7 +45,7 @@ const WorkExperiencePage = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-9 bg-black/50 p-2">
+        <div className="md:col-span-7 lg:col-span-9 bg-black/50 p-2">
           {tab === 0 && (
             <div>
               <img src={DODAS} alt="" className="w-[6rem]" />

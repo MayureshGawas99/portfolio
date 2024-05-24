@@ -18,12 +18,12 @@ const ProjectsPage = () => {
           Select Project
         </p>
       </div>
-      <div className="flex-grow bg-black/50">
+      <div className="flex-grow bg-black/50 p-1 overflow-x-auto">
         <div
           onClick={() => navigate("/loading")}
-          className="mx-auto max-w-3xl hover:border  my-5 flex flex-row gap-2 cursor-pointer"
+          className=" hidden mx-auto max-w-3xl hover:border  my-5 md:flex flex-row gap-2 cursor-pointer"
         >
-          <img src={icon} alt="" className="w-[6rem]" />
+          <img src={icon} alt="" className="w-[7rem] h-[7rem]" />
           <div>
             <p className="text-font text-white mb-1 text-xl">MineCraft World</p>
             <p className="text-font text-gray-500 text-base">
@@ -37,17 +37,23 @@ const ProjectsPage = () => {
         <a
           href="https://mg-ecomapp.netlify.app/"
           target="blank"
-          className="mx-auto max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
+          className="md:mx-auto mx-6 max-w-3xl hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
         >
-          <img src={icon2} alt="" className="w-[6rem]" />
+          <img
+            src={icon2}
+            alt=""
+            className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+          />
           <div>
-            <p className="text-font text-white mb-1 text-xl">Ecom Website</p>
-            <p className="text-font text-gray-500 text-base">
+            <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+              Ecom Website
+            </p>
+            <p className="text-font text-gray-500 md:text-base text-xs text-justify">
               The e-commerce website project aims to create an online platform
-              that enables users to browse, search, and purchase products from
+              that enables users to browse, search, & purchase products from
               various categories.
             </p>
-            <p className="text-font text-yellow-300 text-base">
+            <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
               MongoDB, Express, React, Node.js
             </p>
           </div>
@@ -55,17 +61,23 @@ const ProjectsPage = () => {
         <a
           href="https://project-sahyog.netlify.app/"
           target="blank"
-          className="mx-auto max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
+          className="md:mx-auto mx-6 max-w-3xl hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
         >
-          <img src={icon3} alt="" className="w-[6rem]" />
+          <img
+            src={icon3}
+            alt=""
+            className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+          />
           <div>
-            <p className="text-font text-white mb-1 text-xl">Project Sahyog</p>
-            <p className="text-font text-gray-500 text-base">
-              Project Sahyog is an online platform for sharing and discovering
-              student projects in Indian universities/colleges to promote
-              innovation and collaboration.
+            <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+              Project Sahyog
             </p>
-            <p className="text-font text-yellow-300 text-base">
+            <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+              Project Sahyog is an online platform for sharing & discovering
+              student projects in Indian universities/colleges to promote
+              innovation & collaboration.
+            </p>
+            <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
               MongoDB, Express, React, Node.js, Bootstrap
             </p>
           </div>
@@ -78,7 +90,7 @@ const ProjectsPage = () => {
             navigate("/loading");
           }}
           type="button"
-          className="minecraft-btn w-[10rem]  text-white"
+          className="minecraft-btn w-[10rem] text-white hidden md:block"
         >
           <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
             <span>Play World</span>

@@ -5,16 +5,16 @@ import { AppContext } from "../context/AppContext";
 
 const LoadingPage = () => {
   const navigate = useNavigate();
-  const { setIsPlaying } = useContext(AppContext);
+  // const { setIsPlaying } = useContext(AppContext);
   const handleVideoEnd = () => {
     // Navigate to the desired route ("/" in this case)
     navigate("/overworld");
   };
 
-  useEffect(() => {
-    setIsPlaying(false);
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   setIsPlaying(false);
+  //   // eslint-disable-next-line
+  // }, []);
 
   return (
     <div className="bg-dirt h-screen flex justify-center items-center">

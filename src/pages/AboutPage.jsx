@@ -1,20 +1,22 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Models from "../components/Models";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
+import Slider from "../components/Slider";
 
 const AboutPage = () => {
   const navigate = useNavigate();
+  const python = 100;
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
 
   return (
-    <div className="bg-dirt h-screen bg-fixed">
-      <div className=" mx-32 flex flex-row gap-15 h-full ">
-        <div className="relative h-[40rem] w-[20rem] cursor-pointer ">
+    <div className="bg-dirt h-screen ">
+      <div className=" mx-6 md:mx-2 lg:mx-32 flex flex-row gap-15 h-full ">
+        <div className="relative h-[40rem] w-[20rem] cursor-pointer hidden md:block ">
           <Canvas
             camera={{
               position: [8, 5, 0],
@@ -27,75 +29,45 @@ const AboutPage = () => {
             Narayan Gawas
           </p>
         </div>
-        <div className="flex flex-col gap-5 flex-grow my-10">
+        <div className="flex flex-col gap-5 flex-grow my-10 overflow-x-auto">
           <div className="black-glassmorphism w-full flex-grow p-6 flex flex-col gap-2">
             <div>
-              <p className="text-font text-yellow-300 text-xl">
+              <p className="text-font text-yellow-300 text-base md:text-xl">
                 Full Stack Web Devloper
               </p>
-              <p className="text-font text-white text-justify">
+              <p className="text-font text-white text-justify text-sm md:text-base">
                 Hey there! I'm Narayan Gawas, a full-stack web developer with a
-                passion for building digital worlds inspired by the creativity
-                of Minecraft. From crafting pixel-perfect designs to coding
+                passion for building digital worlds inspired by creativity of
+                Minecraft. From crafting pixel-perfect designs to coding
                 redstone-like functionality, I thrive on turning ideas into
                 immersive web experiences. Let's embark on a digital adventure
                 together!
               </p>
             </div>
             <div>
-              <p className="text-font text-white text-center text-xl">
+              <p className="text-font text-yellow-300 text-center text-base md:text-xl">
                 Languages
               </p>
-              <div className="mx-10  grid grid-cols-2 gap-4 mt-2">
+              <div className="mx-0 md:mx-10  grid grid-cols-2 gap-4 mt-2">
                 {/* 1  */}
-                <div className="relative bg-btn text-gray-300 ">
-                  <div className=" bg-black/50  py-2 flex justify-center">
-                    <span>Python: 100</span>
-                  </div>
-                  <div className="absolute top-0 right-0 w-[1.5rem] h-full border-2 border-black bg-btn"></div>
-                </div>
+                <Slider label={"Python"} defaultValue={100} />
                 {/* 2  */}
-                <div className="relative bg-btn text-gray-300 ">
-                  <div className=" bg-black/50  py-2 flex justify-center">
-                    <span>Java: 80</span>
-                  </div>
-                  <div className="absolute top-0 right-[20%] w-[1.5rem] h-full border-2 border-black bg-btn"></div>
-                </div>
+                <Slider label={"Java"} defaultValue={80} />
                 {/* 3  */}
-                <div className="relative bg-btn text-gray-300 ">
-                  <div className=" bg-black/50  py-2 flex justify-center">
-                    <span>Javascript: 90</span>
-                  </div>
-                  <div className="absolute top-0 right-[10%] w-[1.5rem] h-full border-2 border-black bg-btn"></div>
-                </div>
+                <Slider label={"C"} defaultValue={65} />
                 {/* 4  */}
-                <div className="relative bg-btn text-gray-300 ">
-                  <div className=" bg-black/50  py-2 flex justify-center">
-                    <span>C: 40</span>
-                  </div>
-                  <div className="absolute top-0 right-[60%] w-[1.5rem] h-full border-2 border-black bg-btn"></div>
-                </div>
+                <Slider label={"Javascript"} defaultValue={90} />
                 {/* 5 */}
-                <div className="relative bg-btn text-gray-300 ">
-                  <div className=" bg-black/50  py-2 flex justify-center">
-                    <span>HTML: 100</span>
-                  </div>
-                  <div className="absolute top-0 right-0 w-[1.5rem] h-full border-2 border-black bg-btn"></div>
-                </div>
+                <Slider label={"HTML"} defaultValue={100} />
                 {/* 6 */}
-                <div className="relative bg-btn text-gray-300 ">
-                  <div className=" bg-black/50  py-2 flex justify-center">
-                    <span>CSS: 90</span>
-                  </div>
-                  <div className="absolute top-0 right-[10%] w-[1.5rem] h-full border-2 border-black bg-btn"></div>
-                </div>
+                <Slider label={"CSS"} defaultValue={90} />
               </div>
             </div>
             <div>
-              <p className="text-font text-white text-center text-xl">
+              <p className="text-font text-yellow-300 text-center text-base md:text-xl">
                 Socials
               </p>
-              <div className="mx-10  grid grid-cols-2 gap-4 mt-2">
+              <div className="mx-0 md:mx-10  grid grid-cols-2 gap-4 mt-2">
                 {/* 1  */}
                 <a
                   href="https://www.linkedin.com/in/narayan-gawas-5746b0179"
@@ -144,7 +116,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-end flex-row gap-2 ">
+          <div className="flex justify-center flex-row gap-2 ">
             <button
               onClick={() => {
                 playButtonSound();
