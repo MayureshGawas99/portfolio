@@ -14,6 +14,12 @@ import {
   glassImg,
   obsidianImg,
   netherrack,
+  stoneBricks,
+  mossyStoneBricks,
+  crackedStoneBricks,
+  chiseledStoneBricks,
+  sand,
+  clay,
 } from "./images";
 
 const dirtTexture = new TextureLoader().load(dirtImg);
@@ -52,6 +58,26 @@ glassTexture.magFilter = NearestFilter;
 const obsidianTexture = new TextureLoader().load(obsidianImg);
 obsidianTexture.magFilter = NearestFilter;
 
+const stoneBrickTexture = new TextureLoader().load(stoneBricks);
+stoneBrickTexture.magFilter = NearestFilter;
+
+const mossyStoneBricksTexture = new TextureLoader().load(mossyStoneBricks);
+mossyStoneBricksTexture.magFilter = NearestFilter;
+
+const crackedStoneBricksTexture = new TextureLoader().load(crackedStoneBricks);
+crackedStoneBricksTexture.magFilter = NearestFilter;
+
+const chiseledStoneBricksTexture = new TextureLoader().load(
+  chiseledStoneBricks
+);
+chiseledStoneBricksTexture.magFilter = NearestFilter;
+
+const sandTexture = new TextureLoader().load(sand);
+sandTexture.magFilter = NearestFilter;
+
+const clayTexture = new TextureLoader().load(clay);
+clayTexture.magFilter = NearestFilter;
+
 const groundTexture = new TextureLoader().load(grassTop);
 groundTexture.magFilter = NearestFilter;
 groundTexture.wrapS = RepeatWrapping;
@@ -77,4 +103,10 @@ export {
   obsidianTexture,
   groundTexture,
   netherGroundTexture,
+  stoneBrickTexture,
+  mossyStoneBricksTexture,
+  crackedStoneBricksTexture,
+  chiseledStoneBricksTexture,
+  sandTexture,
+  clayTexture,
 };

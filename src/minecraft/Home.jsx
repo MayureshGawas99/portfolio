@@ -8,7 +8,6 @@ import FPV from "./components/FPV";
 import { FaPlus } from "react-icons/fa";
 import Cubes from "./components/Cubes";
 import TextureSelector from "./components/TextureSelector";
-import Options from "./components/Options";
 import Inventory from "./components/Inventory";
 import useStore from "./hooks/useStore";
 import { useGameContext } from "../context/GameContext";
@@ -16,13 +15,14 @@ import minecraftFont from "../fonts/MinecraftBold.otf";
 import { Text } from "troika-three-text";
 import { blocks } from "./blocks/blocks";
 import Portal from "./components/Portal";
-import AudioModal from "../pages/AudioModal";
 import AudioPlayer from "../components/AudioPlayer";
+import GameMenu from "./components/GameMenu";
+import { world } from "./worlds/world";
+import { netherWorld } from "./worlds/nether";
 
 extend({ Text });
 const Home = () => {
   const [rotation] = useState([0, -Math.PI / 2, 0]);
-
   const [setCubes] = useStore((state) => [state.setCubes]);
   const { setInNether, setAllBlocks, setKeyActionMap, setActive, isPortalLit } =
     useGameContext();
@@ -31,7 +31,7 @@ const Home = () => {
     const pathname = window.location.pathname;
     if (pathname === "/overworld") {
       // Set inNether to true
-      setCubes(false);
+      setCubes(false, world);
       setInNether(false);
       setActive("dirt");
       setAllBlocks(blocks);
@@ -41,6 +41,7 @@ const Home = () => {
         KeyA: "moveLeft",
         KeyD: "moveRight",
         KeyE: "openInventory",
+        Escape: "openMenu",
         Space: "jump",
         Digit1: "dirt",
         Digit2: "grass_block",
@@ -103,7 +104,8 @@ const Home = () => {
       </div>
       <TextureSelector />
       <Inventory />
-      <Options />
+      {/* <Options /> */}
+      <GameMenu />
       <AudioPlayer />
     </div>
   );

@@ -7,7 +7,6 @@ import FPV from "./components/FPV";
 import { FaPlus } from "react-icons/fa";
 import Cubes from "./components/Cubes";
 import TextureSelector from "./components/TextureSelector";
-import Options from "./components/Options";
 import Inventory from "./components/Inventory";
 import netherSky from "../assets/netherBG.hdr";
 import { NetherGround } from "./components/NetherGround";
@@ -18,6 +17,8 @@ import { Text } from "troika-three-text";
 import { skillBlocks } from "./blocks/skills";
 import Portal from "./components/Portal";
 import AudioPlayer from "../components/AudioPlayer";
+import GameMenu from "./components/GameMenu";
+import { netherWorld } from "./worlds/nether";
 
 extend({ Text });
 
@@ -32,7 +33,7 @@ const Nether = () => {
     const pathname = window.location.pathname;
     if (pathname === "/nether") {
       // Set inNether to true
-      setCubes(true);
+      setCubes(true, netherWorld);
       setInNether(true);
       setActive("react");
       setAllBlocks(skillBlocks);
@@ -42,6 +43,7 @@ const Nether = () => {
         KeyA: "moveLeft",
         KeyD: "moveRight",
         KeyE: "openInventory",
+        Escape: "openMenu",
         Space: "jump",
         Digit1: "react",
         Digit2: "next_js",
@@ -106,7 +108,8 @@ const Nether = () => {
         <FaPlus />
       </div>
       <TextureSelector />
-      <Options />
+      {/* <Options /> */}
+      <GameMenu />
       <Inventory />
       <AudioPlayer />
     </div>

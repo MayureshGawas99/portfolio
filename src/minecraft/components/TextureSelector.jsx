@@ -9,6 +9,7 @@ const TextureSelector = () => {
   const { keyActionMap, active, setActive, allBlocks, inNether } =
     useGameContext();
   const actions = useKeyboard();
+  // console.log(actions.openInventory);
 
   const [activeTexture, setTexture] = useStore((state) => [
     state.texture,
@@ -110,7 +111,7 @@ const TextureSelector = () => {
                     />
                     <p
                       className={`text-font text-white absolute bottom-0 right-0 ${
-                        inNether ? "text-yellow-700" : "text-white"
+                        inNether ? "text-yellow-300" : "text-white"
                       }`}
                     >
                       {ind}
@@ -130,7 +131,7 @@ const TextureSelector = () => {
                 <img src={flintAndSteel} alt="" className="w-10 " />
                 <p
                   className={`text-font text-white absolute bottom-0 right-0 ${
-                    inNether ? "text-yellow-700" : "text-white"
+                    inNether ? "text-yellow-300" : "text-white"
                   }`}
                 >
                   0

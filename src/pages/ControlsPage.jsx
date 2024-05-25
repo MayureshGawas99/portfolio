@@ -1,9 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
+import { useGameContext } from "../context/GameContext";
 
 const ControlsPage = () => {
   const navigate = useNavigate();
+  const { inNether } = useGameContext();
+
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);
     audio.play();
@@ -79,7 +82,7 @@ const ControlsPage = () => {
             className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
             <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
-              <span>Click</span>
+              <span>Right Click</span>
             </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
@@ -90,7 +93,7 @@ const ControlsPage = () => {
             className=" col-span-4 minecraft-btn text-white  flex justify-center"
           >
             <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 h-full flex justify-center">
-              <span>Alt + Click</span>
+              <span>Left Click</span>
             </div>
           </div>
           <p className="col-span-8 text-lg text-font  text-white">
@@ -120,7 +123,7 @@ const ControlsPage = () => {
           onClick={() => {
             playButtonSound();
 
-            navigate("/overworld");
+            navigate(inNether ? "/nether" : "/overworld");
           }}
           type="button"
           className="minecraft-btn w-[10rem]  text-white"

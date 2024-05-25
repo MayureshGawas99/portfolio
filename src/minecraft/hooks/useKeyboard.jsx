@@ -13,6 +13,7 @@ const useKeyboard = () => {
     moveLeft: false,
     moveRight: false,
     openInventory: false,
+    openMenu: false,
     Digit1: false,
     Digit2: false,
     Digit3: false,
@@ -24,7 +25,6 @@ const useKeyboard = () => {
     Digit9: false,
     Digit0: false,
   });
-
   const handleKeyDown = useCallback((e) => {
     // console.log(e.code);
     if (e.code === "KeyE") {
@@ -35,6 +35,16 @@ const useKeyboard = () => {
           return {
             ...prev,
             [action]: !prev.openInventory,
+          };
+        });
+      }
+    } else if (e.code === "Escape") {
+      const action = actionByKey(e.code);
+      if (action) {
+        setActions((prev) => {
+          return {
+            ...prev,
+            [action]: !prev.openMenu,
           };
         });
       }
@@ -65,7 +75,7 @@ const useKeyboard = () => {
     // eslint-disable-next-line
   }, []);
   const handleKeyUp = useCallback((e) => {
-    if (e.code !== "KeyE") {
+    if (e.code !== "KeyE" || e.code !== "Escape") {
       const movement = ["KeyW", "KeyA", "KeyS", "KeyD", "Space"];
       if (movement.includes(e.code)) {
         const action = actionByKey(e.code);

@@ -16,10 +16,10 @@ const useStore = create((set) => {
     texture: "dirt",
     nether: false,
     cubes: [],
-    setCubes: (nether) => {
+    setCubes: (nether, cubes) => {
       set((prev) => {
         return {
-          cubes: nether ? netherWorld : world,
+          cubes: cubes || [],
           // cubes: [],
           nether,
           texture: nether ? "react" : "dirt",
@@ -86,8 +86,6 @@ const useStore = create((set) => {
         texture,
       }));
     },
-    saveWorld: () => {},
-    resetWorld: () => {},
   };
 });
 

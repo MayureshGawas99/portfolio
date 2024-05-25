@@ -9,6 +9,7 @@ const GameContext = createContext();
 const GameContextProvider = ({ children }) => {
   const [inNether, setInNether] = useState(false);
   const [isPortalLit, setIsPortalLit] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [active, setActive] = useState(inNether ? "react" : "dirt");
   const [allBlocks, setAllBlocks] = useState(inNether ? blocks : skillBlocks);
   const pos = useRef([0, 0, 0]);
@@ -20,6 +21,7 @@ const GameContextProvider = ({ children }) => {
           KeyA: "moveLeft",
           KeyD: "moveRight",
           KeyE: "openInventory",
+          Escape: "openMenu",
           Space: "jump",
           Digit1: "react",
           Digit2: "next_js",
@@ -38,6 +40,7 @@ const GameContextProvider = ({ children }) => {
           KeyA: "moveLeft",
           KeyD: "moveRight",
           KeyE: "openInventory",
+          Escape: "openMenu",
           Space: "jump",
           Digit1: "dirt",
           Digit2: "grass_block",
@@ -66,6 +69,8 @@ const GameContextProvider = ({ children }) => {
         setAllBlocks,
         isPortalLit,
         setIsPortalLit,
+        isMenuOpen,
+        setIsMenuOpen,
       }}
     >
       {children}

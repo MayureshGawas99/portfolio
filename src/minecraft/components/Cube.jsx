@@ -4,9 +4,23 @@ import useStore from "../hooks/useStore";
 import { useGameContext } from "../../context/GameContext";
 import { flintAndSteelCLick } from "../sounds/sounds";
 
-const Cube = ({ position, texture, rotation }) => {
+const Cube = ({ position, texture, rotation, portal }) => {
   const [textures, setTextures] = useState([]);
   const [rotational, setRotational] = useState(false);
+
+  const coordinatesExist = (coords, array) => {
+    for (const obj of array) {
+      // Check if the pos property of the object matches the coordinates
+      if (
+        obj.pos[0] === coords[0] &&
+        obj.pos[1] === coords[1] &&
+        obj.pos[2] === coords[2]
+      ) {
+        return true; // Coordinates exist in the array
+      }
+    }
+    return false; // Coordinates do not exist in the array
+  };
 
   const { pos, active, inNether, setInNether, allBlocks, setIsPortalLit } =
     useGameContext();
@@ -22,6 +36,7 @@ const Cube = ({ position, texture, rotation }) => {
   ]);
 
   useEffect(() => {
+    console.log(texture);
     const { right, left, top, bottom, front, back, rotational } =
       allBlocks[texture];
     setTextures([right, left, top, bottom, front, back]);
@@ -63,16 +78,20 @@ const Cube = ({ position, texture, rotation }) => {
             currentCube.texture === "obsidian" &&
             active === "flint_and_steel"
           ) {
-            setInNether(!inNether);
-            setIsPortalLit(true);
             const audio = new Audio(flintAndSteelCLick);
             audio.play();
-            setInterval(() => {
-              window.open(inNether ? "/loading" : "/nether-loading", "_self");
-            }, 1500);
+            if (coordinatesExist([x, y, z], portal)) {
+              setInNether(!inNether);
+              setIsPortalLit(true);
+              setInterval(() => {
+                window.open(inNether ? "/loading" : "/nether-loading", "_self");
+              }, 1500);
+            }
           } else {
-            if (e.altKey) {
-              removeCube(x, y, z);
+            if (e.button === 0) {
+              if (!coordinatesExist([x, y, z], portal)) {
+                removeCube(x, y, z);
+              }
               return;
             } else if (clickedFace === 0) {
               if (rotational) {

@@ -22,6 +22,10 @@ import mossPlace5 from "../sounds/Moss_break5.ogg";
 import glassPlace1 from "../sounds/Glass_dig1.ogg";
 import glassPlace2 from "../sounds/Glass_dig2.ogg";
 import glassPlace3 from "../sounds/Glass_dig3.ogg";
+import sandPlace1 from "../sounds/Sand_dig1.ogg";
+import sandPlace2 from "../sounds/Sand_dig2.ogg";
+import sandPlace3 from "../sounds/Sand_dig3.ogg";
+import sandPlace4 from "../sounds/Sand_dig4.ogg";
 import flintAndSteelCLick from "../sounds/Flint_and_steel_click.ogg";
 export {
   dirtPlace1,
@@ -48,5 +52,9 @@ export {
   glassPlace1,
   glassPlace2,
   glassPlace3,
+  sandPlace1,
+  sandPlace2,
+  sandPlace3,
+  sandPlace4,
   flintAndSteelCLick,
 };

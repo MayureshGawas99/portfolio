@@ -13,6 +13,12 @@ import mossyCobblestone from "./mossy_cobblestone.png";
 import moss from "./moss_block.png";
 import netherrack from "./netherrack.png";
 import flintAndSteel from "./flint_and_steel.png";
+import stoneBricks from "./stone_bricks.png";
+import mossyStoneBricks from "./mossy_stone_bricks.png";
+import crackedStoneBricks from "./cracked_stone_bricks.png";
+import chiseledStoneBricks from "./chiseled_stone_bricks.png";
+import sand from "./sand.png";
+import clay from "./clay.png";
 
 export {
   dirtImg,
@@ -29,4 +35,10 @@ export {
   obsidianImg,
   flintAndSteel,
   netherrack,
+  stoneBricks,
+  mossyStoneBricks,
+  crackedStoneBricks,
+  chiseledStoneBricks,
+  sand,
+  clay,
 };
