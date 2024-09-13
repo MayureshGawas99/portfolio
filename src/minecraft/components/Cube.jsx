@@ -36,7 +36,6 @@ const Cube = ({ position, texture, rotation, portal }) => {
   ]);
 
   useEffect(() => {
-    console.log(texture);
     const { right, left, top, bottom, front, back, rotational } =
       allBlocks[texture];
     setTextures([right, left, top, bottom, front, back]);
@@ -63,7 +62,6 @@ const Cube = ({ position, texture, rotation, portal }) => {
     <mesh
       ref={ref}
       onClick={(e) => {
-        console.log(e);
         e.stopPropagation();
         const clickedFace = Math.floor(e.faceIndex / 2);
         const { x, y, z } = ref.current.position;
@@ -101,7 +99,6 @@ const Cube = ({ position, texture, rotation, portal }) => {
                   addCube(x + 1, y, z, [0, 0, Math.PI / 2]);
                 }
               } else {
-                console.log("right");
                 addCube(x + 1, y, z, [0, 0, Math.PI / 2]);
               }
               return;
@@ -113,7 +110,6 @@ const Cube = ({ position, texture, rotation, portal }) => {
                   addCube(x - 1, y, z, [0, 0, Math.PI / 2]);
                 }
               } else {
-                console.log("left");
                 addCube(x - 1, y, z, [0, 0, Math.PI / 2]);
               }
               return;
@@ -129,7 +125,6 @@ const Cube = ({ position, texture, rotation, portal }) => {
               } else {
                 addCube(x, y + 1, z, [0, 0, 0]);
               }
-              console.log("top");
               return;
             } else if (clickedFace === 3) {
               if (rotational) {
@@ -143,7 +138,6 @@ const Cube = ({ position, texture, rotation, portal }) => {
               } else {
                 addCube(x, y - 1, z, [0, 0, 0]);
               }
-              console.log("bottom");
               return;
             } else if (clickedFace === 4) {
               if (rotational) {

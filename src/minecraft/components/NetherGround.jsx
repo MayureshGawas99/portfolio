@@ -33,9 +33,7 @@ export const NetherGround = () => {
       onClick={(e) => {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point);
-        // console.log([x, y, z], pos.current);
         const distance = calculateDistance([x, y, z], pos.current);
-        console.log(distance);
         if (distance < 6) {
           const [nx, ny, nz] = [Math.round(x), Math.ceil(y), Math.round(z)];
           addCube(nx, ny, nz);

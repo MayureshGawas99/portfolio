@@ -31,7 +31,6 @@ const FPV = () => {
   // Event listener to toggle lock state when clicked
   useEffect(() => {
     const domElement = gl?.domElement;
-    console.log(gl?.domElement);
     domElement?.addEventListener("click", handleClick);
 
     return () => {

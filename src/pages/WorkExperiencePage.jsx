@@ -3,6 +3,10 @@ import DODAS from "../assets/DODAS.png";
 import DB from "../assets/DB.png";
 import { useNavigate } from "react-router-dom";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
+import icon from "../assets/pan1.png";
+import icon2 from "../assets/pan2.png";
+import icon3 from "../assets/pan3.png";
+import { MdOpenInNew } from "react-icons/md";
 
 const WorkExperiencePage = () => {
   const navigate = useNavigate();
@@ -18,8 +22,8 @@ const WorkExperiencePage = () => {
           Work Experience
         </p>
       </div>
-      <div className="mx-6 flex flex-col flex-grow md:grid md:grid-cols-12 gap-5 overflow-auto">
-        <div className=" md:col-span-5 lg:col-span-3 bg-black/50">
+      <div className="mx-6 flex flex-col flex-grow md:grid md:grid-cols-12 gap-5 overflow-auto minecraft-scrollbar">
+        <div className=" md:col-span-4 lg:col-span-3 bg-black/50">
           <div
             onClick={() => setTab(0)}
             className={`${
@@ -45,21 +49,31 @@ const WorkExperiencePage = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-7 lg:col-span-9 bg-black/50 p-2">
+        <div className=" md:col-span-8 lg:col-span-9 bg-black/50 p-2">
           {tab === 0 && (
             <div>
               <img src={DODAS} alt="" className="w-[6rem]" />
               <div className="mt-2">
-                <p className="text-font text-white text-xl">
-                  DODAS (Acknoledger)
+                <p className="text-font flex gap-1 items-center text-yellow-300 text-xl">
+                  DODAS (Acknoledger){" "}
+                  <MdOpenInNew
+                    className="cursor-pointer"
+                    onClick={() =>
+                      window.open(
+                        "https://drive.google.com/file/d/1zwkUyeDlkCxGfFJtC5ZlTVn65eMw_rAT/view?usp=sharing",
+                        "_blank"
+                      )
+                    }
+                  />
                 </p>
-                <p className="text-font text-gray-500">
-                  Role: Full Stack Developer
+                <p className="text-font text-gray-500 mt-2">
+                  <span className="text-white">Role: </span>Full Stack Developer
                 </p>
-                <p className="text-font text-gray-500">
-                  Duration: 6 Months (Jan 8 2024 - June 28 2024)
+                <p className="text-font text-gray-500 mt-2">
+                  <span className="text-white">Duration: </span>6 Months (Jan 8
+                  2024 - June 28 2024)
                 </p>
-                <p className="text-font text-gray-500">Responsibilities :</p>
+                <p className="text-font text-white mt-2">Responsibilities :</p>
                 <ul className="text-font text-gray-500 mx-6">
                   <li>1. Design and Develop Web Apps</li>{" "}
                   <li>2. Optimize app wrt speed and scalability</li>{" "}
@@ -70,6 +84,114 @@ const WorkExperiencePage = () => {
                     6. Contribute to development of technical documentation
                   </li>
                 </ul>
+                <p className="text-font text-white mt-2">Projects:</p>
+                <ul className="text-font text-gray-500 mx-6 mt-2 ">
+                  <li>
+                    <a
+                      href="https://erc404.dodas.xyz/"
+                      target="blank"
+                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                    >
+                      <img
+                        src={icon}
+                        alt=""
+                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                      />
+                      <div>
+                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                          ERC-404 Indexer
+                        </p>
+                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                          The ERC404 Indexer by DODAS is a multichain platform
+                          that enhances token liquidity by merging ERC-20 and
+                          ERC-721 standards, offering comprehensive asset
+                          exploration, API integration, and real-time
+                          notifications.
+                        </p>
+                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                          MongoDB, Express, React, NodeJS, Tailwind
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://cryptoreports.co/"
+                      target="blank"
+                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                    >
+                      <img
+                        src={icon2}
+                        alt=""
+                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                      />
+                      <div>
+                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                          CryptoReports
+                        </p>
+                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                          Crypto Reports is a platform that acts as an interface
+                          for web3 enthusiasts to find the latest and all time
+                          research reports in one place.
+                        </p>
+                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                          MongoDB, Express, React, NodeJS, Tailwind
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://runes.dodas.xyz/"
+                      target="blank"
+                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                    >
+                      <img
+                        src={icon3}
+                        alt=""
+                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                      />
+                      <div>
+                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                          Runes & Inscriptions Indexer
+                        </p>
+                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                          Your one-stop destination for exploring the Runes,
+                          Bitcoin ordinals and beyond.
+                        </p>
+                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                          MongoDB, Express, React, NodeJS, Tailwind, ThreeJS
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://donbit.org/"
+                      target="blank"
+                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                    >
+                      <img
+                        src={icon}
+                        alt=""
+                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                      />
+                      <div>
+                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                          Donbit Website
+                        </p>
+                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                          DONBIT is a Decentralized Oracle Network designed for
+                          Bitcoin and Bitcoin L2. DONBIT has a Hyperfocus on
+                          Bitcoin Ecosystem.
+                        </p>
+                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                          React, Tailwind
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           )}
@@ -77,11 +199,11 @@ const WorkExperiencePage = () => {
             <div>
               <img src={DB} alt="" className="w-[6rem]" />
               <div className="mt-2">
-                <p className="text-font text-white text-xl">
+                <p className="text-font text-xl text-yellow-300 ">
                   Deustche Bank (DB)
                 </p>
-                <p className="text-font text-gray-500">
-                  Role: Graduate Analyst
+                <p className="text-font text-gray-500 mt-2">
+                  <span className="text-white">Role: </span>Graduate Analyst
                 </p>
                 {/* <p className="text-font text-gray-500">Duration: 6 Months</p> */}
                 {/* <p className="text-font text-gray-500">Responsibilities :</p> */}

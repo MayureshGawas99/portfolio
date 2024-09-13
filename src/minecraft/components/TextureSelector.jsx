@@ -9,7 +9,6 @@ const TextureSelector = () => {
   const { keyActionMap, active, setActive, allBlocks, inNether } =
     useGameContext();
   const actions = useKeyboard();
-  // console.log(actions.openInventory);
 
   const [activeTexture, setTexture] = useStore((state) => [
     state.texture,
@@ -52,7 +51,6 @@ const TextureSelector = () => {
 
     const pressedTexture = Object.entries(textures).find(([k, v]) => v);
     if (pressedTexture) {
-      console.log("preesed", pressedTexture);
       setTexture(keyActionMap[pressedTexture[0]]);
       setActive(keyActionMap[pressedTexture[0]]);
     }

@@ -26,12 +26,10 @@ const useKeyboard = () => {
     Digit0: false,
   });
   const handleKeyDown = useCallback((e) => {
-    // console.log(e.code);
     if (e.code === "KeyE") {
       const action = actionByKey(e.code);
       if (action) {
         setActions((prev) => {
-          console.log(prev.openInventory, "openInventory");
           return {
             ...prev,
             [action]: !prev.openInventory,

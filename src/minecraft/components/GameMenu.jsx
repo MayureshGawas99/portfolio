@@ -81,7 +81,7 @@ const GameMenu = () => {
                     setCubes(true, savedCubes);
                   } else {
                     const savedCubes = getLocalStorage("overworld") || world;
-                    setCubes(true, savedCubes);
+                    setCubes(false, savedCubes);
                   }
                   setActions({ openMenu: false });
                 }}
