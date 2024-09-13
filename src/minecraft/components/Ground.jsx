@@ -34,7 +34,6 @@ export const Ground = () => {
         e.stopPropagation();
         const [x, y, z] = Object.values(e.point);
         const distance = calculateDistance([x, y, z], pos.current);
-        console.log(distance);
         if (distance < 6 && e.button === 2) {
           const [nx, ny, nz] = [Math.round(x), Math.ceil(y), Math.round(z)];
           addCube(nx, ny, nz, [0, 0, 0]);

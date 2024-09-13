@@ -10,7 +10,6 @@ const Cubes = () => {
   const { inNether } = useGameContext();
   const obsCubes = inNether ? netherWorld : world;
   const portal = obsCubes.filter((cube) => cube.texture === "obsidian");
-  // console.log(portal);
   return cubes.map(({ key, pos, texture, rotation }) => {
     return (
       <Cube

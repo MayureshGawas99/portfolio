@@ -118,7 +118,6 @@
 .minecraft-scrollbar::-webkit-scrollbar-thumb {
   /* background-image: url("./assets/button.png"); */
   background-color: #8b8b8b; /* Change scrollbar track background color */
-
   border-left: 2px solid black;
   border-right: 2px solid white;
 }

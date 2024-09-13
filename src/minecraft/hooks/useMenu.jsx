@@ -12,7 +12,6 @@ const useMenu = () => {
     openMenu: false,
   });
   const handleKeyDown = useCallback((e) => {
-    // console.log(e.code);
     if (e.code === "Escape") {
       const action = actionByKey(e.code);
       if (action) {
