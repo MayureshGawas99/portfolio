@@ -11,9 +11,7 @@ root.render(
   <AppContextProvider>
     <GameContextProvider>
       <BrowserRouter>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <App />
       </BrowserRouter>
     </GameContextProvider>
   </AppContextProvider>

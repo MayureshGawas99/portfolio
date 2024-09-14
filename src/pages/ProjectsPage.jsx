@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import icon from "../assets/pan1.png";
 import icon2 from "../assets/pan2.png";
 import icon3 from "../assets/pan3.png";
@@ -11,6 +11,15 @@ const ProjectsPage = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      alert(
+        "Please note: All projects listed here are hosted on free instances, so they may take 1-2 minutes to fully load after being idle. We appreciate your patience!"
+      );
+    }, 500);
+  }, []);
+
   return (
     <div className="bg-dirt h-screen py-6 flex flex-col gap-5">
       <div className=" ">
@@ -34,6 +43,29 @@ const ProjectsPage = () => {
             </p>
           </div>
         </div>
+        <a
+          href="https://blogsite-mg.netlify.app/"
+          target="blank"
+          className="md:mx-auto mx-6 max-w-3xl hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+        >
+          <img
+            src={icon3}
+            alt=""
+            className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+          />
+          <div>
+            <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+              BlogSite
+            </p>
+            <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+              A technology-focused platform delivering insightful and engaging
+              content for tech enthusiasts and professionals
+            </p>
+            <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+              MongoDB, Express, React, Node.js
+            </p>
+          </div>
+        </a>
         <a
           href="https://mg-ecomapp.netlify.app/"
           target="blank"
