@@ -85,30 +85,30 @@ const WorkExperiencePage = () => {
                   </li>
                 </ul>
                 <p className="text-font text-white mt-2">Projects:</p>
-                <ul className="text-font text-gray-500 mx-6 mt-2 ">
+                <ul className="text-font text-gray-500 mx-2 md:mx-6 mt-2 ">
                   <li>
                     <a
                       href="https://erc404.dodas.xyz/"
                       target="blank"
-                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                      className="md:mx-auto max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
                     >
                       <img
                         src={icon}
                         alt=""
-                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                        className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
                       />
                       <div>
-                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                        <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
                           ERC-404 Indexer
                         </p>
-                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                        <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
                           The ERC404 Indexer by DODAS is a multichain platform
                           that enhances token liquidity by merging ERC-20 and
                           ERC-721 standards, offering comprehensive asset
                           exploration, API integration, and real-time
                           notifications.
                         </p>
-                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                        <p className="text-font   text-yellow-300 md:text-base text-xs">
                           MongoDB, Express, React, NodeJS, Tailwind
                         </p>
                       </div>
@@ -118,23 +118,23 @@ const WorkExperiencePage = () => {
                     <a
                       href="https://cryptoreports.co/"
                       target="blank"
-                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                      className="md:mx-auto max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
                     >
                       <img
                         src={icon2}
                         alt=""
-                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                        className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
                       />
                       <div>
-                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                        <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
                           CryptoReports
                         </p>
-                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                        <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
                           Crypto Reports is a platform that acts as an interface
                           for web3 enthusiasts to find the latest and all time
                           research reports in one place.
                         </p>
-                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                        <p className="text-font   text-yellow-300 md:text-base text-xs">
                           MongoDB, Express, React, NodeJS, Tailwind
                         </p>
                       </div>
@@ -144,22 +144,22 @@ const WorkExperiencePage = () => {
                     <a
                       href="https://runes.dodas.xyz/"
                       target="blank"
-                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                      className="md:mx-auto max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
                     >
                       <img
                         src={icon3}
                         alt=""
-                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                        className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
                       />
                       <div>
-                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
-                          Runes & Inscriptions Indexer
+                        <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
+                          Ordinals Indexer
                         </p>
-                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                        <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
                           Your one-stop destination for exploring the Runes,
                           Bitcoin ordinals and beyond.
                         </p>
-                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                        <p className="text-font   text-yellow-300 md:text-base text-xs">
                           MongoDB, Express, React, NodeJS, Tailwind, ThreeJS
                         </p>
                       </div>
@@ -169,23 +169,23 @@ const WorkExperiencePage = () => {
                     <a
                       href="https://donbit.org/"
                       target="blank"
-                      className=" hover:border  mb-5 flex flex-col md:flex-row items-center gap-2 cursor-pointer"
+                      className="md:mx-auto max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
                     >
                       <img
                         src={icon}
                         alt=""
-                        className="w-[10rem] h-[10rem] md:w-[7rem] md:h-[7rem]"
+                        className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
                       />
                       <div>
-                        <p className="text-font text-center md:text-left text-white mb-1 md:text-xl text-base">
+                        <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
                           Donbit Website
                         </p>
-                        <p className="text-font text-gray-500 md:text-base text-xs text-justify">
+                        <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
                           DONBIT is a Decentralized Oracle Network designed for
                           Bitcoin and Bitcoin L2. DONBIT has a Hyperfocus on
                           Bitcoin Ecosystem.
                         </p>
-                        <p className="text-font text-center md:text-left text-yellow-300 md:text-base text-xs">
+                        <p className="text-font   text-yellow-300 md:text-base text-xs">
                           React, Tailwind
                         </p>
                       </div>
