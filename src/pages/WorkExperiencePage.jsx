@@ -44,7 +44,7 @@ const WorkExperiencePage = () => {
           >
             <img src={DB} alt="" className="h-16" />
             <div>
-              <p>Duestche Bank</p>
+              <p>Deutsche Bank</p>
               <p className="text-gray-500">Full Time </p>
             </div>
           </div>
