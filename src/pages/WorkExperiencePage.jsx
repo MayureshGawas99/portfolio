@@ -200,7 +200,7 @@ const WorkExperiencePage = () => {
               <img src={DB} alt="" className="w-[6rem]" />
               <div className="mt-2">
                 <p className="text-font text-xl text-yellow-300 ">
-                  Deustche Bank (DB)
+                  Deutsche Bank (DB)
                 </p>
                 <p className="text-font text-gray-500 mt-2">
                   <span className="text-white">Role: </span>Graduate Analyst
