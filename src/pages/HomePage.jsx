@@ -67,6 +67,17 @@ const HomePage = () => {
               <span>Work Experience</span>
             </div>
           </div>
+          <div
+            onClick={() => {
+              playButtonSound();
+              navigate("/advancements");
+            }}
+            className=" cursor-pointer mx-0 w-full md:w-auto md:mx-16 mt-5 text-font text-xl  minecraft-btn text-white"
+          >
+            <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+              <span>Advancements</span>
+            </div>
+          </div>
         </div>
 
         <div className=" absolute top-[11.5rem] md:top-[11rem]">

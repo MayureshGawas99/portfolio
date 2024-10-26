@@ -13,6 +13,7 @@ import ControlsPage from "./pages/ControlsPage";
 import NetherLoading from "./pages/NetherLoading";
 import Nether from "./minecraft/Nether";
 import WorkExperiencePage from "./pages/WorkExperiencePage";
+import AcheivementsPage from "./pages/AcheivementsPage";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -43,6 +44,7 @@ function App() {
         <Route path="/nether-loading" element={<NetherLoading />} />
         <Route path="/nether" element={<Nether />} />
         <Route path="/work-experience" element={<WorkExperiencePage />} />
+        <Route path="/advancements" element={<AcheivementsPage />} />
       </Routes>
     </div>
   );

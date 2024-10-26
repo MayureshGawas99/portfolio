@@ -30,19 +30,21 @@ const ProjectsPage = () => {
       <div className="flex-grow bg-black/50 p-1  overflow-x-auto">
         <div
           onClick={() => navigate("/loading")}
-          className=" hidden mx-auto max-w-3xl hover:border  my-5 md:flex flex-row gap-2 cursor-pointer"
+          className="hidden lg:flex md:mx-auto mx-2 max-w-3xl hover:border  mb-5  flex-row gap-2 cursor-pointer"
         >
           <img
             src={icon}
             alt=""
-            className="lg:w-[10rem] lg:h-[10rem] w-[7rem] h-[7rem]"
+            className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
           />
           <div>
-            <p className="text-font text-white mb-1 text-xl">MineCraft World</p>
-            <p className="text-font text-gray-500 text-base">
+            <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
+              MineCraft World
+            </p>
+            <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
               Creative, Version 1.20.1
             </p>
-            <p className="text-font text-yellow-300 text-base">
+            <p className="text-font   text-yellow-300 md:text-base text-xs">
               React, Tailwind, ThreeJS
             </p>
           </div>
