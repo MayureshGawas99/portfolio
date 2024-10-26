@@ -73,7 +73,7 @@ export const netherInitialNodes = [
     data: {
       img: netheriteBoots,
       title: "Hot Tourist Destinations",
-      description: "Explored all Data Structures and Algorithms",
+      description: "Explored most of the Data Structures and Algorithms",
     }, // Replace with your image path
     position: { x: 550, y: 50 },
     type: "custom", // Use custom type
@@ -84,7 +84,7 @@ export const netherInitialNodes = [
     data: {
       img: goldIngot,
       title: "Oh Shiny",
-      description: "Start with Basic of Web Development",
+      description: "Started with Basics of Web Development",
     }, // Replace with your image path
     position: { x: 150, y: 150 },
     type: "custom", // Use custom type
@@ -95,7 +95,7 @@ export const netherInitialNodes = [
     data: {
       img: ghastTears,
       title: "Uneasy Alliance",
-      description: "Practice DSA and Web Development Simultaneously",
+      description: "Practiced DSA and Web Development Simultaneously",
     }, // Replace with your image path
     position: { x: 250, y: 150 },
     type: "custom", // Use custom type
@@ -107,7 +107,7 @@ export const netherInitialNodes = [
       img: milkBucket,
       title: "A Furious Cocktail",
       description:
-        "Practice DSA, Competitive Programming and Web Development Simultaneously",
+        "Practiced DSA, Competitive Programming and Web Development Simultaneously",
     }, // Replace with your image path
     position: { x: 350, y: 150 },
     type: "custom", // Use custom type

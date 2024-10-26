@@ -140,7 +140,7 @@ export const overWorldInitialNodes = [
     data: {
       img: enchantedBook,
       title: "Enchanter",
-      description: "Got the Degree in Btech in EXTC",
+      description: "Got the Degree in Btech in EXTC with 9.8 CGPA!",
     }, // Replace with your image path
     position: { x: 650, y: 350 },
     type: "custom", // Use custom type
