@@ -21,16 +21,16 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <div className="bg-dirt h-screen py-6 flex flex-col gap-5">
-      <div className=" ">
-        <p className="  text-center text-xl text-font  text-white">
+    <div className="flex flex-col h-screen gap-5 py-6 bg-dirt">
+      <div className="">
+        <p className="text-xl text-center text-white text-font">
           Select Personal Project
         </p>
       </div>
-      <div className="flex-grow bg-black/50 p-1  overflow-x-auto">
+      <div className="flex-grow p-1 overflow-x-auto bg-black/50">
         <div
           onClick={() => navigate("/loading")}
-          className="hidden lg:flex md:mx-auto mx-2 max-w-3xl hover:border  mb-5  flex-row gap-2 cursor-pointer"
+          className="flex-row hidden max-w-3xl gap-2 mx-2 my-5 cursor-pointer lg:flex md:mx-auto hover:border"
         >
           <img
             src={icon}
@@ -38,13 +38,13 @@ const ProjectsPage = () => {
             className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
           />
           <div>
-            <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
+            <p className="text-sm text-white text-font md:mb-1 md:text-xl">
               MineCraft World
             </p>
-            <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
+            <p className="text-xs text-gray-500 text-font md:text-base md:text-justify line-clamp-3">
               Creative, Version 1.20.1
             </p>
-            <p className="text-font   text-yellow-300 md:text-base text-xs">
+            <p className="text-xs text-yellow-300 text-font md:text-base">
               React, Tailwind, ThreeJS
             </p>
           </div>
@@ -52,7 +52,7 @@ const ProjectsPage = () => {
         <a
           href="https://blogsite-mg.netlify.app/"
           target="blank"
-          className="md:mx-auto mx-2 max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
+          className="flex flex-row max-w-3xl gap-2 mx-2 mt-5 mb-5 cursor-pointer lg:mt-0 md:mx-auto hover:border"
         >
           <img
             src={icon3}
@@ -60,22 +60,46 @@ const ProjectsPage = () => {
             className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
           />
           <div>
-            <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
-              BlogSite
+            <p className="text-sm text-white text-font md:mb-1 md:text-xl">
+              BlogSite (AI Blog Writing)
             </p>
-            <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
+            <p className="text-xs text-gray-500 text-font md:text-base md:text-justify line-clamp-3">
               A technology-focused platform delivering insightful and engaging
               content for tech enthusiasts and professionals
             </p>
-            <p className="text-font   text-yellow-300 md:text-base text-xs">
-              MongoDB, Express, React, Node.js
+            <p className="text-xs text-yellow-300 text-font md:text-base">
+              MERN Stack, Tailwind, Google Gemini
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://project-sahyog.netlify.app/"
+          target="blank"
+          className="flex flex-row max-w-3xl gap-2 mx-2 mb-5 cursor-pointer md:mx-auto hover:border"
+        >
+          <img
+            src={icon3}
+            alt=""
+            className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
+          />
+          <div>
+            <p className="text-sm text-white text-font md:mb-1 md:text-xl">
+              Project Sahyog
+            </p>
+            <p className="text-xs text-gray-500 text-font md:text-base md:text-justify line-clamp-3">
+              Project Sahyog is an online platform for sharing & discovering
+              student projects in Indian universities/colleges to promote
+              innovation & collaboration.
+            </p>
+            <p className="text-xs text-yellow-300 text-font md:text-base">
+              MongoDB, Express, React, Node.js, Bootstrap
             </p>
           </div>
         </a>
         <a
           href="https://mg-ecomapp.netlify.app/"
           target="blank"
-          className="md:mx-auto mx-2 max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
+          className="flex flex-row max-w-3xl gap-2 mx-2 mb-5 cursor-pointer md:mx-auto hover:border"
         >
           <img
             src={icon2}
@@ -83,45 +107,21 @@ const ProjectsPage = () => {
             className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
           />
           <div>
-            <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
+            <p className="text-sm text-white text-font md:mb-1 md:text-xl">
               Ecom Website
             </p>
-            <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
+            <p className="text-xs text-gray-500 text-font md:text-base md:text-justify line-clamp-3">
               The e-commerce website project aims to create an online platform
               that enables users to browse, search, & purchase products from
               various categories.
             </p>
-            <p className="text-font  text-yellow-300 md:text-base text-xs">
+            <p className="text-xs text-yellow-300 text-font md:text-base">
               MongoDB, Express, React, Node.js
             </p>
           </div>
         </a>
-        <a
-          href="https://project-sahyog.netlify.app/"
-          target="blank"
-          className="md:mx-auto mx-2 max-w-3xl hover:border  mb-5 flex flex-row gap-2 cursor-pointer"
-        >
-          <img
-            src={icon3}
-            alt=""
-            className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
-          />
-          <div>
-            <p className="text-font  text-white md:mb-1 md:text-xl text-sm">
-              Project Sahyog
-            </p>
-            <p className="text-font text-gray-500 md:text-base text-xs md:text-justify line-clamp-3">
-              Project Sahyog is an online platform for sharing & discovering
-              student projects in Indian universities/colleges to promote
-              innovation & collaboration.
-            </p>
-            <p className="text-font  text-yellow-300 md:text-base text-xs">
-              MongoDB, Express, React, Node.js, Bootstrap
-            </p>
-          </div>
-        </a>
       </div>
-      <div className="flex justify-center flex-row gap-5 ">
+      <div className="flex flex-row justify-center gap-5 ">
         <button
           onClick={() => {
             playButtonSound();
