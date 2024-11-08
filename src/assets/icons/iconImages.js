@@ -2,7 +2,7 @@ import book_quill from "./Book_and_Quill.webp";
 import redstone from "./Redstone_Dust.webp";
 import bookshelf from "./bookshelf.webp";
 import grassBlock from "./Grass_Block.webp";
-import ironPickaxe from "./Iron_Pickaxe.png";
+import ironPickaxe from "./Iron_Pick.webp";
 import woodenPickaxe from "./Wooden_Pickaxe.webp";
 import stonePickaxe from "./Stone_Pickaxe.webp";
 import ironIngot from "./Iron_Ingot.webp";
