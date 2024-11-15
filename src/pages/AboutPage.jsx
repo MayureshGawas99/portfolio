@@ -121,7 +121,7 @@ const AboutPage = () => {
               onClick={() => {
                 playButtonSound();
                 window.open(
-                  "https://drive.google.com/drive/folders/1nWl9Mb11Nl7e6SXks_alO0NCSaOo-ssd",
+                  "https://drive.google.com/file/d/1OqMHZuo35aQIJ22mSXpa7XPof5k-aTny/view?usp=sharing",
                   "_blank"
                 );
               }}
