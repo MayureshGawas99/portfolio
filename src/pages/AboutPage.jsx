@@ -14,8 +14,8 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="bg-dirt h-screen ">
-      <div className=" mx-6 md:mx-2 lg:mx-32 flex flex-row gap-15 h-full ">
+    <div className="h-screen bg-dirt ">
+      <div className="flex flex-row h-full mx-6 md:mx-2 lg:mx-32 gap-15">
         <div className="relative h-[40rem] w-[20rem] cursor-pointer hidden md:block ">
           <Canvas
             camera={{
@@ -25,17 +25,17 @@ const AboutPage = () => {
           >
             <Models />
           </Canvas>
-          <p className="position-abs text-font bg-gray-300/30 text-white px-2 py-1 ">
+          <p className="px-2 py-1 text-white position-abs text-font bg-gray-300/30 ">
             Narayan Gawas
           </p>
         </div>
-        <div className="flex flex-col gap-5 flex-grow my-10 overflow-x-auto">
-          <div className="black-glassmorphism w-full flex-grow p-6 flex flex-col gap-2">
+        <div className="flex flex-col flex-grow gap-5 my-10 overflow-x-auto">
+          <div className="flex flex-col flex-grow w-full gap-2 p-6 black-glassmorphism">
             <div>
-              <p className="text-font text-yellow-300 text-base md:text-xl">
+              <p className="text-base text-yellow-300 text-font md:text-xl">
                 Full Stack Web Devloper
               </p>
-              <p className="text-font text-white text-justify text-sm md:text-base">
+              <p className="text-sm text-justify text-white text-font md:text-base">
                 Hey there! I'm Narayan Gawas, a full-stack web developer with a
                 passion for building digital worlds inspired by creativity of
                 Minecraft. From crafting pixel-perfect designs to coding
@@ -45,10 +45,10 @@ const AboutPage = () => {
               </p>
             </div>
             <div>
-              <p className="text-font text-yellow-300 text-center text-base md:text-xl">
+              <p className="text-base text-center text-yellow-300 text-font md:text-xl">
                 Languages
               </p>
-              <div className="mx-0 md:mx-10  grid grid-cols-2 gap-4 mt-2">
+              <div className="grid grid-cols-2 gap-4 mx-0 mt-2 md:mx-10">
                 {/* 1  */}
                 <Slider label={"Python"} defaultValue={100} />
                 {/* 2  */}
@@ -64,16 +64,16 @@ const AboutPage = () => {
               </div>
             </div>
             <div>
-              <p className="text-font text-yellow-300 text-center text-base md:text-xl">
+              <p className="text-base text-center text-yellow-300 text-font md:text-xl">
                 Socials
               </p>
-              <div className="mx-0 md:mx-10  grid grid-cols-2 gap-4 mt-2">
+              <div className="grid grid-cols-2 gap-4 mx-0 mt-2 md:mx-10">
                 {/* 1  */}
                 <a
                   href="https://www.linkedin.com/in/narayan-gawas-5746b0179"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-white flex justify-center"
+                  className="flex justify-center text-white minecraft-btn"
                 >
                   <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
                     <span>LinkedIn</span>
@@ -84,7 +84,7 @@ const AboutPage = () => {
                   href="https://github.com/MayureshGawas99"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-white  flex justify-center"
+                  className="flex justify-center text-white minecraft-btn"
                 >
                   <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
                     <span>Github</span>
@@ -95,7 +95,7 @@ const AboutPage = () => {
                   href="https://www.geeksforgeeks.org/user/narayan01000111/"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-white   flex justify-center"
+                  className="flex justify-center text-white minecraft-btn"
                 >
                   {" "}
                   <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
@@ -104,10 +104,10 @@ const AboutPage = () => {
                 </a>
                 {/* 4  */}
                 <a
-                  href="https://www.codechef.com/users/spt2021201070"
+                  href="https://www.codechef.com/users/narayan_gawas"
                   target="blank"
                   onClick={playButtonSound}
-                  className=" minecraft-btn text-white  flex justify-center"
+                  className="flex justify-center text-white minecraft-btn"
                 >
                   <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
                     <span>Codechef</span>
@@ -116,12 +116,12 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center flex-row gap-2 ">
+          <div className="flex flex-row justify-center gap-2 ">
             <button
               onClick={() => {
                 playButtonSound();
                 window.open(
-                  "https://drive.google.com/file/d/1w8khIE1RgZFkH92ELXeaJYZW33hdu-ah/view?usp=sharing",
+                  "https://drive.google.com/drive/folders/1nWl9Mb11Nl7e6SXks_alO0NCSaOo-ssd",
                   "_blank"
                 );
               }}
