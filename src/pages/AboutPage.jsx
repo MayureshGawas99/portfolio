@@ -120,10 +120,8 @@ const AboutPage = () => {
             <button
               onClick={() => {
                 playButtonSound();
-                window.open(
-                  "https://drive.google.com/file/d/1OqMHZuo35aQIJ22mSXpa7XPof5k-aTny/view?usp=sharing",
-                  "_blank"
-                );
+                console.log(process.env.REACT_APP_RESUME_URL);
+                window.open(process.env.REACT_APP_RESUME_URL, "_blank");
               }}
               type="button"
               className="minecraft-btn w-[10rem]  text-white"

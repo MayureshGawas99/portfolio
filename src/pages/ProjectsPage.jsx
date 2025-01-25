@@ -73,7 +73,7 @@ const ProjectsPage = () => {
           </div>
         </a>
         <a
-          href="https://project-sahyog.netlify.app/"
+          href="https://prayog.netlify.app/"
           target="blank"
           className="flex flex-row max-w-3xl gap-2 mx-2 mb-5 cursor-pointer md:mx-auto hover:border"
         >
@@ -84,7 +84,7 @@ const ProjectsPage = () => {
           />
           <div>
             <p className="text-sm text-white text-font md:mb-1 md:text-xl">
-              Project Sahyog
+              Prayog
             </p>
             <p className="text-xs text-gray-500 text-font md:text-base md:text-justify line-clamp-3">
               Project Sahyog is an online platform for sharing & discovering
