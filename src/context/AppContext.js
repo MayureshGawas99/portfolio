@@ -7,6 +7,7 @@ const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <AppContext.Provider
@@ -15,6 +16,8 @@ const AppContextProvider = ({ children }) => {
         setIsPlaying,
         modalOpen,
         setModalOpen,
+        currentSlide,
+        setCurrentSlide,
       }}
     >
       {children}

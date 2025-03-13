@@ -1,22 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactFlow, { Handle, Position } from "react-flow-renderer";
-import {
-  book_quill,
-  diamond,
-  diamondChest,
-  enchantedBook,
-  flintSteel,
-  grassBlock,
-  ironChest,
-  ironIngot,
-  ironPickaxe,
-  lavaBucket,
-  obsidian,
-  redstone,
-  shield,
-  stonePickaxe,
-  woodenPickaxe,
-} from "../assets/icons/iconImages";
+
 import { Tooltip } from "react-tooltip";
 
 // Custom node component to display an image

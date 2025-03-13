@@ -18,7 +18,7 @@ const WorkExperiencePage = () => {
   return (
     <div className="flex flex-col h-screen gap-5 py-6 bg-dirt">
       <div>
-        <p className="text-xl text-center text-white  text-font">
+        <p className="text-xl text-center text-white text-font">
           Work Experience
         </p>
       </div>
@@ -49,7 +49,7 @@ const WorkExperiencePage = () => {
             </div>
           </div>
         </div>
-        <div className="p-2  md:col-span-8 lg:col-span-9 bg-black/50">
+        <div className="p-2 md:col-span-8 lg:col-span-9 bg-black/50">
           {tab === 0 && (
             <div>
               <img src={DODAS} alt="" className="w-[6rem]" />

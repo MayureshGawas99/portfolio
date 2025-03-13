@@ -14,6 +14,7 @@ import NetherLoading from "./pages/NetherLoading";
 import Nether from "./minecraft/Nether";
 import WorkExperiencePage from "./pages/WorkExperiencePage";
 import AcheivementsPage from "./pages/AcheivementsPage";
+import WorldPage from "./pages/WorldPage";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -32,11 +33,12 @@ function App() {
   }, [isPlaying]);
 
   return (
-    <div className="App h-screen">
+    <div className="h-screen App">
       <AudioModal />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/world" element={<WorldPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/loading" element={<LoadingPage />} />
         <Route path="/overworld" element={<Home />} />

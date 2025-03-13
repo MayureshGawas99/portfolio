@@ -8,7 +8,7 @@ import stonePickaxe from "./Stone_Pickaxe.webp";
 import ironIngot from "./Iron_Ingot.webp";
 import lavaBucket from "./Lava_Bucket.webp";
 import shield from "./Shield.webp";
-import ironChest from "./iron_chestplate.png";
+import ironChest from "./Iron_Chestplate.png";
 import obsidian from "./Obsidian.webp";
 import flintSteel from "./Flint_and_Steel.webp";
 import diamond from "./Diamond.webp";

@@ -20,10 +20,10 @@ const HomePage = () => {
   //   // eslint-disable-next-line
   // }, []);
   return (
-    <div className="relative h-screen w-screen ">
+    <div className="relative w-screen h-screen ">
       <Panorama />
       <AudioPlayer />
-      <div className=" relative z-10 flex justify-center items-center">
+      <div className="relative z-10 flex items-center justify-center ">
         <div className="relative flex flex-col items-center md:block">
           <img
             src={minecraftLogo}
@@ -39,7 +39,7 @@ const HomePage = () => {
               playButtonSound();
               navigate("/projects");
             }}
-            className=" cursor-pointer mx-0 w-full md:w-auto md:mx-16 mt-5 text-font text-xl  minecraft-btn text-white"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>Singleplayer</span>
@@ -48,9 +48,20 @@ const HomePage = () => {
           <div
             onClick={() => {
               playButtonSound();
+              navigate("/world");
+            }}
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
+          >
+            <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+              <span>Story Mode</span>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              playButtonSound();
               navigate("/about");
             }}
-            className=" cursor-pointer mx-0 w-full md:w-auto md:mx-16 mt-5 text-font text-xl  minecraft-btn text-white"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>About Me</span>
@@ -61,7 +72,7 @@ const HomePage = () => {
               playButtonSound();
               navigate("/work-experience");
             }}
-            className=" cursor-pointer mx-0 w-full md:w-auto md:mx-16 mt-5 text-font text-xl  minecraft-btn text-white"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>Work Experience</span>
@@ -72,7 +83,7 @@ const HomePage = () => {
               playButtonSound();
               navigate("/advancements");
             }}
-            className=" cursor-pointer mx-0 w-full md:w-auto md:mx-16 mt-5 text-font text-xl  minecraft-btn text-white"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>Advancements</span>
