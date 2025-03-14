@@ -16,6 +16,7 @@ import WorkExperiencePage from "./pages/WorkExperiencePage";
 import AcheivementsPage from "./pages/AcheivementsPage";
 import WorldPage from "./pages/WorldPage";
 import SkillsPage from "./pages/SkillsPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -50,6 +51,20 @@ function App() {
         <Route path="/work-experience" element={<WorkExperiencePage />} />
         <Route path="/advancements" element={<AcheivementsPage />} />
       </Routes>
+      <ToastContainer
+        toastClassName="bg-[#292929] border-4 border-[#595959] outline outline-black outline-2 rounded-lg shadow-lg"
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        closeButton={false}
+        theme="light"
+      />
     </div>
   );
 }

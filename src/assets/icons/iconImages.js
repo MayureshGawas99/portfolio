@@ -33,6 +33,22 @@ import cobblestone from "./Cobblestone.webp";
 import coal from "./coal.webp";
 import wool from "./wool.webp";
 import string from "./string.webp";
+import diamondLeggings from "./Diamond_Leggings.webp";
+import diamondHelmet from "./Diamond_Helmet.webp";
+import diamondBoots from "./Diamond_Boots.webp";
+import diamondPickaxe from "./Diamond_Pickaxe.webp";
+import diamondAxe from "./Diamond_Axe.webp";
+import diamondSword from "./Diamond_Sword.webp";
+import diamondShovel from "./Diamond_Shovel.webp";
+import diamondHoe from "./Diamond_Hoe.webp";
+import ladder from "./Ladder.png";
+import oakFence from "./Oak_Fence.png";
+import oakFenceGate from "./Oak_Fence_Gate.webp";
+import oakDoor from "./Oak_Door.png";
+import oakTrapdoor from "./Oak_Trapdoor.webp";
+import diamondBlock from "./Block_of_Diamond.webp";
+import ironBlock from "./Block_of_Iron.png";
+import goldBlock from "./Block_of_Gold.webp";
 
 export {
   book_quill,
@@ -70,4 +86,20 @@ export {
   coal,
   wool,
   string,
+  diamondLeggings,
+  diamondHelmet,
+  diamondBoots,
+  diamondPickaxe,
+  diamondAxe,
+  diamondSword,
+  diamondShovel,
+  diamondHoe,
+  ladder,
+  oakFence,
+  oakFenceGate,
+  oakDoor,
+  oakTrapdoor,
+  diamondBlock,
+  ironBlock,
+  goldBlock,
 };

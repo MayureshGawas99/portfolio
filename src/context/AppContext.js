@@ -8,6 +8,8 @@ const AppContextProvider = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [craftedItem, setCraftedItem] = useState();
+  const [skillsUnlocked, setSkillsUnlocked] = useState([]);
   const [currentRecipe, setCurrentRecipe] = useState([
     null,
     null,
@@ -31,6 +33,10 @@ const AppContextProvider = ({ children }) => {
         setCurrentSlide,
         currentRecipe,
         setCurrentRecipe,
+        craftedItem,
+        setCraftedItem,
+        skillsUnlocked,
+        setSkillsUnlocked,
       }}
     >
       {children}
