@@ -107,7 +107,7 @@ export const allReciepes = {
     icon: diamondChest,
   },
   "DiamondDiamondDiamond Stick  Stick ": {
-    name: "Dimond Pickaxe",
+    name: "Diamond Pickaxe",
     icon: diamondPickaxe,
   },
   "DiamondDiamondDiamondDiamond DiamondDiamond Diamond": {
