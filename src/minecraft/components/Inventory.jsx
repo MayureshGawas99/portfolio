@@ -43,12 +43,12 @@ const Inventory = () => {
       {actions.openInventory && (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="h-screen bg-black/50 absolute top-0 w-screen z-10 flex justify-center items-center"
+          className="absolute top-0 z-10 flex items-center justify-center w-screen h-screen bg-black/50"
         >
           <div className=" w-[35rem] h-[20rem] flex bg-[#c9c7c8] rounded-lg border-2 border-black  ">
             <div className="p-4 border-4 border-t-white border-l-white border-b-[#555555] border-r-[#555555] rounded-lg flex-grow ">
               <div className="mb-2">
-                <p className="text-font text-xl text-gray-900">Blocks</p>
+                <p className="text-xl text-gray-900 text-font">Inventory</p>
               </div>
               <div className="flex flex-row flex-wrap w-[100%] h-[10rem] overflow-y-auto minecraft-scrollbar">
                 {Array.from(
@@ -82,7 +82,7 @@ const Inventory = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-5 flex flex-row items-center">
+              <div className="flex flex-row items-center mt-5">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((ind) => (
                   <div
                     className={`${

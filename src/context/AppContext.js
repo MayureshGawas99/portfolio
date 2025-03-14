@@ -8,6 +8,17 @@ const AppContextProvider = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentRecipe, setCurrentRecipe] = useState([
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+  ]);
 
   return (
     <AppContext.Provider
@@ -18,6 +29,8 @@ const AppContextProvider = ({ children }) => {
         setModalOpen,
         currentSlide,
         setCurrentSlide,
+        currentRecipe,
+        setCurrentRecipe,
       }}
     >
       {children}

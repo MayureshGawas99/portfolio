@@ -27,6 +27,12 @@ import goldIngot from "./Gold_Ingot.webp";
 import ghastTears from "./Ghast_Tear.webp";
 import blackstoneBricks from "./Cracked_Blackstone_Bricks.webp";
 import dragonEgg from "./Dragon_Egg.webp";
+import stick from "./stick.webp";
+import oakPlanks from "./Oak_Planks.webp";
+import cobblestone from "./Cobblestone.webp";
+import coal from "./coal.webp";
+import wool from "./wool.webp";
+import string from "./string.webp";
 
 export {
   book_quill,
@@ -58,4 +64,10 @@ export {
   ghastTears,
   blackstoneBricks,
   dragonEgg,
+  stick,
+  oakPlanks,
+  cobblestone,
+  coal,
+  wool,
+  string,
 };

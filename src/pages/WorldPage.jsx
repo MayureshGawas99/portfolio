@@ -99,22 +99,20 @@ const WorldPage = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-dirt">
-      <div className="relative h-screen bg-black/50">
-        <button
-          onClick={() => {
-            playButtonSound();
-            navigate("/");
-          }}
-          type="button"
-          className="minecraft-btn w-[6rem] text-white absolute top-6 right-6 z-50"
-        >
-          <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
-            <span>Back</span>
-          </div>
-        </button>
-        <Slide data={slides[currentSlide]} size={slides.length} />
-      </div>
+    <div className="relative flex flex-col h-screen bg-dirt">
+      <button
+        onClick={() => {
+          playButtonSound();
+          navigate("/");
+        }}
+        type="button"
+        className="minecraft-btn w-[6rem] text-white absolute top-6 right-6 z-50"
+      >
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
+          <span>Back</span>
+        </div>
+      </button>
+      <Slide data={slides[currentSlide]} size={slides.length} />
     </div>
   );
 };

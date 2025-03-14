@@ -39,7 +39,7 @@ const HomePage = () => {
               playButtonSound();
               navigate("/projects");
             }}
-            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>Singleplayer</span>
@@ -50,7 +50,7 @@ const HomePage = () => {
               playButtonSound();
               navigate("/world");
             }}
-            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>Story Mode</span>
@@ -61,7 +61,7 @@ const HomePage = () => {
               playButtonSound();
               navigate("/about");
             }}
-            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>About Me</span>
@@ -72,21 +72,35 @@ const HomePage = () => {
               playButtonSound();
               navigate("/work-experience");
             }}
-            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
+            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer md:w-auto md:mx-16 text-font minecraft-btn"
           >
             <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
               <span>Work Experience</span>
             </div>
           </div>
-          <div
-            onClick={() => {
-              playButtonSound();
-              navigate("/advancements");
-            }}
-            className="w-full mx-0 mt-5 text-xl text-white cursor-pointer  md:w-auto md:mx-16 text-font minecraft-btn"
-          >
-            <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
-              <span>Advancements</span>
+          <div className="grid w-full grid-cols-2 gap-5 md:w-auto md:mx-16">
+            <div
+              onClick={() => {
+                playButtonSound();
+                navigate("/advancements");
+              }}
+              className="mx-0 mt-5 text-xl text-white cursor-pointer text-font minecraft-btn"
+            >
+              <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+                <span>Advancements</span>
+              </div>
+            </div>
+
+            <div
+              onClick={() => {
+                playButtonSound();
+                navigate("/skills");
+              }}
+              className="mx-0 mt-5 text-xl text-white cursor-pointer text-font minecraft-btn"
+            >
+              <div className="text-base md:text-xl border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2 h-full flex justify-center">
+                <span>Skills</span>
+              </div>
             </div>
           </div>
         </div>
