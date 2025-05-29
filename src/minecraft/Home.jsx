@@ -18,7 +18,6 @@ import Portal from "./components/Portal";
 import AudioPlayer from "../components/AudioPlayer";
 import GameMenu from "./components/GameMenu";
 import { world } from "./worlds/world";
-import { netherWorld } from "./worlds/nether";
 
 extend({ Text });
 const Home = () => {
@@ -58,7 +57,7 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div className="h-screen relative">
+    <div className="relative h-screen">
       <Canvas style={{ height: "100vh" }}>
         <Sky sunPosition={[-100, 100, 20]} />
         <ambientLight intensity={1.5} />
@@ -99,7 +98,7 @@ const Home = () => {
           <Portal position={[8, 2, -2.5]} rotation={[0, Math.PI / 2, 0]} />
         )}
       </Canvas>
-      <div className="center-align  text-white">
+      <div className="text-white center-align">
         <FaPlus />
       </div>
       <TextureSelector />

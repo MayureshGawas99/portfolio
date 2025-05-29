@@ -1,8 +1,6 @@
 import { nanoid } from "nanoid";
 import { create } from "zustand";
 import { blocks } from "../blocks/blocks";
-import { world } from "../worlds/world";
-import { netherWorld } from "../worlds/nether";
 import { skillBlocks } from "../blocks/skills";
 
 function getRandomIntInclusive(min, max) {

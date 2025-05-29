@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Models from "../components/Models";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,6 @@ import Slider from "../components/Slider";
 
 const AboutPage = () => {
   const navigate = useNavigate();
-  const python = 100;
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);
     audio.play();

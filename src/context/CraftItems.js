@@ -16,7 +16,6 @@ import {
   goldIngot,
   ironBlock,
   ironIngot,
-  ironPickaxe,
   ladder,
   oakDoor,
   oakFence,

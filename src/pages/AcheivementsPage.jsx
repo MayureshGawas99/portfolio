@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tab, Tabs, TabList } from "react-tabs";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { book_quill, bookshelf, redstone } from "../assets/icons/iconImages";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,7 @@ const AcheivementsPage = () => {
     audio.play();
   };
   return (
-    <div className="bg-dirt h-screen flex flex-col gap-5 items-center justify-center text-font">
+    <div className="flex flex-col items-center justify-center h-screen gap-5 bg-dirt text-font">
       <Tabs className="w-[80%]">
         <TabList className={"w-fit flex flex-row gap-2"}>
           <Tab
@@ -85,7 +85,7 @@ const AcheivementsPage = () => {
                 <h2 className="text-base md:text-lg lg:text-xl ">
                   Coding Advancements
                 </h2>
-                <div className="flex-grow  bg-netherrack">
+                <div className="flex-grow bg-netherrack">
                   <DiagramComponent
                     initialEdges={netherInitialEdges}
                     initialNodes={netherInitialNodes}

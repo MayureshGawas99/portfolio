@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AppContext, useAppContext } from "../context/AppContext";
 import { useDrop } from "react-dnd";
 
@@ -8,8 +8,8 @@ const DropComponent = ({ index, item }) => {
     accept: "image",
     drop: (item) => {
       setCurrentRecipe((prevRecipe) => {
-        const newRecipe = [...prevRecipe]; // Clone the array
-        newRecipe[index] = item; // Update the specific slot
+        const newRecipe = [...prevRecipe];
+        newRecipe[index] = item;
         return newRecipe;
       });
     },
@@ -18,11 +18,6 @@ const DropComponent = ({ index, item }) => {
     }),
   }));
 
-  const addItemToRecipe = (item) => {
-    const newRecipe = [...currentRecipe];
-    newRecipe[index] = item;
-    setCurrentRecipe(newRecipe);
-  };
   return (
     <>
       {item ? (

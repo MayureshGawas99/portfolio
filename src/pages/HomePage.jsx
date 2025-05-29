@@ -1,24 +1,17 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Panorama from "../components/Panorama";
 import minecraftLogo from "../assets/minecraftLogo.png";
 import AudioPlayer from "../components/AudioPlayer";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
-import { AppContext } from "../context/AppContext";
 
 const HomePage = () => {
-  const { setModalOpen, isPlaying } = useContext(AppContext);
   const navigate = useNavigate();
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
-  // useEffect(() => {
-  //   if (!isPlaying) {
-  //     setModalOpen(true);
-  //   }
-  //   // eslint-disable-next-line
-  // }, []);
+
   return (
     <div className="relative w-screen h-screen ">
       <Panorama />
