@@ -122,15 +122,17 @@ const WorkExperiencePage = () => {
                     }
                   />
                 </p>
-                <p className="mt-2 text-gray-500 text-font">
+                <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
                   <span className="text-white">Role: </span>Full Stack Developer
                 </p>
-                <p className="mt-2 text-gray-500 text-font">
+                <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
                   <span className="text-white">Duration: </span>6 Months (Jan 8
                   2024 - June 28 2024)
                 </p>
-                <p className="mt-2 text-white text-font">Responsibilities :</p>
-                <ul className="mx-6 text-gray-500 text-font">
+                <p className="mt-2 text-xs text-white text-font md:text-base">
+                  Responsibilities :
+                </p>
+                <ul className="ml-4 text-xs text-gray-500 text-font md:text-base">
                   <li>1. Design and Develop Web Apps</li>{" "}
                   <li>2. Optimize app wrt speed and scalability</li>{" "}
                   <li>3. Participate in Code Reviews</li>
@@ -140,7 +142,9 @@ const WorkExperiencePage = () => {
                     6. Contribute to development of technical documentation
                   </li>
                 </ul>
-                <p className="mt-2 text-white text-font">Projects:</p>
+                <p className="mt-2 text-xs text-white text-font md:text-base">
+                  Projects:
+                </p>
                 <ul className="mt-2 text-gray-500 text-font">
                   {DodasProjects.map((project, index) => (
                     <li>
@@ -158,11 +162,13 @@ const WorkExperiencePage = () => {
                 <p className="text-xl text-yellow-300 text-font ">
                   Deutsche Bank (DB)
                 </p>
-                <p className="mt-2 text-gray-500 text-font">
+                <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
                   <span className="text-white">Role: </span>Graduate Analyst
                 </p>
-                <p className="mt-2 text-white text-font">Responsibilities :</p>
-                <ul className="mx-6 text-gray-500 text-font">
+                <p className="mt-2 text-xs text-white text-font md:text-base">
+                  Responsibilities :
+                </p>
+                <ul className="ml-4 text-xs text-gray-500  text-font md:text-base">
                   <li>
                     1. Set up and configure TeamCity agents for CI/CD pipelines.
                   </li>
