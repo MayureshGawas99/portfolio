@@ -168,7 +168,7 @@ const WorkExperiencePage = () => {
                 <p className="mt-2 text-xs text-white text-font md:text-base">
                   Responsibilities :
                 </p>
-                <ul className="ml-4 text-xs text-gray-500  text-font md:text-base">
+                <ul className="ml-4 text-xs text-gray-500 text-font md:text-base">
                   <li>
                     1. Set up and configure TeamCity agents for CI/CD pipelines.
                   </li>
@@ -195,7 +195,7 @@ const WorkExperiencePage = () => {
                     improve usability and performance.
                   </li>
                   <li>
-                    7. Develop a service manager to handle and monitor all
+                    8. Develop a service manager to handle and monitor all
                     backend services effectively.
                   </li>
                 </ul>

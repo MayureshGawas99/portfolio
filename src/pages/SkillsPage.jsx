@@ -8,8 +8,6 @@ import DragComponent from "../components/DragComponent";
 import { AppContext, useAppContext } from "../context/AppContext";
 import DropComponent from "../components/DropComponent";
 import { MdDelete } from "react-icons/md";
-import { reactLogo } from "../minecraft/images/skillsLogo";
-import { diamondChest } from "../assets/icons/iconImages";
 import { toast } from "react-toastify";
 
 const SkillsPage = () => {
@@ -248,6 +246,15 @@ const SkillsPage = () => {
                     <p className="text-xs text-yellow-300 text-font ">
                       Unlock by crafting {skill.craft}
                     </p>
+                    <div className="relative flex-shrink-0 block w-fit h-fit md:hidden">
+                      <img src={skill.craftIcon} alt="" className="w-8 h-8 " />
+                      {!skillsUnlocked.includes(skill.skill) && (
+                        <FaLock
+                          size={12}
+                          className="absolute text-white -translate-x-1/2 -translate-y-1/2 opacity-100 top-1/2 left-1/2"
+                        />
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="relative flex-shrink-0 hidden md:block">

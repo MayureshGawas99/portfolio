@@ -122,6 +122,10 @@ export const allReciepes = {
     name: "Diamond Helmet",
     icon: diamondHelmet,
   },
+  "Diamond DiamondDiamond Diamond   ": {
+    name: "Diamond Boots",
+    icon: diamondBoots,
+  },
   "   Diamond DiamondDiamond Diamond": {
     name: "Diamond Boots",
     icon: diamondBoots,
