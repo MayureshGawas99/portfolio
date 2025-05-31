@@ -49,6 +49,21 @@ import oakTrapdoor from "./Oak_Trapdoor.webp";
 import diamondBlock from "./Block_of_Diamond.webp";
 import ironBlock from "./Block_of_Iron.png";
 import goldBlock from "./Block_of_Gold.webp";
+import structureBlock from "./Structure_Block.webp";
+import elytra from "./Elytra.webp";
+import beacon from "./Beacon.webp";
+import observer from "./Observer.webp";
+import lightningRod from "./Lightning_Rod.webp";
+import honeyBlock from "./Honey_Block.webp";
+import emptyMap from "./empty_map.png";
+import chest from "./Chest.png";
+import wheat from "./Wheat.webp";
+import wheatSeeds from "./Wheat_Seeds.webp";
+import redstoneRepeater from "./Redstone_Repeater.webp";
+import enderEye from "./Eye_of_Ender.webp";
+import carvedPumpkin from "./Carved_Pumpkin.webp";
+import dodas from "../DODAS.png";
+import db from "../DB.png";
 
 export {
   book_quill,
@@ -102,4 +117,19 @@ export {
   diamondBlock,
   ironBlock,
   goldBlock,
+  structureBlock,
+  elytra,
+  beacon,
+  observer,
+  lightningRod,
+  honeyBlock,
+  emptyMap,
+  chest,
+  wheat,
+  wheatSeeds,
+  redstoneRepeater,
+  enderEye,
+  carvedPumpkin,
+  dodas,
+  db,
 };
