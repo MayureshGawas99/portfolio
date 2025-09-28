@@ -17,6 +17,7 @@ import AcheivementsPage from "./pages/AcheivementsPage";
 import WorldPage from "./pages/WorldPage";
 import SkillsPage from "./pages/SkillsPage";
 import { ToastContainer } from "react-toastify";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -37,6 +38,7 @@ function App() {
   return (
     <div className="h-screen App">
       <AudioModal />
+      <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
