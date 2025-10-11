@@ -114,7 +114,7 @@ const WorkExperiencePage = () => {
                   Deutsche Bank (DB)
                 </p>
                 <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
-                  <span className="text-white">Role: </span>Graduate Analyst
+                  <span className="text-white">Role: </span>Senior Analyst
                 </p>
                 <p className="mt-2 text-xs text-white text-font md:text-base">
                   Responsibilities :
