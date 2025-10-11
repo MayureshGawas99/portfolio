@@ -80,7 +80,20 @@ const WorkExperiencePage = () => {
             onClick={() => setTab(0)}
             className={`${
               tab === 0 && "border border-white"
-            } text-white text-font p-2 flex flex-row gap-2 `}
+            } text-white text-font p-2 flex flex-row gap-2 cursor-pointer`}
+          >
+            <img src={DB} alt="" className="h-16" />
+            <div>
+              <p>Deutsche Bank</p>
+              <p className="text-gray-500">Full Time </p>
+              <p className="text-sm text-yellow-300 ">15 Jul 2024 - Present</p>
+            </div>
+          </div>
+          <div
+            onClick={() => setTab(1)}
+            className={`${
+              tab === 1 && "border border-white"
+            } text-white text-font p-2 flex flex-row gap-2 cursor-pointer`}
           >
             <img src={DODAS} alt="" className="h-16" />
             <div>
@@ -91,22 +104,62 @@ const WorkExperiencePage = () => {
               </p>
             </div>
           </div>
-          <div
-            onClick={() => setTab(1)}
-            className={`${
-              tab === 1 && "border border-white"
-            } text-white text-font p-2 flex flex-row gap-2 `}
-          >
-            <img src={DB} alt="" className="h-16" />
-            <div>
-              <p>Deutsche Bank</p>
-              <p className="text-gray-500">Full Time </p>
-              <p className="text-sm text-yellow-300 ">15 Jul 2024 - Present</p>
-            </div>
-          </div>
         </div>
         <div className="p-2 md:col-span-8 lg:col-span-9 bg-black/50">
           {tab === 0 && (
+            <div>
+              <img src={DB} alt="" className="w-[6rem]" />
+              <div className="mt-2">
+                <p className="text-xl text-yellow-300 text-font ">
+                  Deutsche Bank (DB)
+                </p>
+                <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
+                  <span className="text-white">Role: </span>Graduate Analyst
+                </p>
+                <p className="mt-2 text-xs text-white text-font md:text-base">
+                  Responsibilities :
+                </p>
+                <ul className="flex flex-col gap-2 ml-4 text-xs text-justify text-gray-500 text-font md:text-base">
+                  <li>
+                    1. Configured and managed 4+ TeamCity build agents,
+                    streamlining CI/CD pipelines across multiple projects and
+                    improving build throughput and deployment efficiency by 30%.
+                  </li>
+                  <li>
+                    2. Migrated over 10 critical jobs to optimized agents, which
+                    reduced pipeline queue times by 60% and minimized build
+                    failures through improved dependency and resource
+                    management.
+                  </li>
+                  <li>
+                    3. Redesigned and modernized the UI of the LBT-DD project,
+                    applying component-level optimization and lazy loading to
+                    decrease page load time from 20s to under 5s, significantly
+                    enhancing user experience.
+                  </li>
+                  <li>
+                    4. Optimized backend performance through query tuning, API
+                    refactoring, and caching strategies, while implementing
+                    role-based authorization to reinforce application security
+                    and data integrity.
+                  </li>
+                  <li>
+                    5. Developed a centralized Service Manager dashboard to
+                    monitor and control microservices in real time, improving
+                    overall system uptime, reliability, and operational
+                    transparency.
+                  </li>
+                  <li>
+                    6. Re-engineered the backend architecture by integrating a
+                    Redis queue for task management and enabling parallel
+                    processing with multithreading, resulting in faster request
+                    handling and better scalability under high load.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
+          {tab === 1 && (
             <div>
               <img src={DODAS} alt="" className="w-[6rem]" />
               <div className="mt-2">
@@ -151,53 +204,6 @@ const WorkExperiencePage = () => {
                       <ProjectCard project={project} key={index} />
                     </li>
                   ))}
-                </ul>
-              </div>
-            </div>
-          )}
-          {tab === 1 && (
-            <div>
-              <img src={DB} alt="" className="w-[6rem]" />
-              <div className="mt-2">
-                <p className="text-xl text-yellow-300 text-font ">
-                  Deutsche Bank (DB)
-                </p>
-                <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
-                  <span className="text-white">Role: </span>Graduate Analyst
-                </p>
-                <p className="mt-2 text-xs text-white text-font md:text-base">
-                  Responsibilities :
-                </p>
-                <ul className="ml-4 text-xs text-gray-500 text-font md:text-base">
-                  <li>
-                    1. Set up and configure TeamCity agents for CI/CD pipelines.
-                  </li>
-                  <li>
-                    2. Migrate existing build and deployment jobs to the newly
-                    configured agents.
-                  </li>
-                  <li>
-                    3. Redesign and optimize the current UI of the ltb-dd
-                    project.
-                  </li>
-                  <li>
-                    4. Implement backend optimizations and integrate
-                    authorization mechanisms.
-                  </li>
-                  <li>
-                    5. Set up and manage SSL certificates on remote machines.
-                  </li>
-                  <li>
-                    6. Write scripts to automate manual and repetitive tasks.
-                  </li>
-                  <li>
-                    7. Redesign the entire user interface of the project to
-                    improve usability and performance.
-                  </li>
-                  <li>
-                    8. Develop a service manager to handle and monitor all
-                    backend services effectively.
-                  </li>
                 </ul>
               </div>
             </div>

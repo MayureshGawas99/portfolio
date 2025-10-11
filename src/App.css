@@ -32,7 +32,28 @@
 }
 
 .text-border {
-  -webkit-text-stroke: 2px #000;
+  color: white; /* Fill color */
+  -webkit-text-stroke: 2px black; /* Stroke thickness & color */
+  font-weight: 800; /* Make text bold */
+  font-size: 30px; /* Adjust as needed */
+}
+
+.text-stack {
+  position: relative;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.stroke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  -webkit-text-stroke: 3px black;
+}
+
+.fill {
+  position: relative;
 }
 
 .grow-shrink {

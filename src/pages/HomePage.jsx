@@ -98,9 +98,12 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className=" absolute top-[11.5rem] md:top-[11rem]">
-          <h1 className="title md:text-3xl text-lg text-[#d3c7c5] text-border ">
-            PORTFOLIO EDITION
+        <div className=" absolute top-[11.5rem] md:top-[11.5rem]">
+          <h1 className="text-lg text-white md:text-3xl text-bold-font">
+            <div className="text-stack">
+              <span className="stroke">PORTFOLIO EDITION</span>
+              <span className="fill">PORTFOLIO EDITION</span>
+            </div>
           </h1>
         </div>
       </div>
