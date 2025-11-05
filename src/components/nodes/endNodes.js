@@ -102,7 +102,7 @@ export const endInitialNodes = [
     data: {
       img: db,
       title: "Deutsche Bank",
-      description: "Graduate Analyst",
+      description: "Senior Analyst",
     }, // Replace with your image path
     position: { x: 400, y: 50 },
     type: "custom", // Use custom type
