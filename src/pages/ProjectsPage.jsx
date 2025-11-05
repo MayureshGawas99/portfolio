@@ -31,6 +31,14 @@ const MyProjects = [
     techstack: "MongoDB, Express, React, Node.js",
     url: "https://mg-ecomapp.netlify.app/",
   },
+  {
+    title: "MAC Clipboard Manager",
+    description:
+      "A lightweight macOS menu-bar utility that manages clipboard history with bookmarking support and persistent storage capabilities",
+    image: icon2,
+    techstack: "Python, rumps, pyperclip",
+    url: "https://github.com/MayureshGawas99/MAC-Clipboard-Manager",
+  },
 ];
 
 const ProjectsPage = () => {
