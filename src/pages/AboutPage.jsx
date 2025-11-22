@@ -12,6 +12,28 @@ const AboutPage = () => {
     audio.play();
   };
 
+  const Languages = [
+    { name: "Python", level: 100 },
+    { name: "Java", level: 80 },
+    { name: "C", level: 65 },
+    { name: "JavaScript", level: 90 },
+  ];
+
+  const Socials = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/narayan-gawas-5746b0179",
+    },
+    { name: "GitHub", url: "https://github.com/MayureshGawas99" },
+    {
+      name: "GeeksforGeeks",
+      url: "https://www.geeksforgeeks.org/user/narayan01000111/",
+    },
+    { name: "Codechef", url: "https://www.codechef.com/users/narayan_gawas" },
+    { name: "Codeforces", url: "https://codeforces.com/profile/Narayan.Gawas" },
+    { name: "Leetcode", url: "https://leetcode.com/u/user3353e/" },
+  ];
+
   return (
     <div className="h-screen bg-dirt ">
       <div className="flex flex-row h-full mx-6 md:mx-2 lg:mx-32 gap-15">
@@ -31,10 +53,10 @@ const AboutPage = () => {
         <div className="flex flex-col flex-grow gap-5 my-10 overflow-x-auto">
           <div className="flex flex-col flex-grow w-full gap-2 p-6 black-glassmorphism">
             <div>
-              <p className="text-base text-yellow-300 text-font md:text-xl">
+              <p className="text-sm text-yellow-300 text-font md:text-xl">
                 Full Stack Web Devloper
               </p>
-              <p className="text-sm text-justify text-white text-font md:text-base">
+              <p className="text-xs text-justify text-white text-font md:text-base">
                 Hey there! I'm Narayan Gawas, a full-stack web developer with a
                 passion for building digital worlds inspired by creativity of
                 Minecraft. From crafting pixel-perfect designs to coding
@@ -44,74 +66,37 @@ const AboutPage = () => {
               </p>
             </div>
             <div>
-              <p className="text-base text-center text-yellow-300 text-font md:text-xl">
+              <p className="text-sm text-center text-yellow-300 text-font md:text-xl">
                 Languages
               </p>
               <div className="grid grid-cols-2 gap-4 mx-0 mt-2 md:mx-10">
-                {/* 1  */}
-                <Slider label={"Python"} defaultValue={100} />
-                {/* 2  */}
-                <Slider label={"Java"} defaultValue={80} />
-                {/* 3  */}
-                <Slider label={"C"} defaultValue={65} />
-                {/* 4  */}
-                <Slider label={"Javascript"} defaultValue={90} />
-                {/* 5 */}
-                <Slider label={"HTML"} defaultValue={100} />
-                {/* 6 */}
-                <Slider label={"CSS"} defaultValue={90} />
+                {Languages.map((language, index) => (
+                  <Slider
+                    key={index}
+                    label={language.name}
+                    defaultValue={language.level}
+                  />
+                ))}
               </div>
             </div>
             <div>
-              <p className="text-base text-center text-yellow-300 text-font md:text-xl">
+              <p className="text-sm text-center text-yellow-300 text-font md:text-xl">
                 Socials
               </p>
               <div className="grid grid-cols-2 gap-4 mx-0 mt-2 md:mx-10">
-                {/* 1  */}
-                <a
-                  href="https://www.linkedin.com/in/narayan-gawas-5746b0179"
-                  target="blank"
-                  onClick={playButtonSound}
-                  className="flex justify-center text-white minecraft-btn"
-                >
-                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
-                    <span>LinkedIn</span>
-                  </div>
-                </a>
-                {/* 2  */}
-                <a
-                  href="https://github.com/MayureshGawas99"
-                  target="blank"
-                  onClick={playButtonSound}
-                  className="flex justify-center text-white minecraft-btn"
-                >
-                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
-                    <span>Github</span>
-                  </div>
-                </a>
-                {/* 3  */}
-                <a
-                  href="https://www.geeksforgeeks.org/user/narayan01000111/"
-                  target="blank"
-                  onClick={playButtonSound}
-                  className="flex justify-center text-white minecraft-btn"
-                >
-                  {" "}
-                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
-                    <span>GeeksforGeeks</span>
-                  </div>
-                </a>
-                {/* 4  */}
-                <a
-                  href="https://www.codechef.com/users/narayan_gawas"
-                  target="blank"
-                  onClick={playButtonSound}
-                  className="flex justify-center text-white minecraft-btn"
-                >
-                  <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center">
-                    <span>Codechef</span>
-                  </div>
-                </a>
+                {Socials.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="blank"
+                    onClick={playButtonSound}
+                    className="flex justify-center text-white minecraft-btn"
+                  >
+                    <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-2  h-full flex justify-center items-center text-sm md:text-base">
+                      <span>{social.name}</span>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -125,7 +110,7 @@ const AboutPage = () => {
               type="button"
               className="minecraft-btn w-[10rem]  text-white"
             >
-              <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1  h-full flex justify-center items-center">
+              <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1  h-full flex justify-center items-center text-sm md:text-base">
                 <span>See Resume</span>
               </div>
             </button>
@@ -135,7 +120,7 @@ const AboutPage = () => {
                 navigate("/");
               }}
               type="button"
-              className="minecraft-btn w-[10rem]  text-white"
+              className="minecraft-btn w-[10rem]  text-white text-sm md:text-base"
             >
               <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1  h-full flex justify-center items-center">
                 <span>Back</span>

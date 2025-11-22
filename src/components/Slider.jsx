@@ -27,10 +27,10 @@ const Slider = ({ label, defaultValue }) => {
   };
   return (
     <div className="relative h-[40px] bg-btn ">
-      <div className="h-full w-full flex items-center justify-center">
+      <div className="flex items-center justify-center w-full h-full">
         <p
           htmlFor="default-range"
-          className="   text-sm font-medium z-10 text-white text-center "
+          className="z-10 text-xs font-medium text-center text-white  md:text-sm"
         >
           {label}: {value}
         </p>
@@ -43,7 +43,7 @@ const Slider = ({ label, defaultValue }) => {
         onMouseUp={handleMouseUp}
         onMouseDown={handleMouseDown}
         onTouchEnd={handleTouchEnd}
-        className="absolute top-0  w-full h-full bg-black/50 slider cursor-pointer "
+        className="absolute top-0 w-full h-full cursor-pointer bg-black/50 slider "
       />
     </div>
   );
