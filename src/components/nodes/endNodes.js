@@ -24,7 +24,7 @@ export const endInitialNodes = [
     data: {
       img: dodas,
       title: "Internship at DODAS",
-      description: "Full Stack Developer Intern",
+      description: "Full Stack Developer Intern (JAN 2024 - June 2024)",
     }, // Replace with your image path
     position: { x: 50, y: 50 },
     type: "custom", // Use custom type
@@ -108,7 +108,7 @@ export const endInitialNodes = [
     data: {
       img: db,
       title: "Deutsche Bank",
-      description: "Senior Analyst",
+      description: "Senior Analyst (JULY 2024 - Present)",
     }, // Replace with your image path
     position: { x: 400, y: 50 },
     type: "custom", // Use custom type
