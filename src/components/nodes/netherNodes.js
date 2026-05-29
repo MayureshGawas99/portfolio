@@ -1,6 +1,8 @@
 import {
   blackstoneBricks,
+  book,
   bucket,
+  clock,
   cryingObsidian,
   ghastTears,
   goldIngot,
@@ -62,7 +64,7 @@ export const netherInitialNodes = [
     data: {
       img: netheriteChest,
       title: "Cover Me in Debris",
-      description: "Solved Over 900 Problems on GFG",
+      description: "Solved Over 1000 Problems on GFG",
     }, // Replace with your image path
     position: { x: 450, y: 50 },
     type: "custom", // Use custom type
@@ -162,7 +164,7 @@ export const netherInitialNodes = [
     data: {
       img: bucket,
       title: "How Did We Get Here?",
-      description: "Completed 1 year Streak on GFG problem of the day",
+      description: "Completed 1000 Days Streak on GFG problem of the day",
     }, // Replace with your image path
     position: { x: 150, y: 350 },
     type: "custom", // Use custom type
@@ -174,11 +176,33 @@ export const netherInitialNodes = [
       img: netheriteHoe,
       title: "Serious Dedication",
       description:
-        "Completed 900+ Competitive Programming Problems on Codechef",
+        "Completed 1000+ Competitive Programming Problems on Codechef",
     }, // Replace with your image path
     position: { x: 250, y: 350 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
+  },
+  {
+    id: "16",
+    data: {
+      img: book, // Replace with your image path (e.g., a Minecraft book icon)
+      title: "New Adventure Begins",
+      description: "Started solving problems on LeetCode",
+    },
+    position: { x: 150, y: 450 },
+    type: "custom",
+    style: { width: "50px", height: "50px" },
+  },
+  {
+    id: "17",
+    data: {
+      img: clock, // Replace with your image path (e.g., Minecraft clock icon)
+      title: "Time is Relative",
+      description: "Achieved 400 Days Streak on LeetCode",
+    },
+    position: { x: 250, y: 450 },
+    type: "custom",
+    style: { width: "50px", height: "50px" },
   },
 ];
 
@@ -330,6 +354,28 @@ export const netherInitialEdges = [
     id: "14-15",
     source: "14",
     target: "15",
+    type: "step",
+    style: {
+      stroke: "#fff", // Line color
+      strokeWidth: 5, // Width of the line
+      border: "2px solid black", // Border (adjust if needed)
+    },
+  },
+  {
+    id: "1-16",
+    source: "1",
+    target: "16",
+    type: "step",
+    style: {
+      stroke: "#fff", // Line color
+      strokeWidth: 5, // Width of the line
+      border: "2px solid black", // Border (adjust if needed)
+    },
+  },
+  {
+    id: "16-17",
+    source: "16",
+    target: "17",
     type: "step",
     style: {
       stroke: "#fff", // Line color

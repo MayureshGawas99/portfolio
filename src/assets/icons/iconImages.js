@@ -64,6 +64,8 @@ import enderEye from "./Eye_of_Ender.webp";
 import carvedPumpkin from "./Carved_Pumpkin.webp";
 import dodas from "../DODAS.png";
 import db from "../DB.png";
+import book from "./Book.png";
+import clock from "./Clock.webp";
 
 export {
   book_quill,
@@ -132,4 +134,6 @@ export {
   carvedPumpkin,
   dodas,
   db,
+  book,
+  clock,
 };

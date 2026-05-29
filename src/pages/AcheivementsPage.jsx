@@ -26,7 +26,7 @@ const AcheivementsPage = () => {
       <Tabs className="w-[80%]">
         <TabList className={"w-fit flex flex-row gap-2"}>
           <Tab
-            className={` bg-[#c9c7c8] border border-b-0 border-black rounded-t-md ${
+            className={` bg-[#c9c7c8] border border-b-0 border-black rounded-t-md cursor-pointer ${
               tab === 1 ? "translate-y-[5px]" : "bg-[#8B8B8B]"
             }`}
             onClick={() => {
@@ -39,7 +39,7 @@ const AcheivementsPage = () => {
             </div>
           </Tab>
           <Tab
-            className={` bg-[#c9c7c8] border border-b-0 border-black rounded-t-md ${
+            className={` bg-[#c9c7c8] border border-b-0 border-black rounded-t-md cursor-pointer ${
               tab === 2 ? "translate-y-[5px]" : "bg-[#8B8B8B]"
             }`}
             onClick={() => {
@@ -52,7 +52,7 @@ const AcheivementsPage = () => {
             </div>
           </Tab>
           <Tab
-            className={` bg-[#c9c7c8] border border-b-0 border-black rounded-t-md ${
+            className={` bg-[#c9c7c8] border border-b-0 border-black rounded-t-md cursor-pointer ${
               tab === 3 ? "translate-y-[5px]" : "bg-[#8B8B8B]"
             }`}
             onClick={() => {

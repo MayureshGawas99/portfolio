@@ -26,16 +26,33 @@ const CustomNode = ({ data }) => {
         >
           <img src={data.img} alt={data.label} style={{ height: "32px" }} />{" "}
           {/* Adjust size as needed */}
-          <Handle
-            style={{ background: "transparent", border: "none" }}
-            type="target"
-            position={Position.Left}
-          />
-          <Handle
-            style={{ background: "transparent", border: "none" }}
-            type="source"
-            position={Position.Right}
-          />
+          {data?.handle === "vertical" ? (
+            <>
+              <Handle
+                style={{ background: "transparent", border: "none" }}
+                type="target"
+                position={Position.Top}
+              />
+              <Handle
+                style={{ background: "transparent", border: "none" }}
+                type="source"
+                position={Position.Bottom}
+              />
+            </>
+          ) : (
+            <>
+              <Handle
+                style={{ background: "transparent", border: "none" }}
+                type="target"
+                position={Position.Left}
+              />
+              <Handle
+                style={{ background: "transparent", border: "none" }}
+                type="source"
+                position={Position.Right}
+              />
+            </>
+          )}
         </div>
       </a>
     </div>
@@ -49,7 +66,7 @@ const DiagramComponent = ({ initialEdges, initialNodes }) => {
   useEffect(() => {
     setNodes(initialNodes);
     setEdges(initialEdges);
-  }, []);
+  }, [initialEdges, initialNodes]);
 
   return (
     <>
@@ -67,7 +84,7 @@ const DiagramComponent = ({ initialEdges, initialNodes }) => {
         className="p-0 m-0"
         noArrow={true}
         render={({ content, activeAnchor }) => (
-          <div className="p-0 m-0 w-full h-full">
+          <div className="w-full h-full p-0 m-0">
             <div className="bg-[#B98F2C] border-2 border-black border-b-[#493606] w-full  text-xl  minecraft-shadow rounded-t-lg">
               <div className=" flex flex-row gap-2 items-center p-2 border-4 border-b-[#493606] border-r-[#493606] border-l-[#DBA213] border-t-[#DBA213] rounded-t-lg">
                 <img

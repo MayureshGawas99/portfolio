@@ -37,8 +37,9 @@ export const endInitialNodes = [
       img: structureBlock,
       title: "Architects of Air and Logic",
       description: "Built responsive and functional web apps.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 200, y: 150 },
+    position: { x: 150, y: 150 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
@@ -48,41 +49,45 @@ export const endInitialNodes = [
       img: elytra,
       title: "Sonic Silk Roads",
       description: "Improved performance and scalability",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 200, y: 150 },
+    position: { x: 150, y: 250 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "4",
     data: {
-      img: observer,
-      title: "The Nether Mirror",
-      description: "Reviewed code for quality and consistency.",
+      img: lightningRod,
+      title: "Lightning in a Cauldron",
+      description: "Proposed creative, effective solutions.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 200, y: 250 },
+    position: { x: 150, y: 350 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "5",
     data: {
-      img: beacon,
-      title: "Whispers in the Beacon",
-      description: "Shared regular project updates.",
+      img: observer,
+      title: "The Nether Mirror",
+      description: "Reviewed code for quality and consistency.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 200, y: 350 },
+    position: { x: 250, y: 150 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "6",
     data: {
-      img: lightningRod,
-      title: "Lightning in a Cauldron",
-      description: "Proposed creative, effective solutions.",
+      img: beacon,
+      title: "Whispers in the Beacon",
+      description: "Shared regular project updates.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 200, y: 450 },
+    position: { x: 250, y: 250 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
@@ -92,8 +97,9 @@ export const endInitialNodes = [
       img: book_quill,
       title: "Scrolls of the Overworld",
       description: "Wrote and updated technical docs.",
+      handle: "vertical",
     },
-    position: { x: 200, y: 550 },
+    position: { x: 250, y: 350 },
     type: "custom",
     style: { width: "50px", height: "50px" },
   },
@@ -116,101 +122,109 @@ export const endInitialNodes = [
       title: "Crown of the Realm",
       description:
         "Recognized for outstanding performance and excellence in the RFT department.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 150 },
+    position: { x: 500, y: 150 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "10",
     data: {
-      img: honeyBlock,
-      title: "Sticky Situation",
-      description: "Installed and configured build agents for CI/CD workflows.",
+      img: enderEye,
+      title: "Eyes of the End",
+      description: "Showcased project at the highest leadership level.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 250 },
+    position: { x: 500, y: 250 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "11",
     data: {
-      img: emptyMap,
-      title: "Subspace Bubble",
-      description:
-        "Successfully moved jobs to new agents with minimal downtime.",
+      img: honeyBlock,
+      title: "Sticky Situation",
+      description: "Installed and configured build agents for CI/CD workflows.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 350 },
+    position: { x: 600, y: 150 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "12",
     data: {
-      img: wheat,
-      title: "The Parrots and Bats",
+      img: emptyMap,
+      title: "Subspace Bubble",
       description:
-        "Revamped the UI for better user experience and performance.",
+        "Successfully moved jobs to new agents with minimal downtime.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 450 },
+    position: { x: 600, y: 250 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "13",
     data: {
-      img: chest,
-      title: "War Pigs",
-      description:
-        "Improved backend performance and implemented access controls.",
+      img: wheatSeeds,
+      title: "A Seedy Place",
+      description: "Installed and configured SSL certificates securely.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 550 },
+    position: { x: 600, y: 350 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
-
   {
     id: "14",
     data: {
       img: redstoneRepeater,
       title: "Redstone Whispers",
       description: "Automated repetitive tasks using custom scripts.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 650 },
+    position: { x: 600, y: 450 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "15",
     data: {
-      img: carvedPumpkin,
-      title: "The Golem Protocol",
+      img: wheat,
+      title: "The Parrots and Bats",
       description:
-        "Built a system to manage and monitor services independently.",
+        "Revamped the UI for better user experience and performance.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 750 },
+    position: { x: 700, y: 150 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "16",
     data: {
-      img: enderEye,
-      title: "Eyes of the End",
-      description: "Showcased project at the highest leadership level.",
+      img: chest,
+      title: "War Pigs",
+      description:
+        "Improved backend performance and implemented access controls.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 850 },
+    position: { x: 700, y: 250 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
   {
     id: "17",
     data: {
-      img: wheatSeeds,
-      title: "A Seedy Place",
-      description: "Installed and configured SSL certificates securely.",
+      img: carvedPumpkin,
+      title: "The Golem Protocol",
+      description:
+        "Built a system to manage and monitor services independently.",
+      handle: "vertical",
     }, // Replace with your image path
-    position: { x: 550, y: 950 },
+    position: { x: 700, y: 350 },
     type: "custom", // Use custom type
     style: { width: "50px", height: "50px" }, // Set desired size
   },
@@ -295,8 +309,8 @@ export const endInitialEdges = [
     },
   },
   {
-    id: "8-10",
-    source: "8",
+    id: "9-10",
+    source: "9",
     target: "10",
     type: "step",
     style: {
@@ -317,8 +331,8 @@ export const endInitialEdges = [
     },
   },
   {
-    id: "8-12",
-    source: "8",
+    id: "11-12",
+    source: "11",
     target: "12",
     type: "step",
     style: {
@@ -328,8 +342,8 @@ export const endInitialEdges = [
     },
   },
   {
-    id: "8-13",
-    source: "8",
+    id: "12-13",
+    source: "12",
     target: "13",
     type: "step",
     style: {
@@ -339,8 +353,8 @@ export const endInitialEdges = [
     },
   },
   {
-    id: "8-14",
-    source: "8",
+    id: "13-14",
+    source: "13",
     target: "14",
     type: "step",
     style: {
@@ -361,8 +375,8 @@ export const endInitialEdges = [
     },
   },
   {
-    id: "8-16",
-    source: "8",
+    id: "15-16",
+    source: "15",
     target: "16",
     type: "step",
     style: {
@@ -372,8 +386,8 @@ export const endInitialEdges = [
     },
   },
   {
-    id: "8-17",
-    source: "8",
+    id: "16-17",
+    source: "16",
     target: "17",
     type: "step",
     style: {
