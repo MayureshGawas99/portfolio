@@ -5,7 +5,10 @@ const DragComponent = ({ item }) => {
   const { icon } = item;
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "image",
-    item: item,
+    item: {
+      ...item,
+      source: "inventory",
+    },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),

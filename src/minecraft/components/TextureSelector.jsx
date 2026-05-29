@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import useStore from "../hooks/useStore";
 import useKeyboard from "../hooks/useKeyboard";
 import { useGameContext } from "../../context/GameContext";
 import { flintAndSteel } from "../images/images";
 
 const TextureSelector = () => {
-  const [visible, setVisible] = useState(false);
   const { keyActionMap, active, setActive, allBlocks, inNether } =
     useGameContext();
   const actions = useKeyboard();
@@ -68,16 +67,6 @@ const TextureSelector = () => {
     Digit9,
     Digit0,
   ]);
-
-  useEffect(() => {
-    const visibilityTimeout = setTimeout(() => {
-      setVisible(false);
-    }, 2000);
-    setVisible(true);
-    return () => {
-      clearTimeout(visibilityTimeout);
-    };
-  }, [activeTexture]);
 
   return (
     <>

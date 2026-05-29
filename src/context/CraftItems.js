@@ -26,6 +26,12 @@ import {
   stick,
   string,
   wool,
+  ironPickaxe,
+  ironShovel,
+  ironAxe,
+  ironSword,
+  ironChest,
+  ironHoe,
 } from "../assets/icons/iconImages";
 import {
   bootstrapLogo,
@@ -38,13 +44,19 @@ import {
   htmlLogo,
   javaLogo,
   jsLogo,
+  linuxLogo,
   mongoDBLogo,
   nextLogo,
   nodeJSLogo,
   pythonLogo,
   reactLogo,
+  redisLogo,
   sqlLogo,
   tailwindLogo,
+  figmaLogo,
+  teamcityLogo,
+  seleniumLogo,
+  jiraLogo,
 } from "../minecraft/images/skillsLogo";
 
 export const items = [
@@ -219,6 +231,55 @@ export const allReciepes = {
       name: "Block of Gold",
       icon: goldBlock,
     },
+  "Iron IngotIron IngotIron Ingot Stick  Stick ": {
+    name: "Iron Pickaxe",
+    icon: ironPickaxe,
+  },
+  "Iron IngotIron Ingot StickIron Ingot Stick  ": {
+    name: "Iron Axe",
+    icon: ironAxe,
+  },
+  " Iron IngotIron Ingot StickIron Ingot Stick ": {
+    name: "Iron Axe",
+    icon: ironAxe,
+  },
+  "Iron Ingot  Stick  Stick  ": {
+    name: "Iron Shovel",
+    icon: ironShovel,
+  },
+  " Iron Ingot  Stick  Stick ": {
+    name: "Iron Shovel",
+    icon: ironShovel,
+  },
+  "  Iron Ingot  Stick  Stick": {
+    name: "Iron Shovel",
+    icon: ironShovel,
+  },
+  "Iron Ingot  Iron Ingot  Stick  ": {
+    name: "Iron Sword",
+    icon: ironSword,
+  },
+  " Iron Ingot  Iron Ingot  Stick ": {
+    name: "Iron Sword",
+    icon: ironSword,
+  },
+  "  Iron Ingot  Iron Ingot  Stick": {
+    name: "Iron Sword",
+    icon: ironSword,
+  },
+  "Iron IngotIron Ingot Stick  Stick  ": {
+    name: "Iron Hoe",
+    icon: ironHoe,
+  },
+  " Iron IngotIron Ingot Stick  Stick ": {
+    name: "Iron Hoe",
+    icon: ironHoe,
+  },
+  "Iron Ingot Iron IngotIron IngotIron IngotIron IngotIron IngotIron IngotIron Ingot":
+    {
+      name: "Iron Chestplate",
+      icon: ironChest,
+    },
 };
 
 export const allSkills = [
@@ -324,5 +385,41 @@ export const allSkills = [
     icon: cssLogo,
     craft: "Block of Gold",
     craftIcon: goldBlock,
+  },
+  {
+    skill: "Linux",
+    icon: linuxLogo,
+    craft: "Iron Pickaxe",
+    craftIcon: ironPickaxe,
+  },
+  {
+    skill: "Redis",
+    icon: redisLogo,
+    craft: "Iron Shovel",
+    craftIcon: ironShovel,
+  },
+  {
+    skill: "Figma",
+    icon: figmaLogo,
+    craft: "Iron Axe",
+    craftIcon: ironAxe,
+  },
+  {
+    skill: "TeamCity",
+    icon: teamcityLogo,
+    craft: "Iron Sword",
+    craftIcon: ironSword,
+  },
+  {
+    skill: "Selenium",
+    icon: seleniumLogo,
+    craft: "Iron Hoe",
+    craftIcon: ironHoe,
+  },
+  {
+    skill: "Jira",
+    icon: jiraLogo,
+    craft: "Iron Chestplate",
+    craftIcon: ironChest,
   },
 ];

@@ -8,6 +8,7 @@ import DragComponent from "../components/DragComponent";
 import { AppContext, useAppContext } from "../context/AppContext";
 import DropComponent from "../components/DropComponent";
 import { MdDelete } from "react-icons/md";
+import { useDrop } from "react-dnd";
 import { toast } from "react-toastify";
 
 const SkillsPage = () => {
@@ -25,10 +26,42 @@ const SkillsPage = () => {
     setSkillsUnlocked,
   } = useAppContext(AppContext);
 
+  const InventorySlot = ({ children }) => {
+    const [{ isOver }, drop] = useDrop(
+      () => ({
+        accept: "image",
+        drop: (dragged) => {
+          if (dragged.source === "grid") {
+            setCurrentRecipe((prevRecipe) => {
+              const nextRecipe = [...prevRecipe];
+              nextRecipe[dragged.index] = null;
+              return nextRecipe;
+            });
+          }
+        },
+        collect: (monitor) => ({
+          isOver: monitor.isOver(),
+        }),
+      }),
+      [setCurrentRecipe],
+    );
+
+    return (
+      <div
+        ref={drop}
+        className={`border-[3px] border-t-[#313131] border-l-[#313131] bg-[#919191] p-1 hover:scale-110 transition-all duration-150 ease-in-out cursor-pointer ${
+          isOver ? "border-yellow-300" : ""
+        }`}
+      >
+        {children}
+      </div>
+    );
+  };
+
   useEffect(() => {
     try {
       let storedUnlockedSkills = JSON.parse(
-        localStorage.getItem("skillsUnlocked")
+        localStorage.getItem("skillsUnlocked"),
       );
       if (storedUnlockedSkills) {
         setSkillsUnlocked(storedUnlockedSkills);
@@ -141,10 +174,10 @@ const SkillsPage = () => {
                             href="#"
                             onClick={() => {
                               const unlockedSkill = allSkills.find(
-                                (skill) => skill.craft === craftedItem.name
+                                (skill) => skill.craft === craftedItem.name,
                               );
                               const filteredSkills = skillsUnlocked.filter(
-                                (skill) => skill !== unlockedSkill.skill
+                                (skill) => skill !== unlockedSkill.skill,
                               );
                               if (
                                 !skillsUnlocked.includes(unlockedSkill.skill)
@@ -159,7 +192,7 @@ const SkillsPage = () => {
                                       {skillsUnlocked.length + 1}/
                                       {allSkills.length}
                                     </p>
-                                  </div>
+                                  </div>,
                                 );
                               }
                               setSkillsUnlocked([
@@ -193,10 +226,7 @@ const SkillsPage = () => {
                   <div className="flex justify-center">
                     <div className="grid grid-cols-5 w-fit ">
                       {Array.from({ length: 20 }, (_, i) => i).map((ind) => (
-                        <div
-                          className={` border-[3px] h-fit w-fit border-t-[#313131] border-l-[#313131] bg-[#919191] p-1 hover:scale-110 transition-all duration-150 ease-in-out cursor-pointer`}
-                          key={ind}
-                        >
+                        <InventorySlot key={ind}>
                           {ind < items.length ? (
                             <a
                               data-tooltip-id="my-tooltip"
@@ -211,7 +241,7 @@ const SkillsPage = () => {
                           ) : (
                             <div className="w-10 h-10"></div>
                           )}
-                        </div>
+                        </InventorySlot>
                       ))}
                     </div>
                   </div>

@@ -66,6 +66,10 @@ import dodas from "../DODAS.png";
 import db from "../DB.png";
 import book from "./Book.png";
 import clock from "./Clock.webp";
+import ironAxe from "./ironAxe.png";
+import ironSword from "./ironSword.webp";
+import ironShovel from "./ironShovel.png";
+import ironHoe from "./ironHoe.png";
 
 export {
   book_quill,
@@ -136,4 +140,8 @@ export {
   db,
   book,
   clock,
+  ironAxe,
+  ironSword,
+  ironShovel,
+  ironHoe,
 };
