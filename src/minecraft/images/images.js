@@ -12,7 +12,7 @@ import cobbleStone from "./cobblestone.png";
 import mossyCobblestone from "./mossy_cobblestone.png";
 import moss from "./moss_block.png";
 import netherrack from "./netherrack.png";
-import flintAndSteel from "./flint_and_steel.png";
+import flintAndSteel from "./Flint_and_Steel.webp";
 import stoneBricks from "./stone_bricks.png";
 import mossyStoneBricks from "./mossy_stone_bricks.png";
 import crackedStoneBricks from "./cracked_stone_bricks.png";

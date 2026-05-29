@@ -17,6 +17,12 @@ import {
   reactLogo,
   sqlLogo,
   tailwindLogo,
+  linuxLogo,
+  redisLogo,
+  figmaLogo,
+  teamcityLogo,
+  seleniumLogo,
+  jiraLogo,
 } from "./skillsLogo";
 
 const reactTexture = new TextureLoader().load(reactLogo);
@@ -70,6 +76,24 @@ cssTexture.magFilter = NearestFilter;
 const jsTexture = new TextureLoader().load(jsLogo);
 jsTexture.magFilter = NearestFilter;
 
+const linuxTexture = new TextureLoader().load(linuxLogo);
+linuxTexture.magFilter = NearestFilter;
+
+const redisTexture = new TextureLoader().load(redisLogo);
+redisTexture.magFilter = NearestFilter;
+
+const figmaTexture = new TextureLoader().load(figmaLogo);
+figmaTexture.magFilter = NearestFilter;
+
+const teamcityTexture = new TextureLoader().load(teamcityLogo);
+teamcityTexture.magFilter = NearestFilter;
+
+const seleniumTexture = new TextureLoader().load(seleniumLogo);
+seleniumTexture.magFilter = NearestFilter;
+
+const jiraTexture = new TextureLoader().load(jiraLogo);
+jiraTexture.magFilter = NearestFilter;
+
 export {
   reactTexture,
   nextTexture,
@@ -88,4 +112,10 @@ export {
   htmlTexture,
   cssTexture,
   jsTexture,
+  linuxTexture,
+  redisTexture,
+  figmaTexture,
+  teamcityTexture,
+  seleniumTexture,
+  jiraTexture,
 };

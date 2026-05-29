@@ -15,6 +15,12 @@ import sqlLogo from "./sql.jpeg";
 import htmlLogo from "./html.png";
 import cssLogo from "./css.png";
 import jsLogo from "./javascript.png";
+import linuxLogo from "./linux.png";
+import redisLogo from "./redis.png";
+import figmaLogo from "./figma.png";
+import teamcityLogo from "./teamcity.jpeg";
+import seleniumLogo from "./selenium.png";
+import jiraLogo from "./jira.jpeg";
 
 export {
   reactLogo,
@@ -34,4 +40,10 @@ export {
   htmlLogo,
   cssLogo,
   jsLogo,
+  linuxLogo,
+  redisLogo,
+  figmaLogo,
+  teamcityLogo,
+  seleniumLogo,
+  jiraLogo
 };

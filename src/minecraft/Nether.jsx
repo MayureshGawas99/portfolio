@@ -61,7 +61,7 @@ const Nether = () => {
   }, [setInNether]);
 
   return (
-    <div classname="h-screen relative">
+    <div className="relative h-screen">
       <Canvas style={{ height: "100vh" }}>
         {/* <Sky sunPosition={[100, 100, 20]} /> */}
         <Environment files={netherSky} background blur={0.5} />
@@ -104,7 +104,7 @@ const Nether = () => {
           <Portal position={[-0.5, 2, -5]} rotation={[0, 0, 0]} />
         )}
       </Canvas>
-      <div className="center-align  text-white">
+      <div className="text-white center-align">
         <FaPlus />
       </div>
       <TextureSelector />

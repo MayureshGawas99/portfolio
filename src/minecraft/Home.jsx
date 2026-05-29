@@ -76,7 +76,7 @@ const Home = () => {
           text={"SKILLS DIMENSION"}
           font={minecraftFont}
           fontSize={0.35}
-          color="#491f20"
+          color="#eab308"
           anchorX="center"
           anchorY="middle"
           outlineWidth={"10%"}

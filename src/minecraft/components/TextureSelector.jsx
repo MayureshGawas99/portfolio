@@ -83,32 +83,34 @@ const TextureSelector = () => {
     <>
       {!actions.openInventory && (
         <div className="bottom-align ">
-          {visible && (
-            <p className="text-font text-white text-center">
-              {active.toUpperCase()}
-            </p>
-          )}
+          <p className="text-center text-white text-font">
+            {active.toUpperCase()}
+          </p>
+
           <div className="flex flex-row gap-5">
             <div className="flex flex-row gap-1 ">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((ind) => {
                 return (
-                  <div
-                    key={ind}
-                    className={`${
-                      active === keyActionMap["Digit" + ind.toString()]
-                        ? "border-white border-4"
-                        : ""
-                    }   w-14 h-14 bg-black/50 relative flex justify-center items-center`}
-                  >
-                    <img
-                      src={
-                        allBlocks[keyActionMap["Digit" + ind.toString()]]?.image
-                      }
-                      alt=""
-                      className="w-10 "
-                    />
+                  <div className="flex flex-col items-center justify-center">
+                    <div
+                      key={ind}
+                      className={`${
+                        active === keyActionMap["Digit" + ind.toString()]
+                          ? "border-white border-4"
+                          : ""
+                      }   w-14 h-14 bg-black/50 relative flex justify-center items-center`}
+                    >
+                      <img
+                        src={
+                          allBlocks[keyActionMap["Digit" + ind.toString()]]
+                            ?.image
+                        }
+                        alt=""
+                        className="w-10 "
+                      />
+                    </div>
                     <p
-                      className={`text-font text-white absolute bottom-0 right-0 ${
+                      className={`text-font text-white  ${
                         inNether ? "text-yellow-300" : "text-white"
                       }`}
                     >
@@ -119,16 +121,18 @@ const TextureSelector = () => {
               })}
             </div>
             <div className="flex flex-row gap-1 ">
-              <div
-                className={`${
-                  active === keyActionMap["Digit0"]
-                    ? "border-white border-4"
-                    : ""
-                }  w-14 h-14 bg-black/50 relative flex justify-center items-center`}
-              >
-                <img src={flintAndSteel} alt="" className="w-10 " />
+              <div className="flex flex-col items-center justify-center">
+                <div
+                  className={`${
+                    active === keyActionMap["Digit0"]
+                      ? "border-white border-4"
+                      : ""
+                  }  w-14 h-14 bg-black/50 relative flex justify-center items-center`}
+                >
+                  <img src={flintAndSteel} alt="" className="w-10 " />
+                </div>
                 <p
-                  className={`text-font text-white absolute bottom-0 right-0 ${
+                  className={`text-font text-white  ${
                     inNether ? "text-yellow-300" : "text-white"
                   }`}
                 >

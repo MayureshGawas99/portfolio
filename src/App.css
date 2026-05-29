@@ -121,7 +121,7 @@
   transform: translate(-50%, -50%);
 }
 .bottom-align {
-  bottom: 0px;
+  bottom: -40px;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -131,6 +131,7 @@
   background-color: #0e1113 !important;
   color: #fff !important;
   border: 4px solid #34107b !important;
+  font-family: "TextFont" !important;
 }
 
 .slider {
