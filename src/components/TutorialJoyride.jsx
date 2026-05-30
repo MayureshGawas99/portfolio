@@ -108,12 +108,7 @@ const TutorialJoyride = ({ run, onClose }) => {
             "Read the build description here and navigate between slides with Prev/Next.",
           placement: "auto",
         },
-        {
-          target: "#tutorial-slide-hide",
-          content:
-            "Toggle the visibility of this information panel to explore the builds without distractions.",
-          placement: "auto",
-        },
+
         {
           target: "#tutorial-world-prev",
           content:
@@ -124,6 +119,12 @@ const TutorialJoyride = ({ run, onClose }) => {
           target: "#tutorial-world-next",
           content:
             "Use this button to move forward to the next build in the tour.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-slide-hide",
+          content:
+            "Toggle the visibility of this information panel to explore the builds without distractions.",
           placement: "auto",
         },
       ],
