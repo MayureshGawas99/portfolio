@@ -13,42 +13,36 @@ const TutorialJoyride = ({ run, onClose }) => {
           target: "#tutorial-home-skills",
           content:
             "Welcome to the Minecraft Portfolio! Start by exploring the Skills section where crafting recipes unlock abilities.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-home-storymode",
           content:
             "Open Story Mode to explore the immersive world and see how navigation works.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-home-about",
           content:
             "Learn more about the developer, their journey, and background.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-home-projects",
           content:
             "Browse featured projects and discover the technologies used to build them.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-home-work",
           content: "Explore professional experience and career progression.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-home-advancements",
           content:
             "View achievements and milestones unlocked during the journey.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
       ],
 
@@ -56,21 +50,18 @@ const TutorialJoyride = ({ run, onClose }) => {
         {
           target: "#tutorial-skill-inventory",
           content: "This inventory contains all available crafting materials.",
-          placement: "bottom",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-skill-crafting-grid",
           content:
             "Drag materials from the inventory into the crafting grid to discover recipes.",
-          placement: "top",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target: "#tutorial-skill-output",
           content: "Successfully crafted skills appear in the output slot.",
-          placement: "left",
-          disableBeacon: true,
+          placement: "auto",
         },
         {
           target:
@@ -79,8 +70,56 @@ const TutorialJoyride = ({ run, onClose }) => {
               : "#tutorial-skill-recipe",
           content:
             "Craft these items to unlock new skills in the portfolio. unlock all skills to complete the skills section!",
-          placement: "top",
-          disableBeacon: true,
+          placement: "auto",
+        },
+      ],
+
+      "/about": [
+        {
+          target: "#tutorial-about-main",
+          content:
+            "Meet Narayan and learn about his full-stack web development background.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-about-languages",
+          content:
+            "Discover the programming languages mastered, each with its own proficiency level.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-about-socials",
+          content:
+            "Connect on LinkedIn, GitHub, LeetCode, and other developer platforms.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-about-resume",
+          content:
+            "Open the resume from the configured environment link to see full experience details.",
+          placement: "auto",
+        },
+      ],
+
+      "/world": [
+    
+        {
+          target: "#tutorial-world-slide-info",
+          content:
+            "Read the build description here and navigate between slides with Prev/Next.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-world-prev",
+          content:
+            "Use this button to move back to the previous build in the tour.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-world-next",
+          content:
+            "Use this button to move forward to the next build in the tour.",
+          placement: "auto",
         },
       ],
 
@@ -90,27 +129,35 @@ const TutorialJoyride = ({ run, onClose }) => {
           content:
             "Browse projects to learn about features, architecture, and implementation details.",
           placement: "auto",
-          disableBeacon: true,
         },
       ],
 
       "/work-experience": [
         {
-          target: "#tutorial-work-timeline",
+          target: "#tutorial-work-tabs",
+          content: "Switch between different roles to explore work experience.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-work-details",
           content:
-            "Follow the timeline to explore professional experience and key milestones.",
-          placement: "top",
-          disableBeacon: true,
+            "View the selected role's responsibilities, achievements, and related projects here.",
+          placement: "auto",
         },
       ],
 
       "/advancements": [
         {
-          target: "#tutorial-advancements-list",
+          target: "#tutorial-advancements-tab",
           content:
-            "These are the achievements unlocked throughout the development journey.",
-          placement: "top",
-          disableBeacon: true,
+            "click on these tabs to view different categories of achievements and milestones unlocked during the journey.",
+          placement: "auto",
+        },
+        {
+          target: "#Minecraft",
+          content:
+            "click on these nodes to view details about each achievement, including how it was unlocked and its significance in the journey.",
+          placement: "auto",
         },
       ],
     };
@@ -125,7 +172,7 @@ const TutorialJoyride = ({ run, onClose }) => {
       steps={steps}
       run={run}
       continuous
-      disableBeacon={true}
+      options={{ skipBeacon: true }}
       showProgress={false}
       showSkipButton={false}
       scrollToFirstStep

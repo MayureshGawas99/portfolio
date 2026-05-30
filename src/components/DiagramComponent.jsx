@@ -5,8 +5,9 @@ import { Tooltip } from "react-tooltip";
 
 // Custom node component to display an image
 const CustomNode = ({ data }) => {
+  console.log("Rendering node with data:", data);
   return (
-    <div className="w-full h-full bg-[#AA7E0F] border-black border-2 rounded-md">
+    <div id={data.title} className="w-full h-full bg-[#AA7E0F] border-black border-2 rounded-md">
       <a
         data-tooltip-id="acheivement-tooltip"
         data-tooltip-content="2"
@@ -24,7 +25,7 @@ const CustomNode = ({ data }) => {
             alignItems: "center",
           }}
         >
-          <img src={data.img} alt={data.label} style={{ height: "32px" }} />{" "}
+          <img src={data.img} alt={data.title} style={{ height: "32px" }} />{" "}
           {/* Adjust size as needed */}
           {data?.handle === "vertical" ? (
             <>
