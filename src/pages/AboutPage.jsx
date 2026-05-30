@@ -4,6 +4,8 @@ import Models from "../components/Models";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
 import Slider from "../components/Slider";
+import { AppContext } from "../context/AppContext";
+import { MdQuestionMark } from "react-icons/md";
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -11,6 +13,8 @@ const AboutPage = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
+
+  const { startJoyride } = React.useContext(AppContext);
 
   const Languages = [
     { name: "Python", level: 100 },
@@ -35,7 +39,15 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="h-screen bg-dirt ">
+    <div className="relative h-screen bg-dirt">
+      <div
+        onClick={startJoyride}
+        className="absolute text-xl text-white cursor-pointer top-2 right-2 text-font minecraft-btn"
+      >
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+          <MdQuestionMark />
+        </div>
+      </div>
       <div className="flex flex-row h-full mx-6 md:mx-2 lg:mx-32 gap-15">
         <div className="relative h-[40rem] w-[20rem] cursor-pointer hidden md:block ">
           <Canvas
@@ -51,7 +63,10 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="flex flex-col flex-grow gap-5 my-10 overflow-x-auto">
-          <div className="flex flex-col flex-grow w-full gap-2 p-6 black-glassmorphism">
+          <div
+            id="tutorial-about-main"
+            className="flex flex-col flex-grow w-full gap-2 p-6 black-glassmorphism"
+          >
             <div>
               <p className="text-sm text-yellow-300 text-font md:text-xl">
                 Full Stack Web Devloper
@@ -65,7 +80,7 @@ const AboutPage = () => {
                 together!
               </p>
             </div>
-            <div>
+            <div id="tutorial-about-languages">
               <p className="text-sm text-center text-yellow-300 text-font md:text-xl">
                 Languages
               </p>
@@ -79,7 +94,7 @@ const AboutPage = () => {
                 ))}
               </div>
             </div>
-            <div>
+            <div id="tutorial-about-socials">
               <p className="text-sm text-center text-yellow-300 text-font md:text-xl">
                 Socials
               </p>
@@ -102,6 +117,7 @@ const AboutPage = () => {
           </div>
           <div className="flex flex-row justify-center gap-2 ">
             <button
+              id="tutorial-about-resume"
               onClick={() => {
                 playButtonSound();
                 console.log(process.env.REACT_APP_RESUME_URL);

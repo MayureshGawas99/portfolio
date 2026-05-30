@@ -28,6 +28,7 @@ const HomePage = () => {
           </p>
 
           <div
+            id="tutorial-home-projects"
             onClick={() => {
               playButtonSound();
               navigate("/projects");
@@ -39,6 +40,7 @@ const HomePage = () => {
             </div>
           </div>
           <div
+            id="tutorial-home-storymode"
             onClick={() => {
               playButtonSound();
               navigate("/world");
@@ -50,6 +52,7 @@ const HomePage = () => {
             </div>
           </div>
           <div
+            id="tutorial-home-about"
             onClick={() => {
               playButtonSound();
               navigate("/about");
@@ -61,6 +64,7 @@ const HomePage = () => {
             </div>
           </div>
           <div
+            id="tutorial-home-work"
             onClick={() => {
               playButtonSound();
               navigate("/work-experience");
@@ -73,6 +77,7 @@ const HomePage = () => {
           </div>
           <div className="grid w-full grid-cols-2 gap-5 md:w-auto md:mx-16">
             <div
+              id="tutorial-home-advancements"
               onClick={() => {
                 playButtonSound();
                 navigate("/advancements");
@@ -85,6 +90,7 @@ const HomePage = () => {
             </div>
 
             <div
+              id="tutorial-home-skills"
               onClick={() => {
                 playButtonSound();
                 navigate("/skills");

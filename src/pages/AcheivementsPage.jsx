@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Tab, Tabs, TabList } from "react-tabs";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { book_quill, bookshelf, redstone } from "../assets/icons/iconImages";
@@ -13,6 +13,8 @@ import {
   netherInitialNodes,
 } from "../components/nodes/netherNodes";
 import { endInitialEdges, endInitialNodes } from "../components/nodes/endNodes";
+import { AppContext } from "../context/AppContext";
+import { MdQuestionMark } from "react-icons/md";
 
 const AcheivementsPage = () => {
   const [tab, setTab] = useState(1);
@@ -21,8 +23,17 @@ const AcheivementsPage = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
+  const { startJoyride } = useContext(AppContext);
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-5 bg-dirt text-font">
+    <div className="relative flex flex-col items-center justify-center h-screen gap-5 bg-dirt text-font">
+      <div
+        onClick={startJoyride}
+        className="absolute text-xl text-white cursor-pointer top-2 right-2 text-font minecraft-btn"
+      >
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+          <MdQuestionMark />
+        </div>
+      </div>
       <Tabs className="w-[80%]">
         <TabList className={"w-fit flex flex-row gap-2"}>
           <Tab
@@ -47,7 +58,10 @@ const AcheivementsPage = () => {
               setTab(2);
             }}
           >
-            <div className="p-2 border-4 border-t-white border-l-white border-b-0 border-r-[#555555] rounded-t-md">
+            <div
+              id="tutorial-advancements-tab"
+              className="p-2 border-4 border-t-white border-l-white border-b-0 border-r-[#555555] rounded-t-md"
+            >
               <img src={redstone} className="w-8 h-8" alt="" />
             </div>
           </Tab>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import DODAS from "../assets/DODAS.png";
 import DB from "../assets/DB.png";
 import { useNavigate } from "react-router-dom";
@@ -6,8 +6,9 @@ import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import icon from "../assets/pan1.png";
 import icon2 from "../assets/pan2.png";
 import icon3 from "../assets/pan3.png";
-import { MdOpenInNew } from "react-icons/md";
+import { MdOpenInNew, MdQuestionMark } from "react-icons/md";
 import ProjectCard from "../minecraft/components/ProjectCard";
+import { AppContext } from "../context/AppContext";
 
 const DodasProjects = [
   {
@@ -67,45 +68,53 @@ const WorkExperiencePage = () => {
     audio.play();
   };
   const [tab, setTab] = useState(0);
+  const { startJoyride } = useContext(AppContext);
   return (
-    <div className="flex flex-col h-screen gap-5 py-6 bg-dirt">
-      <div>
-        <p className="text-xl text-center text-white text-font">
-          Work Experience
-        </p>
+    <div className="relative flex flex-col h-screen gap-5 py-6 bg-dirt">
+      <div
+        onClick={startJoyride}
+        className="absolute text-xl text-white cursor-pointer top-2 right-2 text-font minecraft-btn"
+      >
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+          <MdQuestionMark />
+        </div>
       </div>
+      <p className="text-xl text-center text-white text-font">
+        Work Experience
+      </p>
       <div className="flex flex-col flex-grow gap-5 mx-6 overflow-auto md:grid md:grid-cols-12 ">
         <div className=" md:col-span-4 lg:col-span-3 bg-black/50">
-          <div
-            onClick={() => setTab(0)}
-            className={`${
-              tab === 0 && "border border-white"
-            } text-white text-font p-2 flex flex-row gap-2 cursor-pointer`}
-          >
-            <img src={DB} alt="" className="h-16" />
-            <div>
-              <p>Deutsche Bank</p>
-              <p className="text-gray-500">Full Time </p>
-              <p className="text-sm text-yellow-300 ">15 Jul 2024 - Present</p>
+          <div id="tutorial-work-tabs" className="space-y-2">
+            <div
+              onClick={() => setTab(0)}
+              className={`${tab === 0 ? "border border-white" : ""} text-white text-font p-2 flex flex-row gap-2 cursor-pointer`}
+            >
+              <img src={DB} alt="" className="h-16" />
+              <div>
+                <p>Deutsche Bank</p>
+                <p className="text-gray-500">Full Time</p>
+                <p className="text-sm text-yellow-300">15 Jul 2024 - Present</p>
+              </div>
             </div>
-          </div>
-          <div
-            onClick={() => setTab(1)}
-            className={`${
-              tab === 1 && "border border-white"
-            } text-white text-font p-2 flex flex-row gap-2 cursor-pointer`}
-          >
-            <img src={DODAS} alt="" className="h-16" />
-            <div>
-              <p>DODAS (Acknoledger)</p>
-              <p className="text-sm text-gray-500">Internship (6 months) </p>
-              <p className="text-sm text-yellow-300 ">
-                8 Jan 2024 - 28 Jun 2024
-              </p>
+
+            <div
+              onClick={() => setTab(1)}
+              className={`${tab === 1 ? "border border-white" : ""} text-white text-font p-2 flex flex-row gap-2 cursor-pointer`}
+            >
+              <img src={DODAS} alt="" className="h-16" />
+              <div>
+                <p>DODAS (Acknoledger)</p>
+                <p className="text-sm text-gray-500">Internship (6 months)</p>
+                <p className="text-sm text-yellow-300">
+                  8 Jan 2024 - 28 Jun 2024
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="p-2 md:col-span-8 lg:col-span-9 bg-black/50">
+        <div
+          className="p-2 md:col-span-8 lg:col-span-9 bg-black/50"
+        >
           {tab === 0 && (
             <div>
               <img src={DB} alt="" className="w-[6rem]" />
@@ -116,6 +125,7 @@ const WorkExperiencePage = () => {
                 <p className="mt-2 text-xs text-gray-500 text-font md:text-base">
                   <span className="text-white">Role: </span>Senior Analyst
                 </p>
+                <div id="tutorial-work-details">
                 <p className="mt-2 text-xs text-white text-font md:text-base">
                   Responsibilities :
                 </p>
@@ -156,6 +166,7 @@ const WorkExperiencePage = () => {
                     handling and better scalability under high load.
                   </li>
                 </ul>
+                  </div>
               </div>
             </div>
           )}
@@ -170,7 +181,7 @@ const WorkExperiencePage = () => {
                     onClick={() =>
                       window.open(
                         "https://drive.google.com/file/d/1zwkUyeDlkCxGfFJtC5ZlTVn65eMw_rAT/view?usp=sharing",
-                        "_blank"
+                        "_blank",
                       )
                     }
                   />

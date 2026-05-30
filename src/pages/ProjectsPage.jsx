@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import icon from "../assets/pan1.png";
 import icon2 from "../assets/pan2.png";
 import icon3 from "../assets/pan3.png";
 import { useNavigate } from "react-router-dom";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import ProjectCard from "../minecraft/components/ProjectCard";
+import { AppContext } from "../context/AppContext";
+import { MdQuestionMark } from "react-icons/md";
 
 const MyProjects = [
   {
@@ -47,17 +49,26 @@ const ProjectsPage = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
+  const { startJoyride } = useContext(AppContext);
 
   useEffect(() => {
     setTimeout(() => {
       alert(
-        "Please note: All projects listed here are hosted on free instances, so they may take 1-2 minutes to fully load after being idle. We appreciate your patience!"
+        "Please note: All projects listed here are hosted on free instances, so they may take 1-2 minutes to fully load after being idle. We appreciate your patience!",
       );
     }, 500);
   }, []);
 
   return (
-    <div className="flex flex-col h-screen gap-5 py-6 bg-dirt">
+    <div className="relative flex flex-col h-screen gap-5 py-6 bg-dirt">
+      <div
+        onClick={startJoyride}
+        className="absolute text-xl text-white cursor-pointer top-2 right-2 text-font minecraft-btn"
+      >
+        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+          <MdQuestionMark />
+        </div>
+      </div>
       <div className="">
         <p className="text-xl text-center text-white text-font">
           Select Personal Project
@@ -86,7 +97,7 @@ const ProjectsPage = () => {
           </div>
         </div>
         {MyProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} index={index} project={project} />
         ))}
       </div>
       <div className="flex flex-row justify-center gap-5 ">

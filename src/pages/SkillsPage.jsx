@@ -7,7 +7,7 @@ import { allReciepes, allSkills, items } from "../context/CraftItems";
 import DragComponent from "../components/DragComponent";
 import { AppContext, useAppContext } from "../context/AppContext";
 import DropComponent from "../components/DropComponent";
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdQuestionMark } from "react-icons/md";
 import { useDrop } from "react-dnd";
 import { toast } from "react-toastify";
 
@@ -24,6 +24,7 @@ const SkillsPage = () => {
     setCraftedItem,
     skillsUnlocked,
     setSkillsUnlocked,
+    startJoyride,
   } = useAppContext(AppContext);
 
   const InventorySlot = ({ children }) => {
@@ -98,7 +99,15 @@ const SkillsPage = () => {
 
   return (
     <div className="flex flex-col h-screen overflow-y-auto bg-dirt">
-      <div className="flex justify-end mx-6 my-6 mb-4">
+      <div className="flex justify-end gap-2 mx-6 my-6 mb-4">
+        <div
+          onClick={startJoyride}
+          className="text-xl text-white cursor-pointer text-font minecraft-btn"
+        >
+          <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+            <MdQuestionMark />
+          </div>
+        </div>
         <button
           onClick={() => {
             playButtonSound();
@@ -144,7 +153,10 @@ const SkillsPage = () => {
                     </div>
 
                     <div className="flex flex-row items-center justify-center mb-2 md:gap-5">
-                      <div className="grid grid-cols-3 w-fit">
+                      <div
+                        id="tutorial-skill-crafting-grid"
+                        className="grid grid-cols-3 w-fit"
+                      >
                         {Array.from({ length: 9 }, (_, i) => i).map((ind) => (
                           <div
                             className={` border-[3px] border-t-[#313131] border-l-[#313131] bg-[#919191] p-1 cursor-pointer`}
@@ -164,6 +176,7 @@ const SkillsPage = () => {
                         />
                       </div>
                       <div
+                        id="tutorial-skill-output"
                         className={` border-[3px] border-t-[#313131] border-l-[#313131] bg-[#919191] p-1  cursor-pointer`}
                       >
                         {craftedItem ? (
@@ -223,7 +236,10 @@ const SkillsPage = () => {
                 </div>
                 <div>
                   <p className="text-xl text-gray-600 text-font">Inventory</p>
-                  <div className="flex justify-center">
+                  <div
+                    id="tutorial-skill-inventory"
+                    className="flex justify-center"
+                  >
                     <div className="grid grid-cols-5 w-fit ">
                       {Array.from({ length: 20 }, (_, i) => i).map((ind) => (
                         <InventorySlot key={ind}>
@@ -252,7 +268,7 @@ const SkillsPage = () => {
           <div className="flex flex-col gap-2 p-6 mx-6 black-glassmorphism">
             <div className="flex flex-col mb-4 md:items-center md:justify-between md:flex-row">
               <p className="text-base text-yellow-300 text-font md:text-xl">
-                Unlock My Skills by Crafting
+                Unlock My Skills by Crafting Items!
               </p>
               <p className="text-sm text-white text-font md:text-base">
                 Skills unlocked: {skillsUnlocked.length}/{allSkills.length}
@@ -277,7 +293,12 @@ const SkillsPage = () => {
                       Unlock by crafting {skill.craft}
                     </p>
                     <div className="relative flex-shrink-0 block w-fit h-fit md:hidden">
-                      <img src={skill.craftIcon} alt="" className="w-8 h-8 " />
+                      <img
+                        id={index === 0 ? "tutorial-skill-recipe-sm" : ""}
+                        src={skill.craftIcon}
+                        alt=""
+                        className="w-8 h-8"
+                      />
                       {!skillsUnlocked.includes(skill.skill) && (
                         <FaLock
                           size={12}
@@ -290,6 +311,7 @@ const SkillsPage = () => {
                 <div className="relative flex-shrink-0 hidden md:block">
                   <img
                     src={skill.craftIcon}
+                    id={index === 0 ? "tutorial-skill-recipe" : ""}
                     alt=""
                     className=" w-[5rem] h-[5rem]"
                   />

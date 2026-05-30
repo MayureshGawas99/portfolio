@@ -17,6 +17,7 @@ import villager_breeder from "../models/villager_breeder.glb"; // Adjust the pat
 import { AppContext } from "../context/AppContext";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
+import { MdQuestionMark } from "react-icons/md";
 
 const slides = [
   {
@@ -97,21 +98,34 @@ const WorldPage = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
+  const { startJoyride } = useContext(AppContext);
 
   return (
     <div className="relative flex flex-col h-screen bg-dirt">
-      <button
-        onClick={() => {
-          playButtonSound();
-          navigate("/");
-        }}
-        type="button"
-        className="minecraft-btn w-[6rem] text-white absolute top-6 right-6 z-50"
-      >
-        <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
-          <span>Back</span>
+      <div className="flex justify-end gap-2 mx-6 my-6 mb-4">
+        <div
+          id="tutorial-world-start-tour"
+          onClick={startJoyride}
+          className="text-xl text-white cursor-pointer text-font minecraft-btn"
+        >
+          <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+            <MdQuestionMark />
+          </div>
         </div>
-      </button>
+        <button
+          id="tutorial-world-back"
+          onClick={() => {
+            playButtonSound();
+            navigate("/");
+          }}
+          type="button"
+          className="minecraft-btn w-[6rem] text-white"
+        >
+          <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full py-1 px-2 h-full flex justify-center items-center">
+            <span>Back</span>
+          </div>
+        </button>
+      </div>
       <Slide data={slides[currentSlide]} size={slides.length} />
     </div>
   );
