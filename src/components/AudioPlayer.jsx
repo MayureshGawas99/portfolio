@@ -5,13 +5,7 @@ import { VscMute, VscUnmute } from "react-icons/vsc";
 import { MdQuestionMark } from "react-icons/md";
 
 const AudioPlayer = ({}) => {
-  const {
-    isPlaying,
-    setIsPlaying,
-    isJoyrideRunning,
-    setIsJoyrideRunning,
-    startJoyride,
-  } = useContext(AppContext);
+  const { isPlaying, setIsPlaying, startJoyride } = useContext(AppContext);
 
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);

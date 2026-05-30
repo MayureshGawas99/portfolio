@@ -120,7 +120,6 @@ const AboutPage = () => {
               id="tutorial-about-resume"
               onClick={() => {
                 playButtonSound();
-                console.log(process.env.REACT_APP_RESUME_URL);
                 window.open(process.env.REACT_APP_RESUME_URL, "_blank");
               }}
               type="button"

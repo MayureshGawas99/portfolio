@@ -102,11 +102,16 @@ const TutorialJoyride = ({ run, onClose }) => {
       ],
 
       "/world": [
-    
         {
           target: "#tutorial-world-slide-info",
           content:
             "Read the build description here and navigate between slides with Prev/Next.",
+          placement: "auto",
+        },
+        {
+          target: "#tutorial-slide-hide",
+          content:
+            "Toggle the visibility of this information panel to explore the builds without distractions.",
           placement: "auto",
         },
         {

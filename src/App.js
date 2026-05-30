@@ -4,7 +4,6 @@ import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import LoadingPage from "./pages/LoadingPage";
-import AudioModal from "./pages/AudioModal";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "./context/AppContext";
 import Home from "./minecraft/Home";
@@ -19,13 +18,12 @@ import SkillsPage from "./pages/SkillsPage";
 import { ToastContainer } from "react-toastify";
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import TutorialJoyride from "./components/TutorialJoyride";
-import { MdQuestionMark } from "react-icons/md";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
   // const audio = new Audio(audioPath);
   const [audio] = useState(new Audio(audioPath));
-  const { isJoyrideRunning, setIsJoyrideRunning, startJoyride, joyrideKey } =
+  const { isJoyrideRunning, setIsJoyrideRunning, joyrideKey } =
     useContext(AppContext);
 
   useEffect(() => {
@@ -39,13 +37,8 @@ function App() {
     // eslint-disable-next-line
   }, [isPlaying]);
 
-  useEffect(() => {
-    console.log("Joyride state changed:", isJoyrideRunning);
-  }, [isJoyrideRunning]);
-
   return (
     <div className="h-screen App">
-      {/* <AudioModal /> */}
       <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<HomePage />} />

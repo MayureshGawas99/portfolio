@@ -5,7 +5,6 @@ import { Tooltip } from "react-tooltip";
 
 // Custom node component to display an image
 const CustomNode = ({ data }) => {
-  console.log("Rendering node with data:", data);
   return (
     <div id={data.title} className="w-full h-full bg-[#AA7E0F] border-black border-2 rounded-md">
       <a

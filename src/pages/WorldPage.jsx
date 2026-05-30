@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Slide from "../components/Slide";
 import house from "../models/house.glb"; // Adjust the path as needed
 import butcher_house from "../models/butcher_house.glb"; // Adjust the path as needed
@@ -18,6 +18,7 @@ import { AppContext } from "../context/AppContext";
 import buttonSound from "../assets/sounds/minecraft_click.mp3";
 import { useNavigate } from "react-router-dom";
 import { MdQuestionMark } from "react-icons/md";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 const slides = [
   {
@@ -92,17 +93,26 @@ const slides = [
   },
 ];
 const WorldPage = () => {
-  const { currentSlide } = useContext(AppContext);
+  const [hide, setHide] = useState(false);
+  const { currentSlide, startJoyride } = useContext(AppContext);
   const navigate = useNavigate();
   const playButtonSound = () => {
     const audio = new Audio(buttonSound);
     audio.play();
   };
-  const { startJoyride } = useContext(AppContext);
 
   return (
     <div className="relative flex flex-col h-screen bg-dirt">
       <div className="flex justify-end gap-2 mx-6 my-6 mb-4">
+        <div
+          id="tutorial-slide-hide"
+          onClick={() => setHide(!hide)}
+          className="text-xl text-white cursor-pointer text-font minecraft-btn"
+        >
+          <div className="border-[3px] border-b-[4px] border-b-[#585858] border-r-[#585858] border-t-[#A8A8A8] border-l-[#A8A8A8] w-full p-2 h-full flex justify-center">
+            {hide ? <IoEyeOff /> : <IoEye />}
+          </div>
+        </div>
         <div
           id="tutorial-world-start-tour"
           onClick={startJoyride}
@@ -126,7 +136,7 @@ const WorldPage = () => {
           </div>
         </button>
       </div>
-      <Slide data={slides[currentSlide]} size={slides.length} />
+      <Slide data={slides[currentSlide]} size={slides.length} hide={hide} />
     </div>
   );
 };
