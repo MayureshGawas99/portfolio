@@ -18,11 +18,15 @@ import WorldPage from "./pages/WorldPage";
 import SkillsPage from "./pages/SkillsPage";
 import { ToastContainer } from "react-toastify";
 import AnalyticsTracker from "./components/AnalyticsTracker";
+import TutorialJoyride from "./components/TutorialJoyride";
+import { MdQuestionMark } from "react-icons/md";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
   // const audio = new Audio(audioPath);
   const [audio] = useState(new Audio(audioPath));
+  const { isJoyrideRunning, setIsJoyrideRunning, startJoyride, joyrideKey } =
+    useContext(AppContext);
 
   useEffect(() => {
     audio.loop = true;
@@ -35,9 +39,13 @@ function App() {
     // eslint-disable-next-line
   }, [isPlaying]);
 
+  useEffect(() => {
+    console.log("Joyride state changed:", isJoyrideRunning);
+  }, [isJoyrideRunning]);
+
   return (
     <div className="h-screen App">
-      <AudioModal />
+      {/* <AudioModal /> */}
       <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -66,6 +74,12 @@ function App() {
         pauseOnHover
         closeButton={false}
         theme="light"
+      />
+
+      <TutorialJoyride
+        key={joyrideKey}
+        run={isJoyrideRunning}
+        onClose={() => setIsJoyrideRunning(false)}
       />
     </div>
   );

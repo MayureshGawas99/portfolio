@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectCard = ({ project, key }) => {
+const ProjectCard = ({ project, key, index }) => {
   const { title, description, image, techstack, url } = project;
   return (
     <a
@@ -12,6 +12,7 @@ const ProjectCard = ({ project, key }) => {
       <img
         src={image}
         alt=""
+        id={`tutorial-project-${index}`}
         className="lg:w-[10rem] lg:h-[10rem] md:w-[7rem] md:h-[7rem] w-[5rem] h-[5rem]"
       />
       <div>

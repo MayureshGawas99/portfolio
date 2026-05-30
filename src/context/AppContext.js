@@ -21,6 +21,13 @@ const AppContextProvider = ({ children }) => {
     null,
     null,
   ]);
+  const [isJoyrideRunning, setIsJoyrideRunning] = useState(false);
+  const [joyrideKey, setJoyrideKey] = useState(0);
+
+  const startJoyride = () => {
+    setJoyrideKey((prev) => prev + 1);
+    setIsJoyrideRunning(true);
+  };
 
   return (
     <AppContext.Provider
@@ -37,6 +44,11 @@ const AppContextProvider = ({ children }) => {
         setCraftedItem,
         skillsUnlocked,
         setSkillsUnlocked,
+        isJoyrideRunning,
+        setIsJoyrideRunning,
+        startJoyride,
+        joyrideKey,
+        setJoyrideKey,
       }}
     >
       {children}
