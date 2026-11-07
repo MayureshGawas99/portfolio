@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactFlow, { Handle, Position } from "react-flow-renderer";
-
+import { MdFullscreen, MdFullscreenExit } from "react-icons/md";
+import { toast } from "react-toastify";
 import { Tooltip } from "react-tooltip";
 
 // Custom node component to display an image
@@ -62,14 +63,66 @@ const CustomNode = ({ data }) => {
 const DiagramComponent = ({ initialEdges, initialNodes }) => {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const diagramRef = useRef(null);
 
   useEffect(() => {
     setNodes(initialNodes);
     setEdges(initialEdges);
   }, [initialEdges, initialNodes]);
 
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      const fullscreen = document.fullscreenElement === diagramRef.current;
+      setIsFullscreen(fullscreen);
+
+      if (!fullscreen && diagramRef.current) {
+        diagramRef.current.style.background = "";
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () =>
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    if (!document.fullscreenEnabled) {
+      toast.error("Fullscreen is not supported by this browser.");
+      return;
+    }
+
+    try {
+      if (document.fullscreenElement === diagramRef.current) {
+        await document.exitFullscreen();
+      } else {
+        const parentBackground = window.getComputedStyle(
+          diagramRef.current.parentElement,
+        ).background;
+        diagramRef.current.style.background = parentBackground;
+        await diagramRef.current.requestFullscreen();
+      }
+    } catch (error) {
+      diagramRef.current.style.background = "";
+      toast.error("Unable to change fullscreen mode.");
+      console.error("Unable to change diagram fullscreen mode:", error);
+    }
+  };
+
   return (
-    <>
+    <div
+      ref={diagramRef}
+      className={`relative h-full w-full ${isFullscreen ? "fixed inset-0 z-[1100] h-screen w-screen bg-[#c9c7c8]" : ""}`}
+    >
+      <button
+        type="button"
+        onClick={toggleFullscreen}
+        className="absolute right-2 top-2 z-10 border-2 border-b-[#585858] border-r-[#585858] border-t-[#a8a8a8] border-l-[#a8a8a8] bg-[#292929] p-1 text-2xl text-white hover:bg-[#454545]"
+        aria-label={isFullscreen ? "Exit fullscreen" : "View diagram fullscreen"}
+        title={isFullscreen ? "Exit fullscreen" : "View diagram fullscreen"}
+      >
+        {isFullscreen ? <MdFullscreenExit /> : <MdFullscreen />}
+      </button>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -78,7 +131,7 @@ const DiagramComponent = ({ initialEdges, initialNodes }) => {
           width: "100%",
           height: "100%",
         }}
-      ></ReactFlow>
+      />
       <Tooltip
         id="acheivement-tooltip"
         className="p-0 m-0"
@@ -105,7 +158,7 @@ const DiagramComponent = ({ initialEdges, initialNodes }) => {
           </div>
         )}
       ></Tooltip>
-    </>
+    </div>
   );
 };
 
