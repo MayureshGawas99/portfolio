@@ -18,6 +18,7 @@ import SkillsPage from "./pages/SkillsPage";
 import { ToastContainer } from "react-toastify";
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import TutorialJoyride from "./components/TutorialJoyride";
+import MinecraftChatbot from "./components/MinecraftChatbot";
 
 function App() {
   const { isPlaying } = useContext(AppContext);
@@ -74,6 +75,7 @@ function App() {
         run={isJoyrideRunning}
         onClose={() => setIsJoyrideRunning(false)}
       />
+      <MinecraftChatbot />
     </div>
   );
 }
